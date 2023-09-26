@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+
+  <link href="css/style.min.css?v=1.0" rel="stylesheet">
+  <title></title>
+</head>
+
+<body>
+
+  <div class="modal-with-form" id="modal_with_form">
+    <div class="modal-with-form__wrapper">
+      <div class="modal-with-form__inner">
+        <form class="modal-with-form__formset" id="modal_with_form_formset">
+          <input class="modal-with-form__formset-input" type="text" placeholder="">
+          <input class="modal-with-form__formset-input" type="tel" placeholder="">
+          <button class="modal-with-form__formset-submit" type="submit"></button>
+        </form>
+      </div>
+    </div>
+    <div class="modal-with-form__success"></div>
+  </div>
+
+  <header class="page-header">
+    <nav class="main-nav">
+
+      <div class="main-nav__container base-container">
+
+        <a class="main-nav__logo-link" href="index.html">
+          <svg class="main-nav__logo-icon" width="154" height="54" alt="Логотип">
+            <use href="img/icon/sprite.svg#logo-icon"></use>
+          </svg>
+        </a>
+
+        <div class="main-nav__mobile-menu" id="mobile_menu">
+          <ul class="main-nav__mobile-menu-list">
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Автомобили</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Аксессуары и тюнинг</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Сервис</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Доставка</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Лизинг/кредит</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Франшиза</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">О нас</a>
+            </li>
+          </ul>
+
+          <div class="main-nav__contacts">
+            <span class="main-nav__contacts-title display-on-mobile">Наши контакты</span>
+            <a class="main-nav__contacts-phone" href="tel:+7 495-001-18-88">
+              <svg class="main-nav__contacts-phone-icon" width="24" height="24" aria-hidden="true">
+                <use href="img/icon/sprite.svg#phone-icon"></use>
+              </svg>
+              <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
+            </a>
+            <span class="main-nav__contacts-time display-on-mobile">Время работы: с 9 до 21 часов</span>
+            <div class="main-nav__contacts-address display-on-mobile">
+              <svg class="main-nav__contacts-address-icon" width="24" height="24" aria-hidden="true">
+                <use href="img/icon/sprite.svg#address-icon"></use>
+              </svg>
+              <span class="main-nav__contacts-address-text display-on-mobile">
+                Московская область, Красногорский
+                район Новорижское ш., 23 км,
+                вл 2 стр 1, ТРЦ «Ригамолл»
+              </span>
+            </div>
+          </div>
+
+          <ul class="main-nav__socials display-on-mobile">
+            <li class="main-nav__socials-item">
+              <a class="main-nav__socials-link" href="#"></a>
+            </li>
+          </ul>
+
+        </div>
+
+        <button class="main-nav__burger" id="burger">
+          <span class="main-nav__burger-line"></span>
+        </button>
+
+      </div>
+    </nav>
+  </header>
