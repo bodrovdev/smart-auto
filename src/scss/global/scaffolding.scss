@@ -100,6 +100,8 @@ img {
 }
 
 a {
+	cursor: pointer;
+
 	color: inherit;
 	text-decoration: none;
 }
@@ -168,6 +170,12 @@ h6 {
 
 .display-on-mobile {
 	@include mixins.respond-to(desktopD) {
-		display: none;
+		display: none !important;
+	}
+}
+
+.hide-on-mobile {
+	@include mixins.respond-to(notDesktop) {
+		display: none !important;
 	}
 }

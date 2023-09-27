@@ -1,8 +1,9 @@
 @@include('components/_base/_base-header.html')
 
 <main class="page-content">
+
   <section class="heading">
-    <!-- <video class="heading__bg-video" src="https://files.catbox.moe/87d64z.mp4" autoplay muted loop></video> -->
+    <video class="heading__bg-video" src="https://files.catbox.moe/87d64z.mp4" autoplay muted loop></video>
     <div class="heading__container base-container">
       <div class="heading__content">
         <div class="heading__title">
@@ -20,8 +21,87 @@
         </div>
         <a class="heading__link" href="catalogue_machines.html">В каталог</a>
       </div>
+
+      <a class="heading__whatsapp">
+        <span class="heading__whatsapp-text">WhatsApp</span>
+        <svg class="heading__whatsapp-logo" width="61" height="61" aria-hidden="true">
+          <use href="img/icon/sprite.svg#whatsapp-icon"></use>
+        </svg>
+      </a>
     </div>
   </section>
+
+  <section class="brands">
+    <div class="brands__container base-container">
+
+      <div class="brands__slider-container">
+        <div class="brands__slider swiper">
+          <div class="brands__slider-wrapper swiper-wrapper">
+            <figure class="brands__slider-slide swiper-slide">
+              <img class="brands__slider-slide-img" src="img/image/brands-logo.png" alt="#">
+            </figure>
+            <figure class="brands__slider-slide swiper-slide">
+              <img class="brands__slider-slide-img" src="img/image/brands-logo.png" alt="#">
+            </figure>
+            <figure class="brands__slider-slide swiper-slide">
+              <img class="brands__slider-slide-img" src="img/image/brands-logo.png" alt="#">
+            </figure>
+            <figure class="brands__slider-slide swiper-slide">
+              <img class="brands__slider-slide-img" src="img/image/brands-logo.png" alt="#">
+            </figure>
+            <figure class="brands__slider-slide swiper-slide">
+              <img class="brands__slider-slide-img" src="img/image/brands-logo.png" alt="#">
+            </figure>
+            <figure class="brands__slider-slide swiper-slide">
+              <img class="brands__slider-slide-img" src="img/image/brands-logo.png" alt="#">
+            </figure>
+          </div>
+        </div>
+
+        <div class="brands__slider-arrows">
+          <button class="brands__slider-arrow brands__slider-arrow--prev" aria-label="Назад">
+            <svg class="brands__slider-arrow-icon" width="9" height="14">
+              <use href="img/icon/sprite.svg#brands-arrow-icon"></use>
+            </svg>
+          </button>
+          <button class="brands__slider-arrow brands__slider-arrow--next" style="transform:scaleX(-1)" aria-label="Вперёд">
+            <svg class="brands__slider-arrow-icon" width="9" height="14">
+              <use href="img/icon/sprite.svg#brands-arrow-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="brands__catalogue">
+        <a class="brands__catalogue-link" href="#">
+          <figure class="brands__catalogue-image">
+            <img class="brands__catalogue-img" src="img/image/brands-catalogue-1.png" alt="#">
+            <figcaption class="brands__catalogue-label">Электромобили</figcaption>
+          </figure>
+        </a>
+        <a class="brands__catalogue-link" href="#">
+          <figure class="brands__catalogue-image">
+            <img class="brands__catalogue-img" src="img/image/brands-catalogue-2.png" alt="#">
+            <figcaption class="brands__catalogue-label">Гибриды</figcaption>
+          </figure>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="brands__feedback">
+      <div class="brands__feedback-container base-container ">
+        <h2 class="brands__feedback-title">Закажите консультацию</h2>
+        <span class="brands__feedback-subtitle">Оставьте данные, и мы свяжемся с вами в течении дня</span>
+        <form class="brands__feedback-form">
+          <input class="brands__feedback-input" type="text" name="name" placeholder="Имя">
+          <input class="brands__feedback-input" type="number" name="phone" placeholder="Телефон">
+          <button class="brands__feedback-submit">Свяжитесь со мной</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 @@include('components/_base/_base-footer.html')

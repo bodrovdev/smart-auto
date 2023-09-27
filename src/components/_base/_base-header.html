@@ -29,6 +29,14 @@
     <div class="modal-with-form__success"></div>
   </div>
 
+  <div class="modal-without-form" id="modal_without_form">
+    <div class="modal-without-form__wrapper">
+      <div class="modal-without-form__success">
+        <span class="modal-without-form__success-text"></span>
+      </div>
+    </div>
+  </div>
+
   <header class="page-header">
     <nav class="main-nav">
 
@@ -65,20 +73,20 @@
             </li>
           </ul>
 
-          <div class="main-nav__contacts">
-            <span class="main-nav__contacts-title display-on-mobile">Наши контакты</span>
+          <div class="main-nav__contacts display-on-mobile">
+            <span class="main-nav__contacts-title">Наши контакты</span>
             <a class="main-nav__contacts-phone" href="tel:+7 495-001-18-88">
               <svg class="main-nav__contacts-phone-icon" width="24" height="24" aria-hidden="true">
                 <use href="img/icon/sprite.svg#phone-icon"></use>
               </svg>
               <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
             </a>
-            <span class="main-nav__contacts-time display-on-mobile">Время работы: с 9 до 21 часов</span>
-            <div class="main-nav__contacts-address display-on-mobile">
+            <span class="main-nav__contacts-time">Время работы: с 9 до 21 часов</span>
+            <div class="main-nav__contacts-address">
               <svg class="main-nav__contacts-address-icon" width="24" height="24" aria-hidden="true">
                 <use href="img/icon/sprite.svg#address-icon"></use>
               </svg>
-              <span class="main-nav__contacts-address-text display-on-mobile">
+              <span class="main-nav__contacts-address-text">
                 Московская область, Красногорский
                 район Новорижское ш., 23 км,
                 вл 2 стр 1, ТРЦ «Ригамолл»
@@ -93,6 +101,13 @@
           </ul>
 
         </div>
+
+        <a class="main-nav__contacts-phone hide-on-mobile" href="tel:+7 495-001-18-88">
+          <svg class="main-nav__contacts-phone-icon" width="24" height="24" aria-hidden="true">
+            <use href="img/icon/sprite.svg#phone-icon"></use>
+          </svg>
+          <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
+        </a>
 
         <button class="main-nav__burger" id="burger">
           <span class="main-nav__burger-line"></span>

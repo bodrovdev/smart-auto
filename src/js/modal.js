@@ -37,3 +37,32 @@ window.addEventListener('load', () => {
     })
   }
 })
+
+// ? --- Модалка без формы
+window.addEventListener('load', () => {
+
+  let modal_without_form = document.getElementById('modal_without_form');
+  let modal_without_form_formset = document.querySelector('.modal-without-form__formset');
+
+  if (!(modal_without_form === null) && !(modal_without_form_formset === null)) {
+
+    // ? - Открытие
+    modal_without_form_formset.addEventListener('submit', (e) => {
+      e.preventDefault();
+      modal_without_form.classList.add('modal-without-form--active');
+      disableBodyScroll(modal_without_form);
+
+      window.addEventListener('click', (e) => {
+        if (!(document.querySelector('.modal-without-form__wrapper').contains(e.target))) {
+          modal_without_form.classList.remove('modal-without-form--active');
+          enableBodyScroll(modal_without_form);
+        }
+      })
+
+      // ? - Очищение инпутов
+      modal_without_form_formset.querySelectorAll('input, textarea').forEach(item => {
+        item.value = '';
+      })
+    })
+  }
+});

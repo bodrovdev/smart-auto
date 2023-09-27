@@ -1,0 +1,159 @@
+@use "../mixins";
+
+.brands {
+  padding: 85px 0 0 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__slider-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 0 92px 0;
+  }
+
+  &__slider {
+    position: relative;
+
+    width: 100%;
+
+    @include mixins.respond-to(notDesktop) {
+      max-width: 80%;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      max-width: 1066px;
+    }
+
+    &-arrows {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 73%;
+      user-select: none;
+      pointer-events: none;
+
+      transform: translate(-50%, -50%);
+
+
+
+      & .swiper-button-disabled {
+        opacity: 0.3;
+
+        transition: opacity 0.3s;
+      }
+    }
+
+    &-arrow {
+      user-select: all;
+      pointer-events: all;
+
+      transition: opacity 0.3s;
+    }
+  }
+
+  &__catalogue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+
+    width: 100%;
+
+    margin: 0 0 177px 0;
+
+    &-link {
+      display: flex;
+    }
+
+    &-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    &-label {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__feedback {
+
+    background: url('../img/image/feedback-bg.png');
+    background-position: bottom;
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-title {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 40px;
+
+      margin: 0 0 15px 0;
+    }
+
+    &-subtitle {
+      display: inline-block;
+
+      opacity: 0.4;
+
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+
+      margin: 0 0 30px 0;
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    &-input {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 420px;
+      background: none;
+      border: none;
+      border-bottom: 1px solid #54585f;
+      outline: none;
+
+      font-family: var(--font-family-default);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #FFF;
+      text-align: center;
+
+      padding: 0 0 8px 0;
+    }
+  }
+}
