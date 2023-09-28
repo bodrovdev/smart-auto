@@ -9,7 +9,16 @@ window.addEventListener('load', () => {
   }
 })
 
-// ? --- Показать страницу только после загрузки
-// window.addEventListener('load', () => {
-//   document.body.removeAttribute('style');
-// })
+// ? --- Запустить анимацию после загрузки страницы
+window.addEventListener('load', () => {
+  let animation_wrapper = document.querySelector('.heading__title-variants-wrapper');
+  let heading_link = document.querySelector('.heading__link');
+
+  if (!(animation_wrapper === null)) {
+    animation_wrapper.classList.add('heading__title-variants-wrapper--active');
+
+    setTimeout(() => {
+      heading_link.classList.add('heading__link--active');
+    }, 4000);
+  }
+});

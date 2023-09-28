@@ -1,4 +1,5 @@
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+// import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import { lock, unlock } from 'tua-body-scroll-lock';
 
 // ? --- Мобильное меню
 const burger = document.getElementById('burger');
@@ -9,14 +10,14 @@ function openMobileMenu() {
   mobile_menu.classList.add('main-nav__mobile-menu--active');
   document.body.classList.add('body-cover');
 
-  disableBodyScroll(mobile_menu);
+  lock(mobile_menu);
 }
 function closeMobileMenu() {
   burger.classList.remove('main-nav__burger--active');
   mobile_menu.classList.remove('main-nav__mobile-menu--active');
   document.body.classList.remove('body-cover');
 
-  enableBodyScroll(mobile_menu);
+  unlock(mobile_menu);
 }
 
 // ? - Открытие / закрытие меню по клику на бургер
