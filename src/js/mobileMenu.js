@@ -8,14 +8,14 @@ const mobile_menu = document.getElementById('mobile_menu');
 function openMobileMenu() {
   burger.classList.add('main-nav__burger--active');
   mobile_menu.classList.add('main-nav__mobile-menu--active');
-  document.body.classList.add('body-cover');
+  // document.body.classList.add('body-cover');
 
   lock(mobile_menu);
 }
 function closeMobileMenu() {
   burger.classList.remove('main-nav__burger--active');
   mobile_menu.classList.remove('main-nav__mobile-menu--active');
-  document.body.classList.remove('body-cover');
+  // document.body.classList.remove('body-cover');
 
   unlock(mobile_menu);
 }

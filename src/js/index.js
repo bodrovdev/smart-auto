@@ -19,6 +19,24 @@ window.addEventListener('load', () => {
 
     setTimeout(() => {
       heading_link.classList.add('heading__link--active');
-    }, 4000);
+    }, 5100);
+  }
+});
+
+// ? --- Анимация в блоке новости
+window.addEventListener('load', () => {
+  let news_items = document.querySelectorAll('.news__wrapper-item');
+
+  if (!(news_items === null)) {
+    news_items.forEach(item => {
+
+      item.addEventListener('mouseenter', () => {
+        news_items.forEach(news_item => {
+          news_item.classList.remove('news__wrapper-item--active');
+        });
+
+        item.classList.add('news__wrapper-item--active');
+      })
+    })
   }
 });

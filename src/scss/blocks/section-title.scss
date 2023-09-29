@@ -1,0 +1,8 @@
+@use "../mixins";
+
+.section-title {
+  font-family: var(--font-family-second);
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 40px;
+}

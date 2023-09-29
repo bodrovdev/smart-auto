@@ -1,7 +1,10 @@
 @use "../mixins";
 
 .brands {
-  padding: 85px 0 0 0;
+  background: url('../img/image/brands.png') no-repeat;
+  background-position: center bottom;
+  background-size: 100% 490px;
+  padding: 85px 0 116px 0;
 
   &__container {
     display: flex;
@@ -111,9 +114,6 @@
 
   &__feedback {
 
-    background: url('../img/image/feedback-bg.png');
-    background-position: bottom;
-
     &-container {
       display: flex;
       flex-direction: column;
@@ -146,7 +146,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 25px;
     }
 
     &-input {
@@ -168,15 +167,11 @@
       text-align: center;
 
       padding: 0 0 8px 0;
-    }
+      margin: 0 0 25px 0;
 
-    &-submit {
-      display: flex;
-      width: 250px;
-      padding: 12px 20px;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
+      &:last-of-type {
+        margin: 0 0 40px 0;
+      }
     }
   }
 }

@@ -1,0 +1,118 @@
+@use "../mixins";
+
+.work {
+  padding: 64px 0 90px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    width: 100%;
+
+    &-item {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      max-width: 1330px;
+      height: 378px;
+      background: #272D3B;
+      border: 1px solid #30363D;
+      border-radius: 8px;
+      overflow: hidden;
+
+      &:nth-child(odd) {
+        gap: 78px;
+
+        padding: 52px 56px 54px 141px;
+
+        & .work__wrapper-item-column--left {
+          order: 1;
+        }
+
+        & .work__wrapper-item-column--right {
+          order: 2;
+        }
+
+        & .work__wrapper-item-num {
+          left: -89px;
+        }
+      }
+
+      &:nth-child(even) {
+        gap: 105px;
+
+        padding: 52px 54px 52px 54px;
+
+        & .work__wrapper-item-column--left {
+          order: 2;
+        }
+
+        & .work__wrapper-item-column--right {
+          order: 1;
+        }
+
+        & .work__wrapper-item-num {
+          right: -91px;
+        }
+      }
+
+      &-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
+
+        width: 100%;
+
+        z-index: 2;
+
+        &-title {
+          font-family: var(--font-family-second);
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+        }
+
+        &-text {
+          display: inline-block;
+
+          max-width: 470px;
+
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 24px;
+          color: rgba(235, 245, 255, 0.50);
+        }
+      }
+
+      &-num {
+        position: absolute;
+        top: 50%;
+
+        font-size: 530px;
+        font-weight: 400;
+        color: #323745;
+
+        transform: translateY(-50%);
+
+        z-index: 2;
+      }
+    }
+  }
+}
