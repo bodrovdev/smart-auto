@@ -1,9 +1,121 @@
 <footer class="page-footer">
+  <section class="footer-top">
+    <div class="footer-top__container base-container">
+      <div class="footer-top__column footer-top__column--left">
+        <svg class="footer-top__column-logo-icon" width="154" height="54" alt="Логотип">
+          <use href="img/icon/sprite.svg#logo-icon"></use>
+        </svg>
+        <div class="main-nav__contacts-address">
+          <svg class="main-nav__contacts-address-icon" width="24" height="24" aria-hidden="true">
+            <use href="img/icon/sprite.svg#address-icon"></use>
+          </svg>
+          <span class="main-nav__contacts-address-text">
+            Московская область, Красногорский
+            район Новорижское ш., 23 км,
+            вл 2 стр 1, ТРЦ «Ригамолл»
+          </span>
+        </div>
+      </div>
+      <div class="footer-top__column footer-top__column--center">
+        <ul class="main-nav__mobile-menu-list">
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Автомобили</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Аксессуары и тюнинг</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Сервис</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Доставка</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Лизинг/кредит</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Франшиза</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">О нас</a>
+          </li>
+        </ul>
+
+        @@include('../_bem/_socials.html')
+      </div>
+      <div class="footer-top__column footer-top__column--right">
+        <a class="main-nav__contacts-phone" href="tel:+7 495-001-18-88">
+          <svg class="main-nav__contacts-phone-icon" width="24" height="24" aria-hidden="true">
+            <use href="img/icon/sprite.svg#phone-icon"></use>
+          </svg>
+          <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
+        </a>
+        <span class="footer-top__column-phone-subline">Время работы: с 9 до 21 часов</span>
+        <button class="brands__feedback-submit modal-with-form__button main-button" type="button">Свяжитесь со мной</button>
+      </div>
+    </div>
+  </section>
+  <section class="footer-bottom">
+    <div class="footer-bottom__container base-container">
+      <div class="footer-bottom__column footer-bottom__column--left">
+        <span class="footer-bottom__column-content">© ООО «Смарт Авто», <span id="year"></span></span>
+        <script>document.querySelector('#year').textContent = new Date().getFullYear();</script>
+        <a class="footer-bottom__column-content" href="#">Политика конфиденциальности</a>
+        <a class="footer-bottom__column-content" href="#">Пользовательское соглашение</a>
+      </div>
+      <div class="footer-bottom__column footer-bottom__column--right">
+        <a class="footer-bottom__column-link" href="https://is-art.ru/" rel="noreferrer noopener" target="_blank">
+          <svg class="footer-bottom__column-icon" width="52" height="21" aria-hidden="true">
+            <use href="img/icon/sprite.svg#isart-icon"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.25/bundled/lenis.min.js"></script>
+
+<script>
+  const lenis = new Lenis()
+
+  lenis.on('scroll', (e) => {
+    console.log(e)
+  })
+
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+
+  requestAnimationFrame(raf)
+</script>
+
+<style>
+  html.lenis {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+</style>
+
 <script src="js/index.min.js?v=1.0"></script>
-<script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
 
 </body>
 

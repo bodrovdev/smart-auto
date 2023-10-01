@@ -26,12 +26,12 @@ let brands_slider = new Swiper(".brands__slider", {
 
 let banners_slider = new Swiper(".banners__slider", {
   direction: "horizontal",
-  spaceBetween: 0,
+  spaceBetween: 100,
   slidesPerView: 1,
   speed: 1000,
 
   autoplay: {
-    delay: 5000,
+    delay: 3000,
     disableOnInteraction: false,
   },
 

@@ -1,6 +1,8 @@
 @use "../mixins";
 
 .brands {
+  position: relative;
+
   background: url('../img/image/brands.png') no-repeat;
   background-position: center bottom;
   background-size: 100% 490px;
@@ -114,6 +116,8 @@
 
   &__feedback {
 
+    overflow: hidden;
+
     &-container {
       display: flex;
       flex-direction: column;
@@ -171,6 +175,50 @@
 
       &:last-of-type {
         margin: 0 0 40px 0;
+      }
+    }
+  }
+
+  @keyframes lights {
+    0% {
+      opacity: 0.4;
+
+      transform: scale(1);
+      transform-origin: center;
+    }
+
+    50% {
+      opacity: 1;
+
+      transform: scale(1.1);
+      transform-origin: center;
+    }
+
+    100% {
+      opacity: 0.4;
+
+      transform: scale(1);
+      transform-origin: center;
+    }
+  }
+
+  &__lights {
+    position: absolute;
+    bottom: 170px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 400px;
+
+    width: 100%;
+    height: fit-content;
+    user-select: none;
+    pointer-events: none;
+
+    & svg {
+      & path {
+        animation: lights 8s ease-in-out infinite;
       }
     }
   }

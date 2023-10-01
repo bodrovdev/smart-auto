@@ -3,16 +3,16 @@
 .heading {
   position: relative;
 
-  height: 970px;
-  // height: 100dvh;
+  // height: 970px;
+  height: 100dvh;
   min-height: 500px;
 
   @include mixins.respond-to(notDesktop) {
-    height: auto;
-    // height: 100dvh;
+    // height: auto;
+    height: 100dvh;
 
-    padding: 165px 0 24px 0;
-    // padding: 0;
+    // padding: 165px 0 24px 0;
+    padding: 0;
 
     &::after {
       content: "";
@@ -32,14 +32,14 @@
     position: relative;
 
     display: flex;
-    align-items: flex-end;
-    // align-items: center;
+    // align-items: flex-end;
+    align-items: center;
     justify-content: center;
 
     height: 100%;
 
-    padding: 0 0 320px 0;
-    // padding: 0;
+    // padding: 0 0 320px 0;
+    padding: 0;
 
     @include mixins.respond-to(notDesktop) {
       padding: 0;
@@ -284,9 +284,9 @@
   }
 
   &__whatsapp {
-    position: absolute;
-    right: 0;
-    bottom: 127px;
+    position: fixed;
+    top: 50%;
+    right: 10px;
 
     display: flex;
     align-items: center;
@@ -298,9 +298,12 @@
     border-radius: 50px;
     background-color: #FFF;
 
+    transform: translateY(-50%);
     transition: width 0.3s;
 
     padding: 9px;
+
+    z-index: 99;
 
     @include mixins.respond-to(notDesktop) {
       bottom: -54px;

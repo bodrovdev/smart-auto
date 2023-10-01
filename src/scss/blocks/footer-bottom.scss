@@ -1,0 +1,38 @@
+@use "../mixins";
+
+.footer-bottom {
+  border-top: 1px solid #444850;
+
+  padding: 23px 0 19px 0;
+  margin: 27px 0 0 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__column {
+    &--left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+    }
+
+    &--right {}
+
+    &-content {
+      opacity: 0.3;
+
+      font-size: 12px;
+      font-weight: 400;
+      color: #FAFAFA;
+    }
+
+    &-icon {
+      opacity: 0.3;
+    }
+  }
+}
