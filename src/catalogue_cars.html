@@ -1,0 +1,84 @@
+@@include('components/_base/_base-header.html')
+
+<main class="page-content page-content--second">
+  <section class="catalogue-cars">
+    <div class="catalogue-cars__container base-container">
+      @@include('components/_bem/_bread.html', {
+      "text": "Автомобили",
+      })
+      <div class="catalogue-cars__wrapper">
+        <div class="catalogue-cars__column catalogue-cars__column--left">
+          <h1 class="catalogue-cars__column-title">Автомобили</h1>
+          <div class="catalogue-cars__column-content"></div>
+        </div>
+        <div class="catalogue-cars__column catalogue-cars__column--right">
+          <div class="catalogue-cars__column-select"></div>
+          <div class="catalogue-cars__column-wrapper">
+            <div class="catalogue-cars__column-wrapper-set">
+              <div class="catalogue-cars__column-wrapper-item">
+                <div class="catalogue-cars__item-top">
+                  <img class="catalogue-cars__item-top-logo" src="img/image/catalogue-brand.png" alt="#">
+                  <div class="catalogue-cars__item-name">
+                    <span class="catalogue-cars__item-type">Электромобиль</span>
+                    <h3 class="catalogue-cars__item-title">HiPhi X</h3>
+                  </div>
+                  <span class="catalogue-cars__item-price"></span>
+                  <figure class="catalogue-cars__item-image">
+                    <img class="catalogue-cars__item-img" src="img/image/catalougue-cars.png" width="337" height="154" alt="#">
+                  </figure>
+                  <div class="catalogue-cars__item-features">
+                    <div class="catalogue-cars__features-item">
+                      <h4 class="catalogue-cars__features-item-title">Мощность</h4>
+                      <div class="catalogue-cars__features-item-value">
+                        <img class="catalogue-cars__features-item-value-img" src="img/image/catalogue-value.svg" alt="#">
+                        <span class="catalogue-cars__features-item-value-text">598 л. с</span>
+                      </div>
+                    </div>
+                    <div class="catalogue-cars__features-item">
+                      <h4 class="catalogue-cars__features-item-title">Разгон до 100 км/ч</h4>
+                      <div class="catalogue-cars__features-item-value">
+                        <img class="catalogue-cars__features-item-value-img" src="img/image/catalogue-value2.svg" alt="#">
+                        <span class="catalogue-cars__features-item-value-text">3.9 секунды</span>
+                      </div>
+                    </div>
+                    <div class="catalogue-cars__features-item">
+                      <h4 class="catalogue-cars__features-item-title">Запас хода</h4>
+                      <div class="catalogue-cars__features-item-value">
+                        <img class="catalogue-cars__features-item-value-img" src="img/image/catalogue-value3.svg" alt="#">
+                        <span class="catalogue-cars__features-item-value-text">550 км</span>
+                      </div>
+                    </div>
+                    <div class="catalogue-cars__features-item">
+                      <h4 class="catalogue-cars__features-item-title">Привод</h4>
+                      <div class="catalogue-cars__features-item-value">
+                        <img class="catalogue-cars__features-item-value-img" src="img/image/catalogue-value4.svg" alt="#">
+                        <span class="catalogue-cars__features-item-value-text">4WD (Полный)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="catalogue-cars__button main-button modal-with-form__button" type="button">Заказать</button>
+                </div>
+              </div>
+              <div class="catalogue-cars__column-wrapper-item"></div>
+              <div class="catalogue-cars__column-wrapper-item"></div>
+              <div class="catalogue-cars__column-wrapper-item"></div>
+              <div class="catalogue-cars__column-wrapper-item"></div>
+              <div class="catalogue-cars__column-wrapper-item"></div>
+            </div>
+            <div class="catalogue-cars__column-wrapper-banner"></div>
+            <div class="catalogue-cars__column-wrapper-set">
+              <div class="catalogue-cars__column-wrapper-item"></div>
+              <div class="catalogue-cars__column-wrapper-item"></div>
+              <div class="catalogue-cars__column-wrapper-item"></div>
+              <div class="catalogue-cars__column-wrapper-item"></div>
+              <div class="catalogue-cars__column-wrapper-item"></div>
+              <div class="catalogue-cars__column-wrapper-item"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+@@include('components/_base/_base-footer.html')

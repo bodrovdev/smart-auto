@@ -1,0 +1,92 @@
+@use "../mixins";
+
+.catalogue-cars {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 136px;
+
+    width: 100%;
+  }
+
+  &__column {
+    &--left {
+      min-width: 250px;
+      min-height: 1069px;
+      background: #272D3B;
+    }
+
+    &--right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      width: 100%;
+    }
+
+    &-title {
+      font-family: var(--font-family-second);
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 40px;
+      color: #FFF;
+
+      margin: 0 0 22px 0;
+    }
+
+    &-select {
+      width: 151px;
+      height: 36px;
+      background: #272D3B;
+
+      margin: 0 0 16px 0;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 20px;
+
+      width: 100%;
+
+      &-set {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        grid-auto-flow: row;
+        gap: 20px 40px;
+
+        width: 100%;
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        width: 100%;
+        height: 458px;
+        background: #272D3B;
+
+        padding: 24px;
+      }
+
+      &-banner {
+        width: 1233px;
+        height: 500px;
+        background: #272D3B;
+      }
+    }
+  }
+}

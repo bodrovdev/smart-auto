@@ -2,4 +2,14 @@
 
 .page-content {
   flex-grow: 1;
+
+  &--second {
+    @include mixins.respond-to(notDesktop) {
+      padding: 88px 0 0 0;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      padding: 138px 0 0 0;
+    }
+  }
 }
