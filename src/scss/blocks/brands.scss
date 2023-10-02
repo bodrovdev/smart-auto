@@ -8,6 +8,12 @@
   background-size: 100% 490px;
   padding: 85px 0 116px 0;
 
+  @include mixins.respond-to(notDesktop) {
+    background: none;
+
+    padding: 20px 0 60px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -22,6 +28,10 @@
     max-width: 100%;
 
     margin: 0 0 92px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      margin: 0 0 132px 0;
+    }
   }
 
   &__slider {
@@ -30,11 +40,23 @@
     width: 100%;
 
     @include mixins.respond-to(notDesktop) {
-      max-width: 80%;
+      max-width: 90%;
     }
 
     @include mixins.respond-to(desktopD) {
       max-width: 1066px;
+    }
+
+    &-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: auto;
+
+      @include mixins.respond-to(notDesktop) {
+        max-width: 120px;
+      }
     }
 
     &-arrows {
@@ -81,8 +103,14 @@
 
     width: 100%;
 
-
     margin: 0 0 177px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+      gap: 60px;
+
+      margin: 0 0 42px 0;
+    }
 
     &-link {
       display: flex;
@@ -95,6 +123,17 @@
         opacity: 1;
         transition: 1s ease;
       }
+
+      @include mixins.respond-to(notDesktop) {
+
+        opacity: 1;
+
+        &:nth-child(1) {
+          & .brands__catalogue-img {
+            margin: 0 0 40px 0;
+          }
+        }
+      }
     }
 
     &-image {
@@ -103,6 +142,16 @@
       align-items: center;
       justify-content: center;
       gap: 25px;
+
+      @include mixins.respond-to(notDesktop) {
+        gap: 0;
+      }
+    }
+
+    &-img {
+      @include mixins.respond-to(notDesktop) {
+        width: 100%;
+      }
     }
 
     &-label {
@@ -118,6 +167,12 @@
 
     overflow: hidden;
 
+    @include mixins.respond-to(notDesktop) {
+      background: url('../img/image/brands.png') no-repeat;
+      background-position: center center;
+      background-size: contain
+    }
+
     &-container {
       display: flex;
       flex-direction: column;
@@ -131,6 +186,11 @@
       line-height: 40px;
 
       margin: 0 0 15px 0;
+
+      @include mixins.respond-to(notDesktop) {
+        font-size: 24px;
+        text-align: center;
+      }
     }
 
     &-subtitle {
@@ -143,6 +203,13 @@
       line-height: 24px;
 
       margin: 0 0 30px 0;
+
+      @include mixins.respond-to(notDesktop) {
+        font-size: 16px;
+        text-align: center;
+
+        margin: 0 0 13px 0;
+      }
     }
 
     &-form {
@@ -175,6 +242,14 @@
 
       &:last-of-type {
         margin: 0 0 40px 0;
+      }
+
+      @include mixins.respond-to(notDesktop) {
+        margin: 0 0 16px 0;
+
+        &:last-of-type {
+          margin: 0 0 24px 0;
+        }
       }
     }
   }
@@ -216,6 +291,10 @@
     height: fit-content;
     user-select: none;
     pointer-events: none;
+
+    @include mixins.respond-to(notDesktop) {
+      display: none;
+    }
 
     & svg {
       & path {

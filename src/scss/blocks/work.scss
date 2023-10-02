@@ -3,6 +3,10 @@
 .work {
   padding: 64px 0 90px 0;
 
+  @include mixins.respond-to(notDesktop) {
+    padding: 40px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -71,6 +75,16 @@
         }
       }
 
+      @include mixins.respond-to(notDesktop) {
+        flex-direction: column;
+
+        width: 91%;
+        max-width: none;
+        height: auto;
+
+        padding: 18px 14px 14px 14px !important;
+      }
+
       &-column {
         display: flex;
         flex-direction: column;
@@ -98,6 +112,12 @@
           font-weight: 400;
           line-height: 24px;
           color: rgba(235, 245, 255, 0.50);
+        }
+
+        &-img {
+          @include mixins.respond-to(notDesktop) {
+            width: 100%;
+          }
         }
       }
 

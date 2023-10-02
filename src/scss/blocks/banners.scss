@@ -1,7 +1,11 @@
 @use "../mixins";
 
 .banners {
-  &__container {}
+  &__container {
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
+    }
+  }
 
   &__slider {
     width: 100%;
@@ -14,13 +18,23 @@
       justify-content: flex-end;
 
       height: auto;
+      border-radius: 8px;
+      border: 1px solid #272D3B;
 
       padding: 0 0 61px 0;
+
+      @include mixins.respond-to(notDesktop) {
+        padding: 20px 25px;
+      }
 
       &-icon {
         max-width: 100%;
 
         margin: 0 0 35px 0;
+
+        @include mixins.respond-to(notDesktop) {
+          margin: 0 0 15px 0;
+        }
       }
 
       &-title {
@@ -30,6 +44,15 @@
         line-height: 57px;
 
         margin: 0 0 14px 0;
+
+        @include mixins.respond-to(notDesktop) {
+          font-size: 32px;
+          line-height: 38px;
+
+          text-align: center;
+
+          margin: 0 0 6px 0;
+        }
       }
 
       &-subtitle {
@@ -41,10 +64,21 @@
         color: #D9D9D9;
 
         margin: 0 0 21px 0;
+
+        @include mixins.respond-to(notDesktop) {
+          font-size: 24px;
+          line-height: 28px;
+
+          margin: 0 0 37px 0;
+        }
       }
 
       &-link {
         margin: 0 0 64px 0;
+
+        @include mixins.respond-to(notDesktop) {
+          margin: 0 0 28px 0;
+        }
       }
     }
 
@@ -53,6 +87,10 @@
       right: 0 !important;
       bottom: 53px !important;
       left: 0 !important;
+
+      @include mixins.respond-to(notDesktop) {
+        bottom: 14px !important;
+      }
 
       & .swiper-pagination-bullet {
         width: 129px;
@@ -63,6 +101,10 @@
         transition: background 0.6s;
 
         margin: 0 20px 0 0 !important;
+
+        @include mixins.respond-to(notDesktop) {
+          width: 53px;
+        }
 
         &:last-of-type {
           margin: 0 !important;
@@ -87,5 +129,9 @@
   .banners__slider-wrapper,
   .banners__slider-slide {
     min-height: 915px;
+
+    @include mixins.respond-to(notDesktop) {
+      min-height: 569px;
+    }
   }
 }

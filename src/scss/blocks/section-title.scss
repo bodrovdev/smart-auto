@@ -5,4 +5,9 @@
   font-size: 32px;
   font-weight: 300;
   line-height: 40px;
+
+  @include mixins.respond-to(notDesktop) {
+    font-size: 24px;
+    text-align: center;
+  }
 }

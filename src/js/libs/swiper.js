@@ -5,12 +5,12 @@ let brands_slider = new Swiper(".brands__slider", {
 
   breakpoints: {
     320: {
-      spaceBetween: 28,
-      slidesPerView: 3,
+      spaceBetween: 0,
+      slidesPerView: "auto",
     },
     768: {
       spaceBetween: 28,
-      slidesPerView: 4,
+      slidesPerView: 3,
     },
     1280: {
       spaceBetween: 112,
