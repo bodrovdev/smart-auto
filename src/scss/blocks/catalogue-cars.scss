@@ -20,7 +20,6 @@
       &--left {
         min-width: 250px;
         min-height: 1069px;
-        background: #272D3B;
       }
 
       &--right {
@@ -43,15 +42,209 @@
 
       margin: 0 0 22px 0;
     }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 24px;
+
+      width: 100%;
+
+      & .berocket_single_filter_widget {
+        width: 100%;
+      }
+
+      & .bapf_sfilter {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 21px;
+
+        width: 100%;
+      }
+
+      & .bapf_head {
+        & h3 {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0.5px;
+        }
+      }
+
+      & .bapf_body {
+        width: 100%;
+
+        & ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 14px;
+        }
+
+        & input {
+          position: absolute;
+
+          width: 1px;
+          height: 1px;
+          border: 0;
+          padding: 0;
+          clip-path: inset(100%);
+          clip: rect(0 0 0 0);
+          overflow: hidden;
+
+          white-space: nowrap;
+
+          margin: -1px;
+        }
+
+        & input:checked~label::after {
+          transform: translateY(-50%) scale(1);
+          transition: transform 0.3s;
+        }
+
+        & label {
+          position: relative;
+
+          display: inline-block;
+
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0.5px;
+
+          padding: 0 0 0 37px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            width: 21px;
+            height: 21px;
+            border: 1px solid #FFF;
+            border-radius: 2px;
+
+            transform: translateY(-50%);
+
+            z-index: 1;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            width: 21px;
+            height: 21px;
+            background: url('../img/image/check.svg') no-repeat;
+            background-size: 21px 21px;
+
+            transform: translateY(-50%) scale(0);
+            transition: transform 0.3s;
+
+            z-index: 2;
+          }
+        }
+      }
+
+      & .bapf_slidr_all {
+
+        & .bapf_from,
+        .bapf_to {
+          position: absolute;
+
+          width: 1px;
+          height: 1px;
+          border: 0;
+          padding: 0;
+          clip-path: inset(100%);
+          clip: rect(0 0 0 0);
+          overflow: hidden;
+
+          white-space: nowrap;
+
+          margin: -1px;
+        }
+
+        & .bapf_slidr_main {
+          width: 100%;
+          height: 4px;
+          background-color: #414141 !important;
+          border-radius: 2px;
+        }
+
+        & .ui-slider-range {
+          background-color: #D6D6D6 !important;
+        }
+
+        & .ui-slider-handle {
+          width: 6px !important;
+          height: 6px !important;
+          background-color: #FFF !important;
+          border-radius: 50% !important;
+        }
+      }
+    }
   }
 
   &__main {
-    &-select {
-      width: 151px;
-      height: 36px;
-      background: #272D3B;
+
+    &-select-wrapper {
+      position: relative;
 
       margin: 0 0 16px 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 14px;
+        right: 10px;
+
+        width: 14px;
+        height: 9px;
+        background: url('../img/image/select-arrow.svg') no-repeat;
+        background-size: 14px 9px;
+        user-select: none;
+        pointer-events: none;
+
+        z-index: 2;
+      }
+
+      & select {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-width: 148px;
+        height: 36px;
+        background: #272D3B;
+        border: none;
+        border-radius: 2px;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        font-size: 16px;
+        font-weight: 500;
+        color: #E0E4E7;
+
+        padding: 10px 30px 10px 20px;
+
+        z-index: 1;
+
+        & option {
+          font-size: 16px;
+          font-weight: 500;
+          color: #E0E4E7;
+        }
+      }
     }
 
     &-wrapper {
@@ -81,7 +274,7 @@
       gap: 10px;
 
       width: 100%;
-      height: 458px;
+      height: 452px;
       background: #272D3B;
       border-radius: 16px;
 
@@ -143,8 +336,6 @@
         justify-content: space-between;
         gap: 35px;
 
-        // max-width: 290px;
-
         &-column {
           display: flex;
           flex-direction: column;
@@ -166,10 +357,76 @@
       align-items: center;
       justify-content: flex-start;
 
-      width: 1233px;
+      width: 100%;
       height: 500px;
       background: rgba(255, 231, 106, 0.96);
       border-radius: 8px;
+
+      &-info {
+        flex-shrink: 0;
+
+        height: 100%;
+
+        padding: 46px 0 63px 56px;
+
+        & .catalogue-cars__main-item-type,
+        .catalogue-cars__main-item-title,
+        .catalogue-cars__main-item-price,
+        .catalogue-cars__features-item-title,
+        .catalogue-cars__features-item-value-text,
+        .catalogue-cars__main-item-button {
+          color: #0B101A;
+        }
+
+        & .catalogue-cars__main-item-top {
+          margin: 0 0 17px 0;
+        }
+
+        & .catalogue-cars__main-item-name {
+          gap: 0;
+        }
+
+        & .catalogue-cars__main-item-type {
+          font-size: 18px;
+          line-height: 18px;
+        }
+
+        & .catalogue-cars__main-item-title {
+          font-size: 64px;
+          font-weight: 700;
+          line-height: 120%;
+        }
+
+        & .catalogue-cars__main-item-price {
+          display: inline-block;
+
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 18px;
+
+          margin: 0 0 73px 0;
+        }
+
+        & .catalogue-cars__main-item-features {
+          justify-content: center;
+          gap: 24px;
+
+          margin: 0 0 42px 0;
+        }
+
+        & .catalogue-cars__main-item-button {
+          width: 250px !important;
+          border: 1px solid #0B101A !important;
+        }
+      }
+
+      &-img {
+        flex-shrink: 0;
+
+        width: 830px;
+        height: 500px;
+        object-fit: contain;
+      }
     }
   }
 
