@@ -1,0 +1,98 @@
+@@include('components/_base/_base-header.html')
+
+<main class="page-content page-content--second">
+  <section class="single-cars">
+    <div class="single-cars__container base-container">
+      @@include('components/_bem/_bread.html', {
+      "text": "Автомобили",
+      })
+      <div class="single-cars__wrapper">
+        <div class="single-cars__wrapper-column single-cars__wrapper-column--left">
+          <div class="single-cars__display">
+            <div class="single-cars__display-title">
+              <img class="single-cars__display-title-logo" src="./img/image/single-brand.svg" alt="#">
+              <div class="single-cars__display-title-name">
+                <span class="single-cars__display-title-type">Электромобиль</span>
+                <h1 class="single-cars__display-title-text">HiPhi X</h1>
+              </div>
+            </div>
+
+            <figure class="single-cars__display-image">
+              <img class="single-cars__display-img" src="" alt="#">
+            </figure>
+          </div>
+        </div>
+
+        <div class="single-cars__wrapper-column single-cars__wrapper-column--right">
+          <div class="single-cars__options">
+            <h2 class="single-cars__options-title">Доступные варианты</h2>
+            <span class="single-cars__options-select-label">Комплектация</span>
+            <div class="single-cars__options-select-wrapper">
+              <select class="single-cars__options-select">
+                <option data-img="https://files.catbox.moe/9jgd88.png" data-type-price="10">HiPhi X Deluxe Edition 6 местный</option>
+                <option data-img="https://files.catbox.moe/up2wzu.png" data-type-price="20">HiPhi X Flagship 6 местный</option>
+                <option data-img="https://files.catbox.moe/k4083e.png" data-type-price="30">HiPhi X Flagship 4 местный</option>
+              </select>
+            </div>
+
+            <h2 class="single-cars__options-title">Характеристики</h2>
+
+            <div class="single-cars__options-item body_color">
+              <span class="single-cars__options-item-label">Цвет кузова</span>
+              <div class="single-cars__options-item-buttons">
+                <button class="single-cars__options-item-button" data-img="" data-atr_name="Чёрный" data-art_price="10000" style="background: #0B101A;">
+                </button>
+                <button class="single-cars__options-item-button" data-img="" data-atr_name="Жёлтый" data-art_price="20000" style="background: #ffe76a;">
+                </button>
+                <button class="single-cars__options-item-button" data-img="" data-atr_name="Белый" data-art_price="30000" style="background: #FFFFFF;">
+                </button>
+                <button class="single-cars__options-item-button" data-img="" data-atr_name="Серый" data-art_price="40000" style="background: #8e9094;">
+                </button>
+              </div>
+              <div class="single-cars__options-price">
+                <span class="single-cars__options-price-name"></span>
+                <span class="single-cars__options-price-num">+<span></span>₽</span>
+              </div>
+            </div>
+
+            <div class="single-cars__options-item interior_color">
+              <span class="single-cars__options-item-label">Цвет салона</span>
+              <div class="single-cars__options-item-buttons">
+                <button class="single-cars__options-item-button" data-img="" data-atr_name="" data-art_price="" style="background: #0B101A;"></button>
+                <button class="single-cars__options-item-button" data-img="" data-atr_name="" data-art_price="" style="background: #FFFFFF;"></button>
+              </div>
+              <div class="single-cars__options-price">
+                <span class="single-cars__options-price-name"></span>
+                <span class="single-cars__options-price-num">+<span></span>₽</span>
+              </div>
+            </div>
+
+            <div class="single-cars__options-item wheels">
+              <span class="single-cars__options-item-label">Колеса</span>
+              <div class="single-cars__options-item-buttons">
+                <button class="single-cars__options-item-button" data-img="" data-atr_name="" data-art_price="" style="background: url('./img/image/wheel.png');"></button>
+                <button class="single-cars__options-item-button" data-img="" data-atr_name="" data-art_price="" style="background: url('./img/image/wheel.png');"></button>
+                <button class="single-cars__options-item-button" data-img="" data-atr_name="" data-art_price="" style="background: url('./img/image/wheel.png');"></button>
+              </div>
+              <div class="single-cars__options-price">
+                <span class="single-cars__options-price-name"></span>
+                <span class="single-cars__options-price-num">+<span></span>₽</span>
+              </div>
+            </div>
+
+            <div class="single-cars__options-result" data-initial_price="0">
+              <div class="single-cars__options-result-top">
+                <span class="single-cars__options-result-label"></span>
+                <span class="single-cars__options-result-number"><span></span>₽</span>
+              </div>
+              <button class="single-cars__options-result-button main-button modal-with-form__button" type="button">Заказать</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+@@include('components/_base/_base-footer.html')
