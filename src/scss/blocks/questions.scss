@@ -1,0 +1,81 @@
+@use "../mixins";
+
+.questions {
+  &__tabs {
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 30px;
+
+      width: 100%;
+    }
+
+    &-item {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      width: 100%;
+      height: 86px;
+      border-bottom: 1px solid #373c4a;
+      overflow: hidden;
+      cursor: pointer;
+
+      transition: all 0.3s;
+
+      &:last-child {
+        border: none;
+      }
+
+      &--active {
+        & .questions__tabs-item-icon {
+          transform: rotate(90deg) !important;
+          transition: transform 0.3s;
+        }
+      }
+
+      &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 86px;
+        box-sizing: border-box;
+
+        font-family: var(--font-family-second);
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 40px;
+        color: #FFF;
+
+        padding: 30px 0;
+
+        @include mixins.respond-to(notDesktop) {
+          padding: 13px 6px;
+        }
+      }
+
+      &-name {
+        user-select: none;
+      }
+
+      &-content {
+        padding: 15px 100px 30px 0;
+
+        & p {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 24px;
+          color: rgba(235, 245, 255, 0.50);
+        }
+      }
+    }
+  }
+}

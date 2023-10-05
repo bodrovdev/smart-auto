@@ -10,6 +10,7 @@
     gap: 50px;
 
     padding: 25px 0 0 0;
+    margin: 0 0 75px 0;
 
     &-column {
       &-left {
@@ -18,6 +19,9 @@
         align-items: flex-start;
         justify-content: flex-start;
         gap: 46px;
+        flex-shrink: 1;
+
+        width: 57%;
       }
 
       &-right {}
@@ -117,7 +121,7 @@
 
           width: 100%;
           min-width: 148px;
-          min-height: 36px;
+          min-height: 48px;
           background: #272D3B;
           border: none;
           border-radius: 2px;
@@ -159,6 +163,16 @@
       }
     }
 
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 30px;
+
+      margin: 0 0 32px 0;
+    }
+
     &-item {
       display: flex;
       flex-direction: column;
@@ -193,6 +207,185 @@
 
         transition: transform 0.3s ease-in-out;
       }
+
+      &-price {
+        font-family: var(--font-family-second);
+        font-size: 20px;
+        font-weight: 400;
+        color: #E0E4E7;
+
+        &-num {
+          &--yellow {
+            color: #f5df67 !important;
+          }
+        }
+      }
+    }
+
+    &-result {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 35px;
+
+      width: 100%;
+      border-top: 1px solid #373c4a;
+
+      padding: 31px 0 0 0;
+
+      &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 170px;
+
+        width: 100%;
+      }
+
+      &-label,
+      .single-cars__options-result-num {
+        font-family: var(--font-family-second);
+        font-size: 32px;
+        line-height: 40px;
+        color: #FFF;
+      }
+
+      &-label {
+        font-weight: 300;
+      }
+
+      &-num {
+        font-weight: 700;
+      }
+
+      &-button {
+        width: 315px;
+
+        color: #0B101A;
+      }
+    }
+  }
+
+  &__banner-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    margin: 0 0 60px 0;
+  }
+
+  &__banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 0 60px 0;
+
+    &-title {
+      text-align: center;
+
+      margin: 0 0 30px 0;
+    }
+
+    &-text {
+      display: inline-block;
+
+      max-width: 810px;
+
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      color: rgba(235, 245, 255, 0.50);
+      text-align: center;
+
+      margin: 0 0 80px 0;
+    }
+
+    &-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 15px;
+
+      min-height: 626px;
+      border-radius: 8px;
+      border: 1px solid #30363D;
+      box-shadow: 0px 22px 17px 0px rgba(0, 0, 0, 0.02), 0px 13px 10px 0px rgba(0, 0, 0, 0.02), 0px 7px 5px 0px rgba(0, 0, 0, 0.02), 0px 3px 2px 0px rgba(0, 0, 0, 0.04);
+
+      padding: 25px;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+
+      width: 288px;
+      height: 227px;
+      border: 1px solid #30363D;
+      border-radius: 8px;
+      background: #161B22;
+      padding: 40px 10px 30px 10px;
+
+      &-icon {
+        width: 125px;
+        height: 82px;
+        object-fit: contain;
+      }
+
+      &-text {
+        margin: auto 0 0 0;
+      }
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+
+      width: 100%;
+    }
+
+    &-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 374px;
+      height: 338px;
+
+      &:nth-child(3n+3) {
+        width: 790px;
+        height: 338px;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
