@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+
+  <link href="css/style.min.css?v=1.0" rel="stylesheet">
+  <title></title>
+</head>
+
+<body style="overflow: hidden;">
+
+  <div class="modal-with-form" id="modal_with_form">
+    <div class="modal-with-form__wrapper">
+      <div class="modal-with-form__inner">
+        <form class="modal-with-form__formset" id="modal_with_form_formset">
+          <input class="modal-with-form__formset-input" type="text" placeholder="">
+          <input class="modal-with-form__formset-input" type="tel" placeholder="">
+          <button class="modal-with-form__formset-submit" type="submit"></button>
+        </form>
+      </div>
+    </div>
+    <div class="modal-with-form__success"></div>
+  </div>
+
+  <div class="modal-without-form" id="modal_without_form">
+    <div class="modal-without-form__wrapper">
+      <div class="modal-without-form__success">
+        <span class="modal-without-form__success-text"></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="page-header">
+    <nav class="main-nav">
+
+      <div class="main-nav__container base-container">
+
+        <a class="main-nav__logo-link" href="index.html">
+          <svg class="main-nav__logo-icon" width="154" height="54" alt="Логотип">
+            <use href="img/icon/sprite.svg#logo-icon"></use>
+          </svg>
+        </a>
+
+        <div class="main-nav__mobile-menu" id="mobile_menu">
+          <ul class="main-nav__mobile-menu-list">
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Автомобили</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Аксессуары и тюнинг</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Сервис</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Доставка</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Лизинг/кредит</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Франшиза</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">О нас</a>
+            </li>
+          </ul>
+
+          <div class="main-nav__contacts display-on-mobile">
+            <span class="main-nav__contacts-title">Наши контакты</span>
+            <a class="main-nav__contacts-phone" href="tel:+7 495-001-18-88">
+              <svg class="main-nav__contacts-phone-icon" width="24" height="24" aria-hidden="true">
+                <use href="img/icon/sprite.svg#phone-icon"></use>
+              </svg>
+              <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
+            </a>
+            <span class="main-nav__contacts-time">Время работы: с 9 до 21 часов</span>
+            <div class="main-nav__contacts-address">
+              <svg class="main-nav__contacts-address-icon" width="24" height="24" aria-hidden="true">
+                <use href="img/icon/sprite.svg#address-icon"></use>
+              </svg>
+              <span class="main-nav__contacts-address-text">
+                Московская область, Красногорский
+                район Новорижское ш., 23 км,
+                вл 2 стр 1, ТРЦ «Ригамолл»
+              </span>
+            </div>
+          </div>
+
+          <ul class="socials">
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials1.svg" alt="#">
+    </a>
+  </li>
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials2.svg" alt="#">
+    </a>
+  </li>
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials3.svg" alt="#">
+    </a>
+  </li>
+</ul>
+
+          <ul class="main-nav__socials display-on-mobile">
+            <li class="main-nav__socials-item">
+              <a class="main-nav__socials-link" href="#">
+                <img class="main-nav__socials-img" src="img/image/socials1.svg" alt="#">
+              </a>
+            </li>
+            <li class="main-nav__socials-item">
+              <a class="main-nav__socials-link" href="#">
+                <img class="main-nav__socials-img" src="img/image/socials2.svg" alt="#">
+              </a>
+            </li>
+            <li class="main-nav__socials-item">
+              <a class="main-nav__socials-link" href="#">
+                <img class="main-nav__socials-img" src="img/image/socials3.svg" alt="#">
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+        <a class="main-nav__contacts-phone hide-on-mobile" href="tel:+7 495-001-18-88">
+          <svg class="main-nav__contacts-phone-icon" width="24" height="24" aria-hidden="true">
+            <use href="img/icon/sprite.svg#phone-icon"></use>
+          </svg>
+          <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
+        </a>
+
+        <button class="main-nav__burger" id="burger">
+          <span class="main-nav__burger-line"></span>
+        </button>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="preloader preloader--active">
+    <div class="preloader__circle">
+
+    </div>
+  </div>
+
+  <style>
+    .preloader {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      height: 100vh;
+      background-color: #0B101A;
+      opacity: 0;
+      user-select: none;
+      pointer-events: none;
+
+      transition: opacity 0.3s;
+
+      z-index: 100;
+    }
+
+    .preloader--active {
+      opacity: 100%;
+
+      user-select: all;
+      pointer-events: all;
+
+      transition: opacity 0.3s;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .preloader__circle {
+      width: 120px;
+      height: 120px;
+      border: 16px solid #FFF;
+      border-top: 16px solid #FFE76AF5;
+      border-radius: 50%;
+
+      animation: spin 2s linear infinite;
+    }
+  </style>
+
+  <script>
+    window.addEventListener('load', () => {
+      document.querySelector('.preloader').classList.remove('preloader--active');
+      document.body.setAttribute('style', '');
+    })
+  </script>
+
+<main class="page-content page-content--second">
+  <section class="single-cars">
+    <div class="single-cars__container base-container">
+
+      <div class="breadcrumb">
+  <nav class="woocommerce-breadcrumb">
+    <a href="index.html">Главная</a>
+    Автомобили
+  </nav>
+</div>
+
+      <div class="single-cars__wrapper">
+        <div class="single-cars__wrapper-column single-cars__wrapper-column--left">
+          <div class="single-cars__display">
+            <div class="single-cars__display-title">
+              <img class="single-cars__display-title-logo" src="./img/image/single-brand.svg" alt="#">
+              <div class="single-cars__display-title-name">
+                <span class="single-cars__display-title-type">Электромобиль</span>
+                <h1 class="single-cars__display-title-text">HiPhi X</h1>
+              </div>
+            </div>
+
+            <figure class="single-cars__display-image">
+              <img class="single-cars__display-img" src="./img/image/single-car.png" alt="#">
+            </figure>
+          </div>
+        </div>
+
+        <div class="single-cars__wrapper-column single-cars__wrapper-column--right">
+          <div class="single-cars__options">
+            <h2 class="single-cars__options-title">Доступные варианты</h2>
+            <span class="single-cars__options-select-label">Комплектация</span>
+            <div class="single-cars__options-select-wrapper">
+
+              <select class="single-cars__options-select">
+                <option data-options_set="1" data-img="https://files.catbox.moe/9jgd88.png">HiPhi X Deluxe Edition 6 местный</option>
+                <option data-options_set="2" data-img="https://files.catbox.moe/up2wzu.png">HiPhi X Flagship 6 местный</option>
+                <option data-options_set="3" data-img="https://files.catbox.moe/k4083e.png">HiPhi X Flagship 4 местный</option>
+              </select>
+
+            </div>
+
+            <h2 class="single-cars__options-title">Характеристики</h2>
+
+            <div class="single-cars__options-wrapper">
+              <div class="single-cars__options-item" data-options_set="1">
+                <span class="single-cars__options-item-label">Цвет кузова</span>
+                <div class="single-cars__options-item-buttons">
+                  <button class="single-cars__options-item-button" style="background: #0B101A;">
+                  </button>
+                  <button class="single-cars__options-item-button" style="background: #ffe76a;">
+                  </button>
+                  <button class="single-cars__options-item-button" style="background: #FFFFFF;">
+                  </button>
+                  <button class="single-cars__options-item-button" style="background: #8e9094;">
+                  </button>
+                </div>
+                <div class="single-cars__options-item-price">
+                  <span class="single-cars__options-item-price-name">Желтый</span>
+                  <span class="single-cars__options-item-price-num">+ <span class="single-cars__options-item-price-num--yellow">0</span> ₽</span>
+                </div>
+              </div>
+              <div class="single-cars__options-item" data-options_set="1">
+                <span class="single-cars__options-item-label">Цвет салона</span>
+                <div class="single-cars__options-item-buttons">
+                  <button class="single-cars__options-item-button" style="background: #0B101A;"></button>
+                  <button class="single-cars__options-item-button" style="background: #FFFFFF;"></button>
+                </div>
+                <div class="single-cars__options-item-price">
+                  <span class="single-cars__options-item-price-name">Чёрный</span>
+                  <span class="single-cars__options-item-price-num">+ <span class="single-cars__options-item-price-num--yellow">0</span> ₽</span>
+                </div>
+              </div>
+              <div class="single-cars__options-item" data-options_set="1">
+                <span class="single-cars__options-item-label">Колеса</span>
+                <div class="single-cars__options-item-buttons">
+                  <button class="single-cars__options-item-button" style="background: url('./img/image/wheel.png');"></button>
+                  <button class="single-cars__options-item-button" style="background: url('./img/image/wheel.png');"></button>
+                  <button class="single-cars__options-item-button" style="background: url('./img/image/wheel.png');"></button>
+                </div>
+                <div class="single-cars__options-item-price">
+                  <span class="single-cars__options-item-price-name">22 дюймовые (Standart)</span>
+                  <span class="single-cars__options-item-price-num">+ <span class="single-cars__options-item-price-num--yellow">0</span> ₽</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="single-cars__options-result">
+              <div class="single-cars__options-result-top">
+                <span class="single-cars__options-result-label">Итого</span>
+                <span class="single-cars__options-result-num"><span id="result_price">7 500 000 </span>₽</span>
+              </div>
+              <button class="single-cars__options-result-button main-button main-button--yellow modal-with-form__button" type="button">Заказать</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <figure class="single-cars__banner-image">
+      <img class="single-cars__banner-img" src="img/image/single-banner.png" alt="#">
+    </figure>
+
+    <div class="single-cars__container base-container">
+
+      <div class="single-cars__features">
+        <h2 class="single-cars__features-title section-title">Идеальное сочетание суперкара и внедорожника</h2>
+        <p class="single-cars__features-text">
+          E-пропорция — в которой используется конструкция с перемещением точки капота вперед и лобового стекла с большим углом наклона 65 градусов, образующим форму суперкара. 22-дюймовые колеса в сочетании с полным приводом и регулируемой пневматической
+          подвеской создают образ внедорожника.
+        </p>
+        <div class="single-cars__features-wrapper" style="background: url('./img/image/features-wrapper.png') no-repeat; background-position: center;">
+          <div class="single-cars__features-item">
+            <img class="single-cars__features-item-icon" src="./img/image/single-features.svg" alt="#">
+            <span class="single-cars__features-item-text">Разгон 3.9 сек</span>
+          </div>
+          <div class="single-cars__features-item">
+            <img class="single-cars__features-item-icon" src="./img/image/single-features.svg" alt="#">
+            <span class="single-cars__features-item-text">Мощность 598 л. с.</span>
+          </div>
+          <div class="single-cars__features-item">
+            <img class="single-cars__features-item-icon" src="./img/image/single-features.svg" alt="#">
+            <span class="single-cars__features-item-text">Батарея большой емкости</span>
+          </div>
+          <div class="single-cars__features-item">
+            <img class="single-cars__features-item-icon" src="./img/image/single-features.svg" alt="#">
+            <span class="single-cars__features-item-text">Привод 4WD (Полный)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="single-cars__gallery">
+        <h2 class="single-cars__gallery-title section-title">Фотографиии кузова и салона HiPhi X</h2>
+        <div class="single-cars__gallery-wrapper">
+          <figure class="single-cars__gallery-image">
+            <img class="single-cars__gallery-img" src="./img/image/single-gallery.png" alt="#">
+          </figure>
+          <figure class="single-cars__gallery-image">
+            <img class="single-cars__gallery-img" src="./img/image/single-gallery.png" alt="#">
+          </figure>
+          <figure class="single-cars__gallery-image">
+            <img class="single-cars__gallery-img" src="./img/image/single-gallery.png" alt="#">
+          </figure>
+          <figure class="single-cars__gallery-image">
+            <img class="single-cars__gallery-img" src="./img/image/single-gallery.png" alt="#">
+          </figure>
+          <figure class="single-cars__gallery-image">
+            <img class="single-cars__gallery-img" src="./img/image/single-gallery.png" alt="#">
+          </figure>
+          <figure class="single-cars__gallery-image">
+            <img class="single-cars__gallery-img" src="./img/image/single-gallery.png" alt="#">
+          </figure>
+        </div>
+      </div>
+
+      <div class="single-cars__tabs">
+        <h2 class="single-cars__tabs-title section-title">Технические характеристики комплектаций HiPhi X</h2>
+        <div class="single-cars__tabs-wrapper">
+          <div class="single-cars__tabs-buttons">
+            <button class="single-cars__tabs-button" type="button">HiPhi X Deluxe Edition 6 местный</button>
+            <button class="single-cars__tabs-button" type="button">HiPhi X Deluxe Edition 6 местный</button>
+            <button class="single-cars__tabs-button" type="button">HiPhi X Deluxe Edition 6 местный</button>
+          </div>
+          <div class="single-cars__tabs-body">
+            <div class="single-cars__tabs-body-item">
+              <div class="single-cars__tabs-item-content">
+                <h3 class="single-cars__tabs-item-content-title">Разгон до 100 км/ч</h3>
+                <span class="single-cars__tabs-item-content-text">3.9 секунды</span>
+              </div>
+              <div class="single-cars__tabs-item-content">
+                <h3 class="single-cars__tabs-item-content-title">Разгон до 100 км/ч</h3>
+                <span class="single-cars__tabs-item-content-text">3.9 секунды</span>
+              </div>
+              <div class="single-cars__tabs-item-content">
+                <h3 class="single-cars__tabs-item-content-title">Разгон до 100 км/ч</h3>
+                <span class="single-cars__tabs-item-content-text">3.9 секунды</span>
+              </div>
+            </div>
+            <div class="single-cars__tabs-body-item">
+              <div class="single-cars__tabs-item-content">
+                <h3 class="single-cars__tabs-item-content-title">Двигатель</h3>
+                <span class="single-cars__tabs-item-content-text">598 л. с</span>
+              </div>
+              <div class="single-cars__tabs-item-content">
+                <h3 class="single-cars__tabs-item-content-title">Двигатель</h3>
+                <span class="single-cars__tabs-item-content-text">598 л. с</span>
+              </div>/div>
+              <div class="single-cars__tabs-item-content">
+                <h3 class="single-cars__tabs-item-content-title">Двигатель</h3>
+                <span class="single-cars__tabs-item-content-text">598 л. с</span>
+              </div>
+            </div>
+            <div class="single-cars__tabs-body-item">
+              <div class="single-cars__tabs-item-content">
+                <h3 class="single-cars__tabs-item-content-title">Запас хода</h3>
+                <span class="single-cars__tabs-item-content-text">550 км</span>
+              </div>
+              <div class="single-cars__tabs-item-content">
+                <h3 class="single-cars__tabs-item-content-title">Запас хода</h3>
+                <span class="single-cars__tabs-item-content-text">550 км</span>
+              </div>
+              <div class="single-cars__tabs-item-content">
+                <h3 class="single-cars__tabs-item-content-title">Запас хода</h3>
+                <span class="single-cars__tabs-item-content-text">550 км</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="questions">
+  <div class="questions__heading">
+    <div class="questions__heading-column questions__heading-column--left">
+      <span class="questions__heading-title">Остались вопросы?</span>
+      <p class="questions__heading-subtitle">
+        Задайте их специалиступо телефону горячей линии,закажите звонок или напишите нам
+      </p>
+    </div>
+    <div class="questions__heading-column questions__heading-column--right">
+      <a class="questions__heading-heading-phone" href="rel:+7 495-001-18-88">+7 495-001-18-88</a>
+      <span class="questions__heading-time">Время работы: с 9 до 21 часов</span>
+      <ul class="socials">
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials1.svg" alt="#">
+    </a>
+  </li>
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials2.svg" alt="#">
+    </a>
+  </li>
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials3.svg" alt="#">
+    </a>
+  </li>
+</ul>
+    </div>
+  </div>
+
+  <div class="questions">
+    <div class="questions__tabs-item">
+      <div class="questions__tabs-item-top">
+        <span class="questions__tabs-item-name">Связь 5G, новый способ связи автомобилей с внешним миром</span>
+        <svg class="questions__tabs-item-icon" width="9" height="14" style="transform: rotate(-90deg); transition: transform 0.3s;">
+          <use href="img/icon/sprite.svg#brands-arrow-icon"></use>
+        </svg>
+      </div>
+      <div class="questions__tabs-item-content tabs-content base-par">
+        <p>
+          E-пропорция — в которой используется конструкция с перемещением точки капота вперед и лобового стекла с большим углом наклона 65 градусов, образующим форму суперкара. 22-дюймовые колеса в сочетании с полным приводом и регулируемой пневматической
+          подвеской создают образ внедорожника.
+        </p>
+      </div>
+    </div>
+    <div class="questions__tabs-item">
+      <div class="questions__tabs-item-top">
+        <span class="questions__tabs-item-name">Система управления энергопотреблением Cross-loop</span>
+        <svg class="questions__tabs-item-icon" width="9" height="14" style="transform: rotate(-90deg); transition: transform 0.3s;">
+          <use href="img/icon/sprite.svg#brands-arrow-icon"></use>
+        </svg>
+      </div>
+      <div class="questions__tabs-item-content tabs-content base-par">
+        <p>
+          E-пропорция — в которой используется конструкция с перемещением точки капота вперед и лобового стекла с большим углом наклона 65 градусов, образующим форму суперкара. 22-дюймовые колеса в сочетании с полным приводом и регулируемой пневматической
+          подвеской создают образ внедорожника.
+        </p>
+      </div>
+    </div>
+    <div class="questions__tabs-item">
+      <div class="questions__tabs-item-top">
+        <span class="questions__tabs-item-name">Бесконтактный интеллектуальный доступ</span>
+        <svg class="questions__tabs-item-icon" width="9" height="14" style="transform: rotate(-90deg); transition: transform 0.3s;">
+          <use href="img/icon/sprite.svg#brands-arrow-icon"></use>
+        </svg>
+      </div>
+      <div class="questions__tabs-item-content tabs-content base-par">
+        <p>
+          E-пропорция — в которой используется конструкция с перемещением точки капота вперед и лобового стекла с большим углом наклона 65 градусов, образующим форму суперкара. 22-дюймовые колеса в сочетании с полным приводом и регулируемой пневматической
+          подвеской создают образ внедорожника.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+
+  </section>
+</main>
+
+<footer class="page-footer">
+  <section class="footer-top">
+    <div class="footer-top__container base-container">
+      <div class="footer-top__column footer-top__column--left">
+        <svg class="footer-top__column-logo-icon" width="154" height="54" alt="Логотип">
+          <use href="img/icon/sprite.svg#logo-icon"></use>
+        </svg>
+        <div class="main-nav__contacts-address">
+          <svg class="main-nav__contacts-address-icon" width="24" height="24" aria-hidden="true">
+            <use href="img/icon/sprite.svg#address-icon"></use>
+          </svg>
+          <span class="main-nav__contacts-address-text">
+            Московская область, Красногорский
+            район Новорижское ш., 23 км,
+            вл 2 стр 1, ТРЦ «Ригамолл»
+          </span>
+        </div>
+      </div>
+      <div class="footer-top__column footer-top__column--center">
+        <ul class="main-nav__mobile-menu-list">
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Автомобили</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Аксессуары и тюнинг</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Сервис</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Доставка</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Лизинг/кредит</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Франшиза</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">О нас</a>
+          </li>
+        </ul>
+
+        <ul class="socials">
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials1.svg" alt="#">
+    </a>
+  </li>
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials2.svg" alt="#">
+    </a>
+  </li>
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials3.svg" alt="#">
+    </a>
+  </li>
+</ul>
+      </div>
+      <div class="footer-top__column footer-top__column--right">
+        <a class="main-nav__contacts-phone" href="tel:+7 495-001-18-88">
+          <svg class="main-nav__contacts-phone-icon" width="24" height="24" aria-hidden="true">
+            <use href="img/icon/sprite.svg#phone-icon"></use>
+          </svg>
+          <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
+        </a>
+        <span class="footer-top__column-phone-subline">Время работы: с 9 до 21 часов</span>
+        <button class="brands__feedback-submit modal-with-form__button main-button" type="button">Свяжитесь со мной</button>
+      </div>
+    </div>
+  </section>
+  <section class="footer-bottom">
+    <div class="footer-bottom__container base-container">
+      <div class="footer-bottom__column footer-bottom__column--left">
+        <span class="footer-bottom__column-content">© ООО «Смарт Авто», <span id="year"></span></span>
+        <script>document.querySelector('#year').textContent = new Date().getFullYear();</script>
+        <a class="footer-bottom__column-content" href="#">Политика конфиденциальности</a>
+        <a class="footer-bottom__column-content" href="#">Пользовательское соглашение</a>
+      </div>
+      <div class="footer-bottom__column footer-bottom__column--right">
+        <a class="footer-bottom__column-link" href="https://is-art.ru/" rel="noreferrer noopener" target="_blank">
+          <svg class="footer-bottom__column-icon" width="52" height="21" aria-hidden="true">
+            <use href="img/icon/sprite.svg#isart-icon"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</footer>
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.25/bundled/lenis.min.js"></script>
+
+<script>
+  const lenis = new Lenis()
+
+  lenis.on('scroll', (e) => {
+    console.log(e)
+  })
+
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+
+  requestAnimationFrame(raf)
+</script>
+
+<style>
+  html.lenis {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+</style>
+
+<script src="js/index.min.js?v=1.0"></script>
+
+</body>
+
+</html>
