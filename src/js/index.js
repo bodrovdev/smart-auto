@@ -41,32 +41,61 @@ window.addEventListener('load', () => {
   }
 });
 
-// ? --- Табы
-function tabsFunc(rootClassName) {
+// ? --- Аккордеон в блоке вопросов
+function accordionFunc(rootClassName) {
   window.addEventListener('load', () => {
-    let tabsList = document.querySelectorAll(`.${rootClassName}__tabs-item`);
+    let accordionList = document.querySelectorAll(`.${rootClassName}__accordion-item`);
 
-    if (tabsList === null) {
+    if (accordionList === null) {
       return;
     }
     else {
-      tabsList.forEach(item => {
-        let tabsItemContent = item.querySelector(`.${rootClassName}__tabs-item-content`);
-        let tabsItemTop = item.querySelector(`.${rootClassName}__tabs-item-top`);
+      accordionList.forEach(item => {
+        let accordionItemContent = item.querySelector(`.${rootClassName}__accordion-item-content`);
+        let accordionItemTop = item.querySelector(`.${rootClassName}__accordion-item-top`);
 
         item.addEventListener('click', () => {
-          if (item.classList.contains(`${rootClassName}__tabs-item--active`)) {
-            item.classList.remove(`${rootClassName}__tabs-item--active`);
+          if (item.classList.contains(`${rootClassName}__accordion-item--active`)) {
+            item.classList.remove(`${rootClassName}__accordion-item--active`);
             item.setAttribute('style', '');
           }
           else {
-            item.classList.add(`${rootClassName}__tabs-item--active`);
-            item.setAttribute(`style`, `height:${tabsItemContent.offsetHeight + tabsItemTop.offsetHeight}px; transition:all 0.3s;`);
+            item.classList.add(`${rootClassName}__accordion-item--active`);
+            item.setAttribute(`style`, `height:${accordionItemContent.offsetHeight + accordionItemTop.offsetHeight}px; transition:all 0.3s;`);
           }
         })
       })
     }
   })
 }
+accordionFunc('questions');
 
-tabsFunc('questions');
+// ? --- Табы в блоке характеристик
+function tabsFunc(rootClassName) {
+  window.addEventListener('load', () => {
+    let tabs_buttons = document.querySelectorAll(`.${rootClassName}__tabs-button`);
+    if (tabs_buttons === null) {
+      return;
+    }
+    else {
+      let tabs_items = document.querySelectorAll(`.${rootClassName}__tabs-body-item`);
+
+      tabs_buttons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          console.log(e.target);
+
+          tabs_buttons.forEach(button_value => { button_value.classList.remove(`${rootClassName}__tabs-button--active`) });
+          button.classList.add(`${rootClassName}__tabs-button--active`);
+
+          tabs_items.forEach(item => {
+            if (button.dataset.tab === item.dataset.tab) {
+              tabs_items.forEach(item_value => { item_value.classList.remove(`${rootClassName}__tabs-body-item--active`); });
+              item.classList.add(`${rootClassName}__tabs-body-item--active`);
+            }
+          });
+        });
+      })
+    }
+  });
+}
+tabsFunc(`single-cars`);

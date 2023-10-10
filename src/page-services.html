@@ -1,0 +1,94 @@
+@@include('components/_base/_base-header.html')
+
+<style>
+  .footer-top {
+    margin: 0;
+  }
+</style>
+
+<main class="page-content">
+
+  @@include('components/_bem/_second-heading.html', {
+  "img": "./img/image/second-heading2.png",
+  "title": "Сервисное обслуживание",
+  })
+
+  <section class="main-content">
+    <div class="main-content__features">
+      <div class="main-content__features-item">
+        <span class="main-content__features-item-title">Телефон</span>
+        <a class="main-content__features-item-content" href="tel:+7 495-001-18-88">+7 495-001-18-88</a>
+      </div>
+      <div class="main-content__features-item">
+        <span class="main-content__features-item-title">Email</span>
+        <a class="main-content__features-item-content" href="mailto:infosmsrtavto@gcom.ru">infosmsrtavto@gcom.ru</a>
+      </div>
+      <div class="main-content__features-item">
+        <span class="main-content__features-item-title">Адрес</span>
+        <span class="main-content__features-item-content" href="#">
+          Московская область, Красногорский район Новорижское ш., 23 км, вл 2 стр 1, ТРЦ «Ригамолл»
+        </span>
+      </div>
+    </div>
+    <div class="main-content__container">
+      <p>
+        Многим поклонникам автотранспорта на бензиновом топливе или дизельном трудно представить, что электромобили могут потеснить популярный сейчас транспорт. Тем не менее, продажа подобного автотранспорта медленно, но уверено растет. Это обусловлено рядом
+        причин, в особенности интересными достоинствами электрокаров. Как уверяют эксперты мировой автопромышленности, будущее — за электромобилем.
+      </p>
+      <img src="./img/image/main-content-img2.png" alt="#">
+      <b>
+        Электрокар, как и любой другой автомобиль, рано или поздно нуждается в ремонте. Если авто нельзя включить, он не поворачивает или осуществляется перегрев во время его движения, необходим ремонт электротранспорта.
+      </b>
+      <p>Наиболее часто встречающиеся поломки:</p>
+      <ul>
+        <li>
+          Машина перегревается и прекращает работу плато управления. Если поврежденные детали не подлежат ремонту, осуществляется замена.
+        </li>
+        <li>
+          Неисправная управляющая микросхема. Это самый важный компонент электромобиля, его поломка приводит к выходу машины из рабочего состояния. При диагностировании выясняется, требуется ли полная замена микросхемы.
+        </li>
+        <li>
+          Поломки аккумулятора. Порой на клеммах нет нормального напряжения или теряется прежняя емкость. Все это можно решить и отремонтировать в сервисном центре.
+        </li>
+        <li>
+          Неисправность контроллера. Когда данный компонент часто «барахлит», требуется его заменить.
+        </li>
+        <li>
+          Проблемы с колесами. Колеса — самые уязвимые элементы электромобиля. Если лопается шина, нужна замена.
+        </li>
+      </ul>
+      <img src="./img/image/main-content-img3.png" alt="#">
+      <p>
+        Заметим, что каждый электрокар имеет свои особенности обслуживания и починки. Ремонт электромобиля является достаточно сложной процедурой. Требуется опыт и необходимые навыки, чтобы осуществить ремонт. Самостоятельно чинить аккумуляторную батарею –
+        опасное дело, в связи с этим ремонт электрокара требует настоящего мастера.
+        На российском рынке в последние годы пользуются спросом привозные б/у электромобили. Такие автомобили требуют особого ухода. Отремонтировать электромобиль с гарантией, привезенный из-за границы возможно лишь в спец сервисных центрах.
+      </p>
+    </div>
+
+    <div class="base-container">
+      <div class="questions__heading">
+        <div class="questions__heading-column questions__heading-column--left">
+          <span class="questions__heading-title">
+            Остались вопросы?
+          </span>
+          <p class="questions__heading-subtitle">
+            Задайте их специалиступо телефону горячей линии,закажите звонок или напишите нам
+          </p>
+        </div>
+        <div class="questions__heading-column questions__heading-column--right">
+          <a class="questions__heading-phone" href="rel:+7 495-001-18-88">
+            +7 495-001-18-88
+          </a>
+          <span class="questions__heading-time">
+            Время работы: с 9 до 21 часов
+          </span>
+          @@include('components/_bem/_socials.html')
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+@@include('components/_base/_base-footer.html')

@@ -4,20 +4,39 @@
 
   padding: 85px 0 0 0;
 
+  @include mixins.respond-to(notDesktop) {
+    padding: 54px 0 0 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 34px;
+
+    @include mixins.respond-to(notDesktop) {
+      gap: 13px;
+    }
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(385px, 1fr));
+    justify-items: center;
     gap: 20px;
 
     width: 100%;
+
+    @include mixins.respond-to(notDesktop) {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 359px) {
+    &__wrapper {
+      gap: 10px;
+    }
   }
 
   &__wrapper-item {
@@ -33,29 +52,18 @@
     border: 1px solid #30363D;
     overflow: hidden;
 
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+      gap: 14px;
 
-    //   width: 100%;
-    //   height: 100%;
-    //   background: #161B22;
-    //   opacity: 0;
-
-    //   transition: opacity 0.6s;
-
-    //   z-index: 1;
-    // }
+      width: 140px;
+      height: auto;
+      min-height: 160px;
+      border: none;
+      border-radius: 0;
+    }
 
     &--active {
-      // &::after {
-      //   opacity: 80%;
-
-      //   transition: opacity 0.6s;
-      // }
-
       & .news__wrapper-item-img {
         opacity: 1;
 
@@ -82,6 +90,20 @@
 
       transform: translate3d(-40px, 0, 0);
       transition: opacity 0.6s, transform 0.6s;
+
+      @include mixins.respond-to(notDesktop) {
+        position: relative;
+        top: auto;
+        left: auto;
+
+        width: 100%;
+        height: auto;
+        border: 1px solid #30363D;
+        border-radius: 8px;
+        opacity: 1;
+
+        transform: none;
+      }
     }
 
     &-title {
@@ -100,6 +122,15 @@
       transition: opacity 0.6s, transform 0.6s;
 
       z-index: 2;
+
+      @include mixins.respond-to(notDesktop) {
+        opacity: 1;
+
+        transform: none;
+
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 

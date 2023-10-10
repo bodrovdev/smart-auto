@@ -3,12 +3,22 @@
 .contacts {
   padding: 80px 0 0 0;
 
+  @include mixins.respond-to(notDesktop) {
+    padding: 40px 0 0 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 34px;
+
+    @include mixins.respond-to(notDesktop) {
+      gap: 10px;
+
+      width: 100%;
+    }
   }
 
   &__wrapper {
@@ -19,6 +29,11 @@
     justify-content: center;
 
     width: 100%;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+      gap: 18px;
+    }
   }
 
   &__map {
@@ -26,10 +41,19 @@
     filter: grayscale(1) brightness(0.6) contrast(2);
 
     & iframe {
+      flex-shrink: 0;
+
       width: 100% !important;
       height: 477px !important;
       border: 1px solid #30363D;
       border-radius: 8px;
+
+      @include mixins.respond-to(notDesktop) {
+        width: 362px !important;
+        height: 275px !important;
+
+        border-radius: 0;
+      }
     }
   }
 
@@ -51,6 +75,23 @@
 
     padding: 35px 41px 47px 42px;
 
+    @include mixins.respond-to(notDesktop) {
+      position: relative;
+      top: auto;
+      left: auto;
+
+      width: 100%;
+      max-width: 300px;
+      min-height: auto;
+      max-height: 350px;
+      border-radius: 8px;
+      border: 1px solid #30363D;
+
+      transform: none;
+
+      padding: 37px;
+    }
+
     &-logo {
       flex-shrink: 0;
 
@@ -58,6 +99,10 @@
       height: 66px;
 
       margin: 0 0 25px 0;
+
+      @include mixins.respond-to(notDesktop) {
+        margin: 0 0 18px 0;
+      }
     }
 
     &-content {
@@ -67,12 +112,22 @@
       justify-content: flex-start;
 
       width: 100%;
+
+      @include mixins.respond-to(notDesktop) {
+        gap: 20px;
+      }
     }
 
     & .main-nav__contacts-phone {
       gap: 18px;
 
       margin: 0 0 19px 0;
+
+      @include mixins.respond-to(notDesktop) {
+        gap: 12px;
+
+        margin: 0;
+      }
 
       & .main-nav__contacts-phone-text {
         font-size: 24px;
@@ -85,6 +140,10 @@
       max-width: none;
 
       margin: 0 0 14px 0;
+
+      @include mixins.respond-to(notDesktop) {
+        margin: 0;
+      }
     }
 
     &-time {
@@ -94,6 +153,10 @@
       gap: 12px;
 
       margin: 0 0 31px 0;
+
+      @include mixins.respond-to(notDesktop) {
+        margin: 0;
+      }
 
       &-icon {
         flex-shrink: 0;
@@ -122,14 +185,27 @@
 
         padding: 0 0 0 7px;
         margin: 0;
+
+        @include mixins.respond-to(notDesktop) {
+          padding: 0;
+        }
       }
     }
 
     & .socials {
+      align-items: flex-start;
       justify-content: flex-start;
+
+      width: 100%;
 
       padding: 0 0 0 7px;
       margin: 0;
+
+      @include mixins.respond-to(notDesktop) {
+        gap: 32px;
+
+        padding: 0;
+      }
     }
   }
 }

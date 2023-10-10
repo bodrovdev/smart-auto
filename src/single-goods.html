@@ -1,0 +1,59 @@
+@@include('components/_base/_base-header.html')
+
+<main class="page-content page-content--second">
+  <section class="single-goods">
+    <div class="single-goods__container base-container">
+
+      @@include('components/_bem/_bread.html', {
+      "text": "Аксессуары",
+      })
+
+      <div class="single-goods__wrapper">
+        <div class="single-goods__column single-goods__column--left">
+          <span class="single-goods__cat">Электрическая зарядная станция</span>
+          <h1 class="single-goods__title">TOUCH Home Max Pro 13,2</h1>
+          <span class="single-goods__price">от <span>800 000</span> ₽</span>
+          <button class="single-goods__button main-button main-button--yellow modal-with-form__button">Заказать</button>
+          <div class="single-goods__description">
+            <h3 class="single-goods__description-title section-title">Описание</h3>
+            <div class="single-goods__description-wrapper">
+              <div class="single-goods__description-wrapper-item">
+                2 Разъема Type 2 – возможна зарядка до 2 электромобилей одновременно
+              </div>
+              <div class="single-goods__description-wrapper-item">
+                Модуль OCPP 1.6 – поддерживаются все возможности удалённого управления станцией
+              </div>
+              <div class="single-goods__description-wrapper-item">
+                Ток заряда 32 А на каждый порт, напряжение сети 380 В
+              </div>
+              <div class="single-goods__description-wrapper-item">
+                Полная защита от пыли и водяных струй со всех сторон IP54 Корпус из стали
+              </div>
+              <div class="single-goods__description-wrapper-item">
+                Встроенная автоматикана каждый порт на 32 А для защиты цепи от перегрузок, токов короткого замыкания, а также от утечки тока в результате повреждения изоляции
+              </div>
+              <div class="single-goods__description-wrapper-item">
+                Простота обслуживания: корпус с откидной крышкой
+              </div>
+              <div class="single-goods__description-wrapper-item">
+                Сетевое подключение станции: 4G,Wifi или Ethernet
+              </div>
+              <div class="single-goods__description-wrapper-item">
+                Гарантия 24 месяца
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <figure class="single-goods__column single-goods__column--right">
+          <img class="single-goods__img" src="img/image/single-goods.png" alt="">
+        </figure>
+      </div>
+
+      @@include('components/_bem/_questions.html')
+
+    </div>
+  </section>
+</main>
+
+@@include('components/_base/_base-footer.html')

@@ -3,11 +3,9 @@
 <main class="page-content page-content--second">
   <section class="single-cars">
     <div class="single-cars__container base-container">
-
       @@include('components/_bem/_bread.html', {
       "text": "Автомобили",
       })
-
       <div class="single-cars__wrapper">
         <div class="single-cars__wrapper-column single-cars__wrapper-column--left">
           <div class="single-cars__display">
@@ -95,7 +93,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <figure class="single-cars__banner-image">
@@ -103,7 +100,6 @@
     </figure>
 
     <div class="single-cars__container base-container">
-
       <div class="single-cars__features">
         <h2 class="single-cars__features-title section-title">Идеальное сочетание суперкара и внедорожника</h2>
         <p class="single-cars__features-text">
@@ -129,89 +125,144 @@
           </div>
         </div>
       </div>
-
       <div class="single-cars__gallery">
         <h2 class="single-cars__gallery-title section-title">Фотографиии кузова и салона HiPhi X</h2>
         <div class="single-cars__gallery-wrapper">
-          <figure class="single-cars__gallery-image">
+          <a class="single-cars__gallery-image" data-fancybox href="./img/image/single-gallery.png">
             <img class="single-cars__gallery-img" src="./img/image/single-gallery.png" alt="#">
-          </figure>
-          <figure class="single-cars__gallery-image">
+          </a>
+          <a class="single-cars__gallery-image" data-fancybox href="./img/image/single-gallery.png">
             <img class="single-cars__gallery-img" src="./img/image/single-gallery.png" alt="#">
-          </figure>
-          <figure class="single-cars__gallery-image">
+          </a>
+          <a class="single-cars__gallery-image" data-fancybox href="./img/image/single-gallery.png">
             <img class="single-cars__gallery-img" src="./img/image/single-gallery.png" alt="#">
-          </figure>
-          <figure class="single-cars__gallery-image">
+          </a>
+          <a class="single-cars__gallery-image" data-fancybox href="./img/image/single-gallery.png">
             <img class="single-cars__gallery-img" src="./img/image/single-gallery.png" alt="#">
-          </figure>
-          <figure class="single-cars__gallery-image">
+          </a>
+          <a class="single-cars__gallery-image" data-fancybox href="./img/image/single-gallery.png">
             <img class="single-cars__gallery-img" src="./img/image/single-gallery.png" alt="#">
-          </figure>
-          <figure class="single-cars__gallery-image">
+          </a>
+          <a class="single-cars__gallery-image" data-fancybox href="./img/image/single-gallery.png">
             <img class="single-cars__gallery-img" src="./img/image/single-gallery.png" alt="#">
-          </figure>
+          </a>
         </div>
       </div>
-
       <div class="single-cars__tabs">
         <h2 class="single-cars__tabs-title section-title">Технические характеристики комплектаций HiPhi X</h2>
         <div class="single-cars__tabs-wrapper">
           <div class="single-cars__tabs-buttons">
-            <button class="single-cars__tabs-button" type="button">HiPhi X Deluxe Edition 6 местный</button>
-            <button class="single-cars__tabs-button" type="button">HiPhi X Deluxe Edition 6 местный</button>
-            <button class="single-cars__tabs-button" type="button">HiPhi X Deluxe Edition 6 местный</button>
+            <button class="single-cars__tabs-button single-cars__tabs-button--active" data-tab="1" type="button">
+              HiPhi X Deluxe Edition 6 местный
+            </button>
+            <button class="single-cars__tabs-button" type="button" data-tab="2">
+              HiPhi X Deluxe Edition 6 местный
+            </button>
+            <button class="single-cars__tabs-button" type="button" data-tab="3">
+              HiPhi X Deluxe Edition 6 местный
+            </button>
           </div>
           <div class="single-cars__tabs-body">
-            <div class="single-cars__tabs-body-item">
-              <div class="single-cars__tabs-item-content">
-                <h3 class="single-cars__tabs-item-content-title">Разгон до 100 км/ч</h3>
-                <span class="single-cars__tabs-item-content-text">3.9 секунды</span>
+            <div class="single-cars__tabs-body-item single-cars__tabs-body-item--active" data-tab="1">
+              <div class="single-cars__tabs-item-container">
+                <div class="single-cars__tabs-item-content">
+                  <h3 class="single-cars__tabs-item-content-title">
+                    Разгон до 100 км/ч
+                  </h3>
+                  <span class="single-cars__tabs-item-content-text">
+                    3.9 секунды
+                  </span>
+                </div>
+                <div class="single-cars__tabs-item-content">
+                  <h3 class="single-cars__tabs-item-content-title">
+                    Разгон до 100 км/ч
+                  </h3>
+                  <span class="single-cars__tabs-item-content-text">
+                    3.9 секунды
+                  </span>
+                </div>
+                <div class="single-cars__tabs-item-content">
+                  <h3 class="single-cars__tabs-item-content-title">
+                    Разгон до 100 км/ч
+                  </h3>
+                  <span class="single-cars__tabs-item-content-text">
+                    3.9 секунды
+                  </span>
+                </div>
               </div>
-              <div class="single-cars__tabs-item-content">
-                <h3 class="single-cars__tabs-item-content-title">Разгон до 100 км/ч</h3>
-                <span class="single-cars__tabs-item-content-text">3.9 секунды</span>
-              </div>
-              <div class="single-cars__tabs-item-content">
-                <h3 class="single-cars__tabs-item-content-title">Разгон до 100 км/ч</h3>
-                <span class="single-cars__tabs-item-content-text">3.9 секунды</span>
-              </div>
+
+              <figure class="single-cars__tabs-item-image">
+                <img class="single-cars__tabs-item-img" src="img/image/single-tab-img.png" alt="#">
+              </figure>
             </div>
-            <div class="single-cars__tabs-body-item">
-              <div class="single-cars__tabs-item-content">
-                <h3 class="single-cars__tabs-item-content-title">Двигатель</h3>
-                <span class="single-cars__tabs-item-content-text">598 л. с</span>
+            <div class="single-cars__tabs-body-item" data-tab="2">
+              <div class="single-cars__tabs-item-container">
+                <div class="single-cars__tabs-item-content">
+                  <h3 class="single-cars__tabs-item-content-title">
+                    Разгон до 100 км/ч 222
+                  </h3>
+                  <span class="single-cars__tabs-item-content-text">
+                    3.9 секунды 222
+                  </span>
+                </div>
+                <div class="single-cars__tabs-item-content">
+                  <h3 class="single-cars__tabs-item-content-title">
+                    Разгон до 100 км/ч 222
+                  </h3>
+                  <span class="single-cars__tabs-item-content-text">
+                    3.9 секунды 222
+                  </span>
+                </div>
+                <div class="single-cars__tabs-item-content">
+                  <h3 class="single-cars__tabs-item-content-title">
+                    Разгон до 100 км/ч 222
+                  </h3>
+                  <span class="single-cars__tabs-item-content-text">
+                    3.9 секунды 222
+                  </span>
+                </div>
               </div>
-              <div class="single-cars__tabs-item-content">
-                <h3 class="single-cars__tabs-item-content-title">Двигатель</h3>
-                <span class="single-cars__tabs-item-content-text">598 л. с</span>
-              </div>/div>
-              <div class="single-cars__tabs-item-content">
-                <h3 class="single-cars__tabs-item-content-title">Двигатель</h3>
-                <span class="single-cars__tabs-item-content-text">598 л. с</span>
-              </div>
+
+              <figure class="single-cars__tabs-item-image">
+                <img class="single-cars__tabs-item-img" src="img/image/single-tab-img.png" alt="#">
+              </figure>
             </div>
-            <div class="single-cars__tabs-body-item">
-              <div class="single-cars__tabs-item-content">
-                <h3 class="single-cars__tabs-item-content-title">Запас хода</h3>
-                <span class="single-cars__tabs-item-content-text">550 км</span>
+            <div class="single-cars__tabs-body-item" data-tab="3">
+              <div class="single-cars__tabs-item-container">
+                <div class="single-cars__tabs-item-content">
+                  <h3 class="single-cars__tabs-item-content-title">
+                    Разгон до 100 км/ч 333
+                  </h3>
+                  <span class="single-cars__tabs-item-content-text">
+                    3.9 секунды 333
+                  </span>
+                </div>
+                <div class="single-cars__tabs-item-content">
+                  <h3 class="single-cars__tabs-item-content-title">
+                    Разгон до 100 км/ч 333
+                  </h3>
+                  <span class="single-cars__tabs-item-content-text">
+                    3.9 секунды 333
+                  </span>
+                </div>
+                <div class="single-cars__tabs-item-content">
+                  <h3 class="single-cars__tabs-item-content-title">
+                    Разгон до 100 км/ч 333
+                  </h3>
+                  <span class="single-cars__tabs-item-content-text">
+                    3.9 секунды 333
+                  </span>
+                </div>
               </div>
-              <div class="single-cars__tabs-item-content">
-                <h3 class="single-cars__tabs-item-content-title">Запас хода</h3>
-                <span class="single-cars__tabs-item-content-text">550 км</span>
-              </div>
-              <div class="single-cars__tabs-item-content">
-                <h3 class="single-cars__tabs-item-content-title">Запас хода</h3>
-                <span class="single-cars__tabs-item-content-text">550 км</span>
-              </div>
+              <figure class="single-cars__tabs-item-image">
+                <img class="single-cars__tabs-item-img" src="img/image/single-tab-img.png" alt="#">
+              </figure>
             </div>
           </div>
         </div>
       </div>
-
       @@include('components/_bem/_questions.html')
     </div>
-
 
   </section>
 </main>

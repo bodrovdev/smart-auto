@@ -4,7 +4,7 @@
   padding: 64px 0 90px 0;
 
   @include mixins.respond-to(notDesktop) {
-    padding: 40px 0;
+    padding: 40px 0 33px 0;
   }
 
   &__container {
@@ -13,6 +13,10 @@
     align-items: center;
     justify-content: center;
     gap: 35px;
+
+    @include mixins.respond-to(notDesktop) {
+      gap: 23px;
+    }
   }
 
   &__wrapper {
@@ -23,6 +27,10 @@
     gap: 24px;
 
     width: 100%;
+
+    @include mixins.respond-to(notDesktop) {
+      gap: 20px;
+    }
 
     &-item {
       position: relative;
@@ -39,50 +47,54 @@
       border-radius: 8px;
       overflow: hidden;
 
-      &:nth-child(odd) {
-        gap: 78px;
-
-        padding: 52px 56px 54px 141px;
-
-        & .work__wrapper-item-column--left {
-          order: 1;
-        }
-
-        & .work__wrapper-item-column--right {
-          order: 2;
-        }
-
-        & .work__wrapper-item-num {
-          left: -89px;
-        }
-      }
-
-      &:nth-child(even) {
-        gap: 105px;
-
-        padding: 52px 54px 52px 54px;
-
-        & .work__wrapper-item-column--left {
-          order: 2;
-        }
-
-        & .work__wrapper-item-column--right {
-          order: 1;
-        }
-
-        & .work__wrapper-item-num {
-          right: -91px;
-        }
-      }
-
       @include mixins.respond-to(notDesktop) {
         flex-direction: column;
+        gap: 21px;
 
         width: 91%;
         max-width: none;
         height: auto;
+        min-height: 425px;
 
         padding: 18px 14px 14px 14px !important;
+      }
+
+      @include mixins.respond-to(desktopD) {
+        &:nth-child(odd) {
+          gap: 78px;
+
+          padding: 52px 56px 54px 141px;
+
+          & .work__wrapper-item-column--left {
+            order: 1;
+          }
+
+          & .work__wrapper-item-column--right {
+            order: 2;
+          }
+
+          & .work__wrapper-item-num {
+            left: -89px;
+          }
+        }
+
+        &:nth-child(even) {
+          gap: 105px;
+
+          padding: 52px 54px 52px 54px;
+
+          & .work__wrapper-item-column--left {
+            order: 2;
+          }
+
+          & .work__wrapper-item-column--right {
+            order: 1;
+          }
+
+          & .work__wrapper-item-num {
+            right: -91px;
+          }
+        }
       }
 
       &-column {
@@ -112,11 +124,19 @@
           font-weight: 400;
           line-height: 24px;
           color: rgba(235, 245, 255, 0.50);
+
+          @include mixins.respond-to(notDesktop) {
+            font-size: 16px;
+          }
         }
 
         &-img {
           @include mixins.respond-to(notDesktop) {
             width: 100%;
+            height: auto;
+            min-height: 161px;
+            border: 1px solid #30363D;
+            border-radius: 8px;
           }
         }
       }
@@ -132,6 +152,10 @@
         transform: translateY(-50%);
 
         z-index: 2;
+
+        @include mixins.respond-to(notDesktop) {
+          display: none;
+        }
       }
     }
   }

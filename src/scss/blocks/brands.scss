@@ -190,6 +190,8 @@
       @include mixins.respond-to(notDesktop) {
         font-size: 24px;
         text-align: center;
+
+        margin: 0 0 11px 0;
       }
     }
 
@@ -205,10 +207,12 @@
       margin: 0 0 30px 0;
 
       @include mixins.respond-to(notDesktop) {
+        max-width: 260px;
+
         font-size: 16px;
         text-align: center;
 
-        margin: 0 0 13px 0;
+        margin: 0 0 17px 0;
       }
     }
 

@@ -1,0 +1,138 @@
+@use "../mixins";
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  width: 100%;
+  background: #D9D9D9;
+
+  padding: 30px 0 80px 0;
+
+  &__features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
+    width: 100%;
+    max-width: 790px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+
+      width: 249px;
+      min-height: 208px;
+      background: #161B22;
+      border: 1px solid #30363D;
+      border-radius: 8px;
+
+      padding: 20px;
+
+      &-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #D9D9D9;
+        text-align: center;
+      }
+
+      &-content {
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      & a {
+        transition: color 0.3s;
+
+        &:hover {
+          transition: color 0.3s;
+
+          color: #ffe66a;
+        }
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 34px;
+
+    width: 100%;
+    max-width: 790px;
+
+    & p,
+    span,
+    a,
+    li,
+    b,
+    strong,
+    figcaption,
+    label {
+      font-family: var(--font-family-default);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #585858;
+    }
+
+    & a {
+      transition: color 0.3s;
+
+      text-transform: underline;
+
+      &:hover {
+        transition: color 0.3s;
+
+        color: #ffe66a;
+      }
+    }
+
+    & b,
+    strong {
+      font-weight: 500;
+    }
+
+    & ul,
+    ol {
+      list-style: initial !important;
+
+      padding: 0 0 0 20px !important;
+    }
+
+    & li {
+      position: relative;
+    }
+  }
+
+  &__time {
+    width: 100%;
+    max-width: 790px;
+
+    font-size: 22px;
+    font-weight: 400;
+    color: #585858;
+    text-align: left;
+  }
+
+  & .questions__heading {
+    margin: 33px 0 0 0;
+  }
+
+  & .contacts__wrapper {
+    background: #D9D9D9 !important;
+
+    margin: 33px 0 0 0;
+  }
+}

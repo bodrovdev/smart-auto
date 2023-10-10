@@ -1,0 +1,74 @@
+@@include('components/_base/_base-header.html')
+
+<style>
+  .footer-top {
+    margin: 0;
+  }
+</style>
+
+<main class="page-content">
+
+  @@include('components/_bem/_second-heading.html', {
+  "img": "./img/image/second-heading3.png",
+  "title": "О компании",
+  })
+
+  <section class="main-content">
+    <div class="main-content__container">
+      <p>
+        ООО “Смарт Авто” - это онлайн-дилер автомобилей из Китая с сервисным обслуживанием. Наша миссия - повышать уровень и качество жизни с помощью новейших технологий и содействовать защите экологии. Мы стараемся, чтоб каждый клиент получил авто своей мечты
+        как можно скорее и безопаснее.
+      </p>
+      <img src="./img/image/main-content-img4.svg" alt="#">
+      <p>
+        Мы работаем напрямую с заводами - изготовителями и выкупаем квоты по самым ходовым моделям У нас самый низкий аванс для заказа - 10%, а это значит, что мы финансируем до 90% стоимости наших авто и это позволяет заказчику быть максимально спокойным до
+        поставки электромобиля. Оплата возможна различными способами: наличными/безналичными/в криптовалюте. Адаптируем электромобили для отечественного рынка.
+      </p>
+      <p>
+        Осуществляем сервисное обслуживание у партнеров в крупнейших городах и готовы предоставить оригинальные запчасти. Уже на сегодняшний день мы аккредитованы в крупнейших лизинговых компаниях. Осуществляем оперативную доставку в любой регион РФ.
+      </p>
+    </div>
+
+    <div class="base-container">
+      <div class="contacts__wrapper">
+        <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9595bf96e58c347e42c3f71adaab562b296b9f5b622098f53ce8caab51885c43&amp;source=constructor" width="100%" height="720" frameborder="0"></iframe>
+        </div>
+        <div class="contacts__info">
+          <svg class="contacts__info-logo" width="188" height="66" aria-hidden="true">
+            <use href="img/icon/sprite.svg#logo-icon"></use>
+          </svg>
+          <div class="contacts__info-content">
+            <a class="main-nav__contacts-phone" href="tel:+7 495-001-18-88">
+              <svg class="main-nav__contacts-phone-icon" width="24" height="24" aria-hidden="true">
+                <use href="img/icon/sprite.svg#phone-icon"></use>
+              </svg>
+              <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
+            </a>
+            <div class="main-nav__contacts-address">
+              <svg class="main-nav__contacts-address-icon" width="24" height="24" aria-hidden="true">
+                <use href="img/icon/sprite.svg#address-icon"></use>
+              </svg>
+              <span class="main-nav__contacts-address-text">
+                г. Москва, Московская область, Красногорский район Новорижское ш., 23 км, вл 2 стр 1, ТРЦ «Ригамолл»
+              </span>
+            </div>
+            <div class="contacts__info-time">
+              <svg class="contacts__info-time-icon" width="24" height="24" aria-hidden="true">
+                <use href="img/icon/sprite.svg#time-icon"></use>
+              </svg>
+              <span class="contacts__info-time-text">с 9:00 до 21:00, ежедневно</span>
+            </div>
+            <div class="contacts__info-socials">
+              <h3 class="contacts__info-socials-title">Мы в социальных сетях</h3>
+              @@include('components/_bem/_socials.html')
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include('components/_base/_base-footer.html')
