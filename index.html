@@ -212,12 +212,12 @@
     })
   </script>
 
-<a class="heading__whatsapp">
+<!-- <a class="heading__whatsapp">
   <span class="heading__whatsapp-text">WhatsApp</span>
   <svg class="heading__whatsapp-logo" width="61" height="61" aria-hidden="true">
     <use href="img/icon/sprite.svg#whatsapp-icon"></use>
   </svg>
-</a>
+</a> -->
 
 <main class="page-content">
 
@@ -507,13 +507,13 @@
         </div>
         <div class="features__wrapper-item">
           <img class="features__wrapper-item-icon" src="img/image/features.svg" alt="#"></img>
-          <span class="features__wrapper-item-text">Экономия на топливе и обслуживании</span>
+          <span class="features__wrapper-item-text">Нет необходимости прогрева, кондиционер работает независимо от двигателя</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="news">
+  <section class="news" style="overflow-x: hidden;">
     <div class="news__container base-container">
       <h2 class="news__title section-title">Новости</h2>
       <div class="news__wrapper">
@@ -564,12 +564,20 @@
             </svg>
             <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
           </a>
-          <div class="main-nav__contacts-address">
+          <div class="main-nav__contacts-address hide-on-mobile">
             <svg class="main-nav__contacts-address-icon" width="24" height="24" aria-hidden="true">
               <use href="img/icon/sprite.svg#address-icon"></use>
             </svg>
             <span class="main-nav__contacts-address-text">
               г. Москва, Московская область, Красногорский район Новорижское ш., 23 км, вл 2 стр 1, ТРЦ «Ригамолл»
+            </span>
+          </div>
+          <div class="main-nav__contacts-address display-on-mobile">
+            <svg class="main-nav__contacts-address-icon" width="24" height="24" aria-hidden="true">
+              <use href="img/icon/sprite.svg#address-icon"></use>
+            </svg>
+            <span class="main-nav__contacts-address-text">
+              г. Москва, Лужнецкая наб., 10А, стр.3
             </span>
           </div>
           <div class="contacts__info-time">
@@ -606,7 +614,7 @@
 
 </main>
 
-<footer class="page-footer">
+<footer class="page-footer" style="overflow-x: hidden;">
   <section class="footer-top">
     <div class="footer-top__container base-container">
       <div class="footer-top__column footer-top__column--left">
@@ -630,7 +638,10 @@
             <a class="main-nav__mobile-menu-link" href="#">Автомобили</a>
           </li>
           <li class="main-nav__mobile-menu-item">
-            <a class="main-nav__mobile-menu-link" href="#">Аксессуары и тюнинг</a>
+            <a class="main-nav__mobile-menu-link" href="#">Аксессуары</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Тюнинг</a>
           </li>
           <li class="main-nav__mobile-menu-item">
             <a class="main-nav__mobile-menu-link" href="#">Сервис</a>
@@ -679,6 +690,7 @@
       </div>
     </div>
   </section>
+
   <section class="footer-bottom">
     <div class="footer-bottom__container base-container">
       <div class="footer-bottom__column footer-bottom__column--left">

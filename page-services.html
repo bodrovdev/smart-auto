@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+
+  <link href="css/style.min.css?v=1.0" rel="stylesheet">
+  <title></title>
+</head>
+
+<body style="overflow: hidden;">
+
+  <div class="modal-with-form" id="modal_with_form">
+    <div class="modal-with-form__wrapper">
+      <div class="modal-with-form__inner">
+        <form class="modal-with-form__formset" id="modal_with_form_formset">
+          <input class="modal-with-form__formset-input" type="text" placeholder="">
+          <input class="modal-with-form__formset-input" type="tel" placeholder="">
+          <button class="modal-with-form__formset-submit" type="submit"></button>
+        </form>
+      </div>
+    </div>
+    <div class="modal-with-form__success"></div>
+  </div>
+
+  <div class="modal-without-form" id="modal_without_form">
+    <div class="modal-without-form__wrapper">
+      <div class="modal-without-form__success">
+        <span class="modal-without-form__success-text"></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="page-header">
+    <nav class="main-nav">
+
+      <div class="main-nav__container base-container">
+
+        <a class="main-nav__logo-link" href="index.html">
+          <svg class="main-nav__logo-icon" width="154" height="54" alt="Логотип">
+            <use href="img/icon/sprite.svg#logo-icon"></use>
+          </svg>
+        </a>
+
+        <div class="main-nav__mobile-menu" id="mobile_menu">
+          <ul class="main-nav__mobile-menu-list">
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Автомобили</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Аксессуары и тюнинг</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Сервис</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Доставка</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Лизинг/кредит</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">Франшиза</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="#">О нас</a>
+            </li>
+          </ul>
+
+          <div class="main-nav__contacts display-on-mobile">
+            <span class="main-nav__contacts-title">Наши контакты</span>
+            <a class="main-nav__contacts-phone" href="tel:+7 495-001-18-88">
+              <svg class="main-nav__contacts-phone-icon" width="24" height="24" aria-hidden="true">
+                <use href="img/icon/sprite.svg#phone-icon"></use>
+              </svg>
+              <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
+            </a>
+            <span class="main-nav__contacts-time">Время работы: с 9 до 21 часов</span>
+            <div class="main-nav__contacts-address">
+              <svg class="main-nav__contacts-address-icon" width="24" height="24" aria-hidden="true">
+                <use href="img/icon/sprite.svg#address-icon"></use>
+              </svg>
+              <span class="main-nav__contacts-address-text">
+                Московская область, Красногорский
+                район Новорижское ш., 23 км,
+                вл 2 стр 1, ТРЦ «Ригамолл»
+              </span>
+            </div>
+          </div>
+
+          <ul class="socials">
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials1.svg" alt="#">
+    </a>
+  </li>
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials2.svg" alt="#">
+    </a>
+  </li>
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials3.svg" alt="#">
+    </a>
+  </li>
+</ul>
+
+          <ul class="main-nav__socials display-on-mobile">
+            <li class="main-nav__socials-item">
+              <a class="main-nav__socials-link" href="#">
+                <img class="main-nav__socials-img" src="img/image/socials1.svg" alt="#">
+              </a>
+            </li>
+            <li class="main-nav__socials-item">
+              <a class="main-nav__socials-link" href="#">
+                <img class="main-nav__socials-img" src="img/image/socials2.svg" alt="#">
+              </a>
+            </li>
+            <li class="main-nav__socials-item">
+              <a class="main-nav__socials-link" href="#">
+                <img class="main-nav__socials-img" src="img/image/socials3.svg" alt="#">
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+        <a class="main-nav__contacts-phone hide-on-mobile" href="tel:+7 495-001-18-88">
+          <svg class="main-nav__contacts-phone-icon" width="24" height="24" aria-hidden="true">
+            <use href="img/icon/sprite.svg#phone-icon"></use>
+          </svg>
+          <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
+        </a>
+
+        <button class="main-nav__burger" id="burger">
+          <span class="main-nav__burger-line"></span>
+        </button>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="preloader preloader--active">
+    <div class="preloader__circle">
+
+    </div>
+  </div>
+
+  <style>
+    .preloader {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      height: 100vh;
+      background-color: #0B101A;
+      opacity: 0;
+      user-select: none;
+      pointer-events: none;
+
+      transition: opacity 0.3s;
+
+      z-index: 100;
+    }
+
+    .preloader--active {
+      opacity: 100%;
+
+      user-select: all;
+      pointer-events: all;
+
+      transition: opacity 0.3s;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .preloader__circle {
+      width: 120px;
+      height: 120px;
+      border: 16px solid #FFF;
+      border-top: 16px solid #FFE76AF5;
+      border-radius: 50%;
+
+      animation: spin 2s linear infinite;
+    }
+  </style>
+
+  <script>
+    window.addEventListener('load', () => {
+      document.querySelector('.preloader').classList.remove('preloader--active');
+      document.body.setAttribute('style', '');
+    })
+  </script>
+
+<style>
+  .footer-top {
+    margin: 0;
+  }
+</style>
+
+<main class="page-content">
+
+  <section class="second-heading">
+
+  <style>
+    .second-heading {
+      background: center / cover no-repeat url('./img/image/second-heading2.png');
+    }
+  </style>
+
+  <div class="second-heading__cover"></div>
+
+  <div class="second-heading__container base-container">
+    <div class="breadcrumb">
+  <nav class="woocommerce-breadcrumb">
+    <a href="index.html">Главная</a>
+    Доставка
+  </nav>
+</div>
+    <h1 class="second-heading__title">Сервисное обслуживание</h1>
+  </div>
+</section>
+
+  <section class="main-content">
+    <div class="main-content__features">
+      <div class="main-content__features-item">
+        <span class="main-content__features-item-title">Телефон</span>
+        <a class="main-content__features-item-content" href="tel:+7 495-001-18-88">+7 495-001-18-88</a>
+      </div>
+      <div class="main-content__features-item">
+        <span class="main-content__features-item-title">Email</span>
+        <a class="main-content__features-item-content" href="mailto:infosmsrtavto@gcom.ru">infosmsrtavto@gcom.ru</a>
+      </div>
+      <div class="main-content__features-item">
+        <span class="main-content__features-item-title">Адрес</span>
+        <span class="main-content__features-item-content" href="#">
+          Московская область, Красногорский район Новорижское ш., 23 км, вл 2 стр 1, ТРЦ «Ригамолл»
+        </span>
+      </div>
+    </div>
+    <div class="main-content__container">
+      <p>
+        Многим поклонникам автотранспорта на бензиновом топливе или дизельном трудно представить, что электромобили могут потеснить популярный сейчас транспорт. Тем не менее, продажа подобного автотранспорта медленно, но уверено растет. Это обусловлено рядом
+        причин, в особенности интересными достоинствами электрокаров. Как уверяют эксперты мировой автопромышленности, будущее — за электромобилем.
+      </p>
+      <img src="./img/image/main-content-img2.png" alt="#">
+      <b>
+        Электрокар, как и любой другой автомобиль, рано или поздно нуждается в ремонте. Если авто нельзя включить, он не поворачивает или осуществляется перегрев во время его движения, необходим ремонт электротранспорта.
+      </b>
+      <p>Наиболее часто встречающиеся поломки:</p>
+      <ul>
+        <li>
+          Машина перегревается и прекращает работу плато управления. Если поврежденные детали не подлежат ремонту, осуществляется замена.
+        </li>
+        <li>
+          Неисправная управляющая микросхема. Это самый важный компонент электромобиля, его поломка приводит к выходу машины из рабочего состояния. При диагностировании выясняется, требуется ли полная замена микросхемы.
+        </li>
+        <li>
+          Поломки аккумулятора. Порой на клеммах нет нормального напряжения или теряется прежняя емкость. Все это можно решить и отремонтировать в сервисном центре.
+        </li>
+        <li>
+          Неисправность контроллера. Когда данный компонент часто «барахлит», требуется его заменить.
+        </li>
+        <li>
+          Проблемы с колесами. Колеса — самые уязвимые элементы электромобиля. Если лопается шина, нужна замена.
+        </li>
+      </ul>
+      <img src="./img/image/main-content-img3.png" alt="#">
+      <p>
+        Заметим, что каждый электрокар имеет свои особенности обслуживания и починки. Ремонт электромобиля является достаточно сложной процедурой. Требуется опыт и необходимые навыки, чтобы осуществить ремонт. Самостоятельно чинить аккумуляторную батарею –
+        опасное дело, в связи с этим ремонт электрокара требует настоящего мастера.
+        На российском рынке в последние годы пользуются спросом привозные б/у электромобили. Такие автомобили требуют особого ухода. Отремонтировать электромобиль с гарантией, привезенный из-за границы возможно лишь в спец сервисных центрах.
+      </p>
+    </div>
+
+    <div class="base-container">
+      <div class="questions__heading">
+        <div class="questions__heading-column questions__heading-column--left">
+          <span class="questions__heading-title">
+            Остались вопросы?
+          </span>
+          <p class="questions__heading-subtitle">
+            Задайте их специалиступо телефону горячей линии,закажите звонок или напишите нам
+          </p>
+        </div>
+        <div class="questions__heading-column questions__heading-column--right">
+          <a class="questions__heading-phone" href="rel:+7 495-001-18-88">
+            +7 495-001-18-88
+          </a>
+          <span class="questions__heading-time">
+            Время работы: с 9 до 21 часов
+          </span>
+          <ul class="socials">
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials1.svg" alt="#">
+    </a>
+  </li>
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials2.svg" alt="#">
+    </a>
+  </li>
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials3.svg" alt="#">
+    </a>
+  </li>
+</ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="page-footer" style="overflow-x: hidden;">
+  <section class="footer-top">
+    <div class="footer-top__container base-container">
+      <div class="footer-top__column footer-top__column--left">
+        <svg class="footer-top__column-logo-icon" width="154" height="54" alt="Логотип">
+          <use href="img/icon/sprite.svg#logo-icon"></use>
+        </svg>
+        <div class="main-nav__contacts-address">
+          <svg class="main-nav__contacts-address-icon" width="24" height="24" aria-hidden="true">
+            <use href="img/icon/sprite.svg#address-icon"></use>
+          </svg>
+          <span class="main-nav__contacts-address-text">
+            Московская область, Красногорский
+            район Новорижское ш., 23 км,
+            вл 2 стр 1, ТРЦ «Ригамолл»
+          </span>
+        </div>
+      </div>
+      <div class="footer-top__column footer-top__column--center">
+        <ul class="main-nav__mobile-menu-list">
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Автомобили</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Аксессуары</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Тюнинг</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Сервис</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Доставка</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Лизинг/кредит</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Франшиза</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">О нас</a>
+          </li>
+        </ul>
+
+        <ul class="socials">
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials1.svg" alt="#">
+    </a>
+  </li>
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials2.svg" alt="#">
+    </a>
+  </li>
+  <li class="socials__item">
+    <a class="socials__link" href="#">
+      <img class="socials__img" src="img/image/socials3.svg" alt="#">
+    </a>
+  </li>
+</ul>
+      </div>
+      <div class="footer-top__column footer-top__column--right">
+        <a class="main-nav__contacts-phone" href="tel:+7 495-001-18-88">
+          <svg class="main-nav__contacts-phone-icon" width="24" height="24" aria-hidden="true">
+            <use href="img/icon/sprite.svg#phone-icon"></use>
+          </svg>
+          <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
+        </a>
+        <span class="footer-top__column-phone-subline">Время работы: с 9 до 21 часов</span>
+        <button class="brands__feedback-submit modal-with-form__button main-button" type="button">Свяжитесь со мной</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer-bottom">
+    <div class="footer-bottom__container base-container">
+      <div class="footer-bottom__column footer-bottom__column--left">
+        <span class="footer-bottom__column-content">© ООО «Смарт Авто», <span id="year"></span></span>
+        <script>document.querySelector('#year').textContent = new Date().getFullYear();</script>
+        <a class="footer-bottom__column-content" href="#">Политика конфиденциальности</a>
+        <a class="footer-bottom__column-content" href="#">Пользовательское соглашение</a>
+      </div>
+      <div class="footer-bottom__column footer-bottom__column--right">
+        <a class="footer-bottom__column-link" href="https://is-art.ru/" rel="noreferrer noopener" target="_blank">
+          <svg class="footer-bottom__column-icon" width="52" height="21" aria-hidden="true">
+            <use href="img/icon/sprite.svg#isart-icon"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</footer>
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.25/bundled/lenis.min.js"></script>
+
+<script>
+  const lenis = new Lenis()
+
+  lenis.on('scroll', (e) => {
+    console.log(e)
+  })
+
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+
+  requestAnimationFrame(raf)
+</script>
+
+<style>
+  html.lenis {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+</style>
+
+<script src="js/index.min.js?v=1.0"></script>
+
+</body>
+
+</html>
