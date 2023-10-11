@@ -4,7 +4,7 @@
   padding: 64px 0 90px 0;
 
   @include mixins.respond-to(notDesktop) {
-    padding: 40px 0 33px 0;
+    padding: 40px 0;
   }
 
   &__container {
@@ -130,6 +130,12 @@
           }
         }
 
+        &-image {
+          @include mixins.respond-to(notDesktop) {
+            width: 100%;
+          }
+        }
+
         &-img {
           @include mixins.respond-to(notDesktop) {
             width: 100%;
@@ -147,6 +153,7 @@
 
         font-size: 530px;
         font-weight: 400;
+        line-height: 530px;
         color: #323745;
 
         transform: translateY(-50%);
@@ -154,7 +161,16 @@
         z-index: 2;
 
         @include mixins.respond-to(notDesktop) {
-          display: none;
+          top: -39px;
+          right: -52px;
+
+          transform: none;
+
+          font-size: 300px;
+          line-height: 100%;
+          line-height: 300px;
+
+          z-index: 1;
         }
       }
     }

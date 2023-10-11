@@ -53,12 +53,18 @@
 
       @include mixins.respond-to(notDesktop) {
         order: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         width: 100%;
 
         & .main-nav__mobile-menu-list {
           flex-direction: row !important;
           align-items: flex-start !important;
+
+          margin: 0 0 30px 0 !important;
         }
 
         & .main-nav__mobile-menu-item {

@@ -49,7 +49,6 @@
       border-radius: 8px;
 
       @include mixins.respond-to(notDesktop) {
-        width: 362px !important;
         height: 275px !important;
 
         border-radius: 0;

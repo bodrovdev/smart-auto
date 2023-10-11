@@ -6,11 +6,20 @@
   padding: 23px 0 19px 0;
   margin: 27px 0 0 0;
 
+  @include mixins.respond-to(notDesktop) {
+    padding: 9px 0 12px 0;
+    margin: 30px 0 0 0;
+  }
+
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 84% !important;
+    }
   }
 
   &__column {
@@ -19,6 +28,12 @@
       align-items: center;
       justify-content: center;
       gap: 26px;
+
+      @include mixins.respond-to(notDesktop) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
     }
 
     &--right {}

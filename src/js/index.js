@@ -1,4 +1,5 @@
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+// import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import { lock, unlock } from 'tua-body-scroll-lock';
 
 // ? --- Отключение подсветки ошибок в инпутах
 window.addEventListener('load', () => {
@@ -99,3 +100,26 @@ function tabsFunc(rootClassName) {
   });
 }
 tabsFunc(`single-cars`);
+
+// ? --- Фильтр на странице каталога
+window.addEventListener('load', () => {
+  let filter_menu = document.querySelector('.catalogue-cars__wrapper-column--left');
+
+  if (filter_menu === null) {
+    return;
+  }
+  else {
+    let filter_button = document.querySelector('.catalogue-cars__select-container-button');
+    let filter_button_close = document.querySelector('.catalogue-cars__filters-content-close');
+
+    filter_button.addEventListener('click', () => {
+      filter_menu.classList.add('catalogue-cars__wrapper-column--left--active');
+      lock(filter_menu);
+    })
+
+    filter_button_close.addEventListener('click', () => {
+      filter_menu.classList.remove('catalogue-cars__wrapper-column--left--active');
+      unlock(filter_menu);
+    })
+  }
+})
