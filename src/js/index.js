@@ -83,7 +83,6 @@ function tabsFunc(rootClassName) {
 
       tabs_buttons.forEach(button => {
         button.addEventListener('click', (e) => {
-          console.log(e.target);
 
           tabs_buttons.forEach(button_value => { button_value.classList.remove(`${rootClassName}__tabs-button--active`) });
           button.classList.add(`${rootClassName}__tabs-button--active`);

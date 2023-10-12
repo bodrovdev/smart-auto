@@ -40,3 +40,24 @@ let banners_slider = new Swiper(".banners__slider", {
     clickable: true,
   },
 });
+
+var gallery_slider_init = false;
+
+function gallery_slider() {
+  if (window.innerWidth <= 1279) {
+    if (!gallery_slider_init) {
+      gallery_slider_init = true;
+
+      var gallery_slider = new Swiper(".single-cars__gallery-slider", {
+        direction: "horizontal",
+        spaceBetween: 10,
+        slidesPerView: "auto",
+      });
+    }
+  } else if (gallery_slider_init) {
+    gallery_slider.destroy();
+    gallery_slider_init = false;
+  }
+}
+gallery_slider();
+window.addEventListener("resize", gallery_slider);
