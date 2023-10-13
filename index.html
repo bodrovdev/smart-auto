@@ -18,15 +18,22 @@
 
   <div class="modal-with-form" id="modal_with_form">
     <div class="modal-with-form__wrapper">
+      <button class="modal-with-form__close" type="button">
+        <svg class="modal-with-form__close-icon" width="24" height="24" aria-hidden="true">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
       <div class="modal-with-form__inner">
-        <form class="modal-with-form__formset" id="modal_with_form_formset">
-          <input class="modal-with-form__formset-input" type="text" placeholder="">
-          <input class="modal-with-form__formset-input" type="tel" placeholder="">
+        <h2 class="modal-with-form__inner-title"></h2>
+        <form class="modal-with-form__formset" id="catalogue_cars_form">
+          <label class="modal-with-form__formset-label">
+            <input class="label modal-with-form__formset-input" type="text" value="" disabled>
+          </label>
           <button class="modal-with-form__formset-submit" type="submit"></button>
         </form>
       </div>
+      <div class="modal-with-form__success"></div>
     </div>
-    <div class="modal-with-form__success"></div>
   </div>
 
   <div class="modal-without-form" id="modal_without_form">
