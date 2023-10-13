@@ -289,6 +289,14 @@
       flex-shrink: 0;
       gap: 10px;
 
+      &:hover {
+        & .main-nav__contacts-phone-text {
+          transition: color 0.3s;
+
+          color: #ffe66a;
+        }
+      }
+
       &-icon {
         flex-shrink: 0;
       }
@@ -296,6 +304,8 @@
       &-text {
         font-size: 22px;
         font-weight: 400;
+
+        transition: color 0.3s;
       }
 
       @media (min-width:1280px) and (max-width:1599px) {

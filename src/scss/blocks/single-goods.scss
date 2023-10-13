@@ -16,17 +16,20 @@
 
     @include mixins.respond-to(notDesktop) {
       flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
 
-      padding: 22px 18px;
-      margin: 0;
+      padding: 22px 18px 32px 18px;
+      margin: 0 0 40px 0;
     }
   }
 
   &__column {
 
-    @include mixins.respond-to(notDesktop) {
-      width: 100%;
-    }
+    // @include mixins.respond-to(notDesktop) {
+    //   width: 100%;
+    // }
 
     &--left {
       display: flex;
@@ -45,6 +48,8 @@
 
       @include mixins.respond-to(notDesktop) {
         order: 1;
+
+        padding: 0;
       }
     }
   }
@@ -53,6 +58,13 @@
     width: 318px;
 
     color: #0B101A;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 100%;
+      max-width: 320px;
+
+      margin: 20px 0 0 0;
+    }
   }
 
   &__cat {
@@ -61,6 +73,10 @@
     font-weight: 400;
     line-height: 18px;
     color: #C9C9C9;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 16px;
+    }
   }
 
   &__title {
@@ -68,6 +84,11 @@
     font-size: 64px;
     font-weight: 700;
     line-height: 76px;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 25px;
+      line-height: 27px;
+    }
   }
 
   &__price {
@@ -75,6 +96,12 @@
     font-size: 32px;
     font-weight: 700;
     line-height: 40px;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 400;
+    }
   }
 
   &__description {
@@ -86,6 +113,10 @@
 
     margin: 16px 0 0 0;
 
+    @include mixins.respond-to(notDesktop) {
+      gap: 20px;
+    }
+
     &-wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -93,13 +124,21 @@
       justify-content: flex-start;
       gap: 23px 80px;
 
+      @include mixins.respond-to(notDesktop) {
+        gap: 15px 20px;
+      }
+
       &-item {
-        width: 470px;
+        max-width: 470px;
 
         color: rgba(235, 245, 255, 0.50);
         font-size: 20px;
         font-weight: 400;
         line-height: 24px;
+
+        @include mixins.respond-to(notDesktop) {
+          max-width: 250px;
+        }
       }
     }
   }

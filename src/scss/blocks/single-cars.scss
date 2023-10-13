@@ -203,12 +203,16 @@
     }
 
     &-item {
-      display: flex;
+      display: none;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
 
       width: 100%;
+
+      &--active {
+        display: flex;
+      }
 
       &-label {
         display: inline-block;
@@ -242,6 +246,11 @@
         border-radius: 50%;
 
         transition: transform 0.3s ease-in-out;
+
+        &--selected {
+          transform: scale(1.2);
+          transition: transform 0.3s ease-in-out;
+        }
       }
 
       &-price {

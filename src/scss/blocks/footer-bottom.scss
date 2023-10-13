@@ -34,9 +34,18 @@
         align-items: flex-start;
         gap: 6px;
       }
-    }
 
-    &--right {}
+      & a {
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 1;
+
+          transition: opacity 0.3s;
+        }
+
+      }
+    }
 
     &-content {
       opacity: 0.3;
@@ -48,6 +57,14 @@
 
     &-icon {
       opacity: 0.3;
+
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 1;
+
+        transition: opacity 0.3s;
+      }
     }
   }
 }

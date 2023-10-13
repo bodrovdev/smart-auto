@@ -10,6 +10,17 @@
 
   z-index: 1;
 
+  @include mixins.respond-to(notDesktop) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    height: 300px;
+
+    padding: 88px 0 20px 0;
+  }
+
   &__cover {
     position: absolute;
     top: 0;
@@ -53,5 +64,10 @@
     margin: auto 0 0 0;
 
     z-index: 3;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 }

@@ -53,9 +53,20 @@
       justify-content: center;
 
       height: auto;
+      opacity: 0.3;
+
+      transition: opacity 0.3s;
 
       @include mixins.respond-to(notDesktop) {
         max-width: 120px;
+      }
+
+      @include mixins.respond-to(desktopD) {
+        &:hover {
+          opacity: 1;
+
+          transition: opacity 0.3s;
+        }
       }
     }
 
