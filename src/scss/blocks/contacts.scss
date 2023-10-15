@@ -3,7 +3,7 @@
 .contacts {
   padding: 80px 0 0 0;
 
-  @include mixins.respond-to(notDesktop) {
+  @include mixins.respond-to(mobileOnly) {
     padding: 40px 0 0 0;
   }
 
@@ -14,7 +14,7 @@
     justify-content: center;
     gap: 34px;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       gap: 10px;
 
       width: 100%;
@@ -30,7 +30,7 @@
 
     width: 100%;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
       gap: 18px;
     }
@@ -48,7 +48,7 @@
       border: 1px solid #30363D;
       border-radius: 8px;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         height: 275px !important;
 
         border-radius: 0;
@@ -74,7 +74,7 @@
 
     padding: 35px 41px 47px 42px;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       position: relative;
       top: auto;
       left: auto;
@@ -99,7 +99,7 @@
 
       margin: 0 0 25px 0;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         margin: 0 0 18px 0;
       }
     }
@@ -112,7 +112,7 @@
 
       width: 100%;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         gap: 20px;
       }
     }
@@ -122,7 +122,7 @@
 
       margin: 0 0 19px 0;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         gap: 12px;
 
         margin: 0;
@@ -140,7 +140,7 @@
 
       margin: 0 0 14px 0;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         margin: 0;
       }
     }
@@ -153,7 +153,7 @@
 
       margin: 0 0 31px 0;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         margin: 0;
       }
 
@@ -185,7 +185,7 @@
         padding: 0 0 0 7px;
         margin: 0;
 
-        @include mixins.respond-to(notDesktop) {
+        @include mixins.respond-to(mobileOnly) {
           padding: 0;
         }
       }
@@ -200,7 +200,7 @@
       padding: 0 0 0 7px;
       margin: 0;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         gap: 32px;
 
         padding: 0;

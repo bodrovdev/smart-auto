@@ -41,6 +41,19 @@ let banners_slider = new Swiper(".banners__slider", {
   },
 });
 
+window.addEventListener('load', () => {
+  if (!(document.querySelector('.banners__slider') === null)) {
+    document.querySelector('.banners__slider').addEventListener('mouseenter', () => {
+      console.log('stop');
+      banners_slider.autoplay.stop();
+    })
+    document.querySelector('.banners__slider').addEventListener('mouseleave', () => {
+      console.log('start');
+      banners_slider.autoplay.start();
+    })
+  }
+})
+
 var gallery_slider_init = false;
 
 function gallery_slider() {

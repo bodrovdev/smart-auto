@@ -14,7 +14,7 @@
     padding: 44px 36px 43px 36px;
     margin: 48px 0 60px 0;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
@@ -27,7 +27,7 @@
 
   &__column {
 
-    // @include mixins.respond-to(notDesktop) {
+    // @include mixins.respond-to(notDesktopFr) {
     //   width: 100%;
     // }
 
@@ -38,7 +38,7 @@
       justify-content: flex-start;
       gap: 20px;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(notDesktopFr) {
         order: 2;
       }
     }
@@ -46,7 +46,7 @@
     &--right {
       padding: 40px 0 0 0;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(notDesktopFr) {
         order: 1;
 
         padding: 0;
@@ -59,7 +59,7 @@
 
     color: #0B101A;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       width: 100%;
       max-width: 320px;
 
@@ -74,7 +74,7 @@
     line-height: 18px;
     color: #C9C9C9;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       font-size: 16px;
     }
   }
@@ -85,7 +85,7 @@
     font-weight: 700;
     line-height: 76px;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       font-size: 25px;
       line-height: 27px;
     }
@@ -97,7 +97,7 @@
     font-weight: 700;
     line-height: 40px;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       font-size: 18px;
       line-height: 20px;
       font-weight: 400;
@@ -113,7 +113,7 @@
 
     margin: 16px 0 0 0;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       gap: 20px;
     }
 
@@ -124,7 +124,7 @@
       justify-content: flex-start;
       gap: 23px 80px;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(notDesktopFr) {
         gap: 15px 20px;
       }
 
@@ -136,7 +136,7 @@
         font-weight: 400;
         line-height: 24px;
 
-        @include mixins.respond-to(notDesktop) {
+        @include mixins.respond-to(notDesktopFr) {
           max-width: 250px;
         }
       }
@@ -148,7 +148,7 @@
     height: 538px;
     object-fit: contain !important;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       width: 100%;
       height: auto;
       max-height: 300px;

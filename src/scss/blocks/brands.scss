@@ -8,7 +8,7 @@
   background-size: 100% 490px;
   padding: 85px 0 116px 0;
 
-  @include mixins.respond-to(notDesktop) {
+  @include mixins.respond-to(notDesktopFr) {
     background: none;
 
     padding: 20px 0 60px 0;
@@ -29,7 +29,7 @@
 
     margin: 0 0 92px 0;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       margin: 0 0 132px 0;
     }
   }
@@ -39,7 +39,7 @@
 
     width: 100%;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       max-width: 90%;
     }
 
@@ -57,7 +57,7 @@
 
       transition: opacity 0.3s;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(notDesktopFr) {
         max-width: 120px;
       }
 
@@ -116,7 +116,7 @@
 
     margin: 0 0 177px 0;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       flex-direction: column;
       gap: 60px;
 
@@ -135,7 +135,7 @@
         transition: 1s ease;
       }
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(notDesktopFr) {
         opacity: 1;
 
         transition: transform 0.3s;
@@ -160,7 +160,7 @@
       justify-content: center;
       gap: 25px;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(notDesktopFr) {
         gap: 0;
       }
     }
@@ -183,7 +183,7 @@
 
     overflow: hidden;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       background: url('../img/image/brands.png') no-repeat;
       background-position: center center;
       background-size: contain
@@ -203,7 +203,7 @@
 
       margin: 0 0 15px 0;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(notDesktopFr) {
         font-size: 24px;
         text-align: center;
 
@@ -222,7 +222,7 @@
 
       margin: 0 0 30px 0;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(notDesktopFr) {
         max-width: 260px;
 
         font-size: 16px;
@@ -264,7 +264,7 @@
         margin: 0 0 40px 0;
       }
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(notDesktopFr) {
         margin: 0 0 16px 0;
 
         &:last-of-type {
@@ -312,7 +312,7 @@
     user-select: none;
     pointer-events: none;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       display: none;
     }
 

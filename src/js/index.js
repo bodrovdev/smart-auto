@@ -1,5 +1,24 @@
 // import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { lock, unlock } from 'tua-body-scroll-lock';
+import Lenis from '@studio-freight/lenis'
+
+// ? --- Плавный скроллинг
+window.addEventListener('load', () => {
+  if (window.innerWidth >= 1280) {
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
+      console.log(e)
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  }
+})
 
 // ? --- Отключение подсветки ошибок в инпутах
 window.addEventListener('load', () => {
@@ -114,11 +133,17 @@ window.addEventListener('load', () => {
     filter_button.addEventListener('click', () => {
       filter_menu.classList.add('catalogue-cars__wrapper-column--left--active');
       lock(filter_menu);
+      if (window.innerWidth < 1280) {
+        Lenis.stop();
+      }
     })
 
     filter_button_close.addEventListener('click', () => {
       filter_menu.classList.remove('catalogue-cars__wrapper-column--left--active');
       unlock(filter_menu);
+      if (window.innerWidth < 1280) {
+        Lenis.start();
+      }
     })
   }
 })

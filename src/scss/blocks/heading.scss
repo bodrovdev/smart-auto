@@ -7,7 +7,7 @@
   height: 100dvh;
   min-height: 500px;
 
-  @include mixins.respond-to(notDesktop) {
+  @include mixins.respond-to(notDesktopFr) {
     // height: auto;
     height: 100dvh;
 
@@ -41,7 +41,7 @@
     // padding: 0 0 320px 0;
     padding: 0;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       padding: 0;
     }
   }
@@ -71,7 +71,7 @@
 
     width: 100%;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       top: auto;
 
       gap: 20px;
@@ -161,7 +161,7 @@
     font-weight: 700;
     line-height: 64px;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(mobileOnly) {
       gap: 8px;
 
       font-size: 40px;
@@ -172,7 +172,7 @@
       height: 64px;
       overflow: hidden;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         width: 100%;
         height: 48px;
         min-width: auto;
@@ -187,7 +187,7 @@
           animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
           animation-delay: 0.3s;
 
-          @include mixins.respond-to(notDesktop) {
+          @include mixins.respond-to(mobileOnly) {
             animation: move_mobile 5s infinite forwards;
             animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
             animation-delay: 0.1s;
@@ -205,7 +205,7 @@
       font-weight: 400;
       text-align: center;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(mobileOnly) {
         height: 48px;
       }
 
@@ -216,7 +216,7 @@
       &--2 {
         font-family: 'Caveat', system-ui, sans-serif;
 
-        @include mixins.respond-to(notDesktop) {
+        @include mixins.respond-to(mobileOnly) {
           font-size: 60px;
         }
       }
@@ -226,7 +226,7 @@
         font-size: 50px;
         text-transform: uppercase;
 
-        @include mixins.respond-to(notDesktop) {
+        @include mixins.respond-to(mobileOnly) {
           font-size: 50px;
           text-transform: none;
         }
@@ -236,7 +236,7 @@
         font-family: 'Press-Start-2p', system-ui, sans-serif;
         font-size: 50px;
 
-        @include mixins.respond-to(notDesktop) {
+        @include mixins.respond-to(mobileOnly) {
           font-size: 20px;
         }
       }
@@ -246,7 +246,7 @@
 
         font-size: 55px;
 
-        @include mixins.respond-to(notDesktop) {
+        @include mixins.respond-to(mobileOnly) {
           font-size: 45px;
         }
       }
@@ -299,8 +299,8 @@
 
   &__whatsapp {
     position: fixed;
-    top: 50%;
     right: 10px;
+    bottom: 127px;
 
     display: flex;
     align-items: center;
@@ -317,9 +317,11 @@
 
     padding: 9px;
 
-    z-index: 99;
+    z-index: 9;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
+      bottom: 20px;
+      right: 20px;
 
       justify-content: center;
 
@@ -352,7 +354,7 @@
     }
 
     &-icon {
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(notDesktopFr) {
         width: 44px;
         height: 44px;
       }

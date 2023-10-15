@@ -4,7 +4,7 @@
 
   padding: 85px 0 0 0;
 
-  @include mixins.respond-to(notDesktop) {
+  @include mixins.respond-to(notDesktopFr) {
     padding: 40px 0 0 0;
   }
 
@@ -15,7 +15,7 @@
     justify-content: center;
     gap: 34px;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       gap: 13px;
     }
   }
@@ -28,7 +28,7 @@
 
     width: 100%;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
   }
@@ -52,7 +52,7 @@
     border: 1px solid #30363D;
     overflow: hidden;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       flex-direction: column;
       gap: 14px;
 
@@ -91,7 +91,7 @@
       transform: translate3d(-40px, 0, 0);
       transition: opacity 0.6s, transform 0.6s;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(notDesktopFr) {
         position: relative;
         top: auto;
         left: auto;
@@ -123,7 +123,7 @@
 
       z-index: 2;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(notDesktopFr) {
         opacity: 1;
 
         transform: none;
@@ -134,7 +134,7 @@
     }
   }
 
-  @media (min-width:1280px) and (max-width:1599px) {
+  @media (min-width:1200px) and (max-width:1599px) {
     &__wrapper {
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }

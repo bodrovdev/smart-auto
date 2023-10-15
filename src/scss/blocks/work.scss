@@ -3,7 +3,7 @@
 .work {
   padding: 64px 0 90px 0;
 
-  @include mixins.respond-to(notDesktop) {
+  @include mixins.respond-to(notDesktopFr) {
     padding: 40px 0;
   }
 
@@ -14,7 +14,7 @@
     justify-content: center;
     gap: 35px;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       gap: 23px;
     }
   }
@@ -28,7 +28,7 @@
 
     width: 100%;
 
-    @include mixins.respond-to(notDesktop) {
+    @include mixins.respond-to(notDesktopFr) {
       gap: 20px;
     }
 
@@ -47,7 +47,7 @@
       border-radius: 8px;
       overflow: hidden;
 
-      @include mixins.respond-to(notDesktop) {
+      @include mixins.respond-to(notDesktopFr) {
         flex-direction: column;
         gap: 21px;
 
@@ -59,7 +59,7 @@
         padding: 18px 14px 14px 14px !important;
       }
 
-      @include mixins.respond-to(desktopD) {
+      @include mixins.respond-to(desktopDSmall) {
         &:nth-child(odd) {
           gap: 78px;
 
@@ -125,19 +125,19 @@
           line-height: 24px;
           color: rgba(235, 245, 255, 0.50);
 
-          @include mixins.respond-to(notDesktop) {
+          @include mixins.respond-to(notDesktopFr) {
             font-size: 16px;
           }
         }
 
         &-image {
-          @include mixins.respond-to(notDesktop) {
+          @include mixins.respond-to(notDesktopFr) {
             width: 100%;
           }
         }
 
         &-img {
-          @include mixins.respond-to(notDesktop) {
+          @include mixins.respond-to(notDesktopFr) {
             width: 100%;
             height: auto;
             min-height: 161px;
@@ -160,7 +160,7 @@
 
         z-index: 2;
 
-        @include mixins.respond-to(notDesktop) {
+        @include mixins.respond-to(notDesktopFr) {
           top: -39px;
           right: -52px;
 

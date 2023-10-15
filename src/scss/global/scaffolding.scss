@@ -169,13 +169,13 @@ h6 {
 }
 
 .display-on-mobile {
-	@include mixins.respond-to(desktopD) {
+	@include mixins.respond-to(desktopDSmall) {
 		display: none !important;
 	}
 }
 
 .hide-on-mobile {
-	@include mixins.respond-to(notDesktop) {
+	@include mixins.respond-to(notDesktopFr) {
 		display: none !important;
 	}
 }

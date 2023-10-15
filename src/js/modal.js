@@ -18,11 +18,19 @@
 //     })
 
 //     // ? - Закрытие
+//     modal_with_form_close.addEventListener('click', () => {
+//       modal_with_form.classList.remove('modal-with-form--active');
+//       document.querySelector('.modal-with-form__inner').classList.remove('modal-with-form__inner--hidden');
+//       document.querySelector('.modal-with-form__success').classList.remove('modal-with-form__success--active');
+//       enableBodyScroll(modal_with_form);
+//     })
+
 //     window.addEventListener('click', (e) => {
+//       console.log(e.target);
 //       if (Array.from(modal_with_form_buttons).includes(e.target)) {
 //         return;
 //       }
-//       else if (!(document.querySelector('.modal-with-form__wrapper').contains(e.target)) || e.target === modal_with_form_close) {
+//       else if (!(document.querySelector('.modal-with-form__wrapper').contains(e.target))) {
 //         modal_with_form.classList.remove('modal-with-form--active');
 //         document.querySelector('.modal-with-form__inner').classList.remove('modal-with-form__inner--hidden');
 //         document.querySelector('.modal-with-form__success').classList.remove('modal-with-form__success--active');
@@ -31,11 +39,11 @@
 //     })
 
 //     // ? - Отправка
-//     modal_with_form_formset.addEventListener('submit', (e) => {
-//       e.preventDefault();
-//       document.querySelector('.modal-with-form__inner').classList.add('modal-with-form__inner--hidden');
-//       document.querySelector('.modal-with-form__success').classList.add('modal-with-form__success--active');
-//     })
+//     // modal_with_form_formset.addEventListener('submit', (e) => {
+//     //   e.preventDefault();
+//     //   document.querySelector('.modal-with-form__inner').classList.add('modal-with-form__inner--hidden');
+//     //   document.querySelector('.modal-with-form__success').classList.add('modal-with-form__success--active');
+//     // })
 //   }
 // })
 
