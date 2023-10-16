@@ -27,14 +27,65 @@
         <h2 class="modal-with-form__inner-title">Заказать HiPhi X</h2>
         <span class="modal-with-form__inner-subtitle">Выбранные параметры</span>
         <form class="modal-with-form__formset" id="catalogue_cars_form">
-          <div class="modal-with-form__form-item">
-            <h3 class="modal-with-form__form-item-title">Комплектация</h3>
-            <div class="modal-with-form__form-item-body">
-              <input class="modal-with-form__form-item-content" type="text" value="HiPhi X Deluxe Edition 6 местный" disabled>
-              <input class="modal-with-form__form-item-content" type="text" value="11 000 000 ₽" disabled>
+
+          <div class="modal-with-form__formset-wrapper">
+            <div class="modal-with-form__formset-wrapper-item">
+              <h3 class="modal-with-form__formset-wrapper-item-title">Комплектация</h3>
+              <div class="modal-with-form__formset-wrapper-item-body">
+                <input class="modal-with-form__formset-wrapper-item-content" type="text" value="HiPhi X Deluxe Edition 6 местный" disabled>
+                <input class="modal-with-form__formset-wrapper-item-content" type="text" value="11 000 000 ₽" disabled>
+              </div>
+            </div>
+            <div class="modal-with-form__formset-wrapper-item">
+              <h3 class="modal-with-form__formset-wrapper-item-title">Цвет кузова</h3>
+              <div class="modal-with-form__formset-wrapper-item-body">
+                <input class="modal-with-form__formset-wrapper-item-content" type="text" value="Белый" disabled>
+                <input class="modal-with-form__formset-wrapper-item-content" type="text" value="0 ₽" disabled>
+              </div>
+            </div>
+            <div class="modal-with-form__formset-wrapper-item">
+              <h3 class="modal-with-form__formset-wrapper-item-title">Цвет салона</h3>
+              <div class="modal-with-form__formset-wrapper-item-body">
+                <input class="modal-with-form__formset-wrapper-item-content" type="text" value="Черный" disabled>
+                <input class="modal-with-form__formset-wrapper-item-content" type="text" value="0 ₽" disabled>
+              </div>
             </div>
           </div>
-          <button class="modal-with-form__formset-submit" type="submit"></button>
+
+          <div class="modal-with-form__formset-bottom">
+            <div class="modal-with-form__formset-wrapper-item">
+              <div class="modal-with-form__formset-wrapper-item-body">
+                <input class="modal-with-form__formset-wrapper-item-content" type="text" value="Итого" disabled>
+                <input class="modal-with-form__formset-wrapper-item-content" type="text" value="11 000 000 ₽" disabled>
+              </div>
+            </div>
+
+            <h3 class="modal-with-form__formset-bottom-title">Ваши контактные данные</h3>
+            <div class="modal-with-form__formset-bottom-field">
+              <span class="modal-with-form__formset-bottom-label">Ф.И.О *</span>
+              <input type="text" class="modal-with-form__formset-bottom-input" placeholder="Можно указать только имя" name="name">
+            </div>
+            <div class="modal-with-form__formset-bottom-field">
+              <span class="modal-with-form__formset-bottom-label">Номер телефона *</span>
+              <input type="text" class="modal-with-form__formset-bottom-input" placeholder="+7 999 000 00-00" name="phone">
+            </div>
+            <div class="modal-with-form__formset-bottom-field">
+              <span class="modal-with-form__formset-bottom-label">Комментарий к заявке</span>
+              <textarea type="text" class="modal-with-form__formset-bottom-input" placeholder="Наберите текст" name="text"></textarea>
+            </div>
+          </div>
+
+          <button class="modal-with-form__formset-bottom-submit main-button main-button--yellow" type="submit">Отправить заявку</button>
+
+          <div class="modal-with-form__formset-bottom-info">
+            <p>
+              Нажимая на кнопку “Отправить заявку”,
+              вы даете согласие на обработку персональных
+              данных и соглашаетесь с условиями политики
+              конфиденциальности.
+            </p>
+          </div>
+
         </form>
       </div>
       <div class="modal-with-form__success"></div>

@@ -2,7 +2,7 @@ const { src, dest } = require('gulp');
 const plumber = require('gulp-plumber');
 const webpack = require('webpack-stream');
 
-let isDev = false;
+let isDev = true;
 
 // Минификация JavaScript
 let webConfig = {
