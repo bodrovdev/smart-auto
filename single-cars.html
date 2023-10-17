@@ -10,41 +10,165 @@
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
 
-  <link href="css/style.min.css?v=1.0" rel="stylesheet">
+  <link href="css/style.min.css?v=3.0" rel="stylesheet">
   <title></title>
 </head>
 
 <body style="overflow: hidden;">
 
-  <div class="modal-with-form" id="modal_with_form">
-    <div class="modal-with-form__wrapper">
-      <button class="modal-with-form__close" type="button">
-        <svg class="modal-with-form__close-icon" width="24" height="24" aria-hidden="true">
+  <div class="cars-modal">
+    <div class="cars-modal__wrapper">
+      <button class="cars-modal__close cars-modal__close--top" type="button">
+        <svg class="cars-modal__close-icon" width="24" height="24" aria-hidden="true">
           <use href="img/icon/sprite.svg#modal-close-icon"></use>
         </svg>
       </button>
-      <div class="modal-with-form__inner">
-        <h2 class="modal-with-form__inner-title">Заказать HiPhi X</h2>
-        <span class="modal-with-form__inner-subtitle">Выбранные параметры</span>
-        <form class="modal-with-form__formset" id="catalogue_cars_form">
-          <div class="modal-with-form__form-item">
-            <h3 class="modal-with-form__form-item-title">Комплектация</h3>
-            <div class="modal-with-form__form-item-body">
-              <input class="modal-with-form__form-item-content" type="text" value="HiPhi X Deluxe Edition 6 местный" disabled>
-              <input class="modal-with-form__form-item-content" type="text" value="11 000 000 ₽" disabled>
+      <div class="cars-modal__inner">
+        <h2 class="cars-modal__inner-title">Заказать HiPhi X</h2>
+        <span class="cars-modal__inner-subtitle">Выбранные параметры</span>
+        <form class="cars-modal__form" id="catalogue_cars_form">
+
+          <div class="cars-modal__form-wrapper">
+            <div class="cars-modal__form-wrapper-item">
+              <h3 class="cars-modal__form-wrapper-item-title">Комплектация</h3>
+              <div class="cars-modal__form-wrapper-item-body">
+                <input class="cars-modal__form-wrapper-item-content" type="text" value="HiPhi X Deluxe Edition 6 местный" disabled>
+                <input class="cars-modal__form-wrapper-item-content" type="text" value="11 000 000 ₽" disabled>
+              </div>
+            </div>
+            <div class="cars-modal__form-wrapper-item">
+              <h3 class="cars-modal__form-wrapper-item-title">Цвет кузова</h3>
+              <div class="cars-modal__form-wrapper-item-body">
+                <input class="cars-modal__form-wrapper-item-content" type="text" value="Белый" disabled>
+                <input class="cars-modal__form-wrapper-item-content" type="text" value="0 ₽" disabled>
+              </div>
+            </div>
+            <div class="cars-modal__form-wrapper-item">
+              <h3 class="cars-modal__form-wrapper-item-title">Цвет салона</h3>
+              <div class="cars-modal__form-wrapper-item-body">
+                <input class="cars-modal__form-wrapper-item-content" type="text" value="Черный" disabled>
+                <input class="cars-modal__form-wrapper-item-content" type="text" value="0 ₽" disabled>
+              </div>
             </div>
           </div>
-          <button class="modal-with-form__formset-submit" type="submit"></button>
+
+          <div class="cars-modal__form-bottom">
+            <div class="cars-modal__form-wrapper-item">
+              <div class="cars-modal__form-wrapper-item-body">
+                <input class="cars-modal__form-wrapper-item-content" type="text" value="Итого" disabled>
+                <input class="cars-modal__form-wrapper-item-content" type="text" value="11 000 000 ₽" disabled>
+              </div>
+            </div>
+
+            <h3 class="cars-modal__form-bottom-title">Ваши контактные данные</h3>
+            <div class="cars-modal__form-bottom-field">
+              <span class="cars-modal__form-bottom-label">Ф.И.О *</span>
+              <input type="text" class="cars-modal__form-bottom-input" placeholder="Можно указать только имя" name="name" required>
+            </div>
+            <div class="cars-modal__form-bottom-field">
+              <span class="cars-modal__form-bottom-label">Номер телефона *</span>
+              <input type="text" class="cars-modal__form-bottom-input" placeholder="+7 999 000 00-00" name="phone" required>
+            </div>
+            <div class="cars-modal__form-bottom-field">
+              <span class="cars-modal__form-bottom-label">Комментарий к заявке</span>
+              <textarea type="text" class="cars-modal__form-bottom-input" placeholder="Наберите текст" name="text"></textarea>
+            </div>
+          </div>
+
+          <button class="cars-modal__form-bottom-submit main-button main-button--yellow" type="submit">Отправить заявку</button>
+
+          <div class="cars-modal__form-bottom-info">
+            <p>
+              Нажимая на кнопку “Отправить заявку”,
+              вы даете согласие на обработку персональных
+              данных и соглашаетесь с условиями политики
+              конфиденциальности.
+            </p>
+          </div>
+
         </form>
       </div>
-      <div class="modal-with-form__success"></div>
+      <div class="modal-success">
+        <h2 class="modal-success__title">Спасибо, Ваша заявка успешно отправлена</h2>
+        <span class="modal-success__subtitle">
+          Наш менеджер свяжется с вами
+          для уточнения данных
+        </span>
+        <button class="cars-modal__close main-button">Закрыть</button>
+      </div>
     </div>
   </div>
 
-  <div class="modal-without-form" id="modal_without_form">
-    <div class="modal-without-form__wrapper">
-      <div class="modal-without-form__success">
-        <span class="modal-without-form__success-text"></span>
+  <div class="goods-modal">
+    <div class="goods-modal__wrapper">
+      <button class="goods-modal__close goods-modal__close--top" type="button">
+        <svg class="goods-modal__close-icon" width="24" height="24" aria-hidden="true">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <div class="goods-modal__inner">
+        <form class="goods-modal__form" id="catalogue_goods_form">
+          <div class="goods-modal__form-bottom">
+            <div class="goods-modal__form-wrapper-item">
+              <div class="goods-modal__form-wrapper-item-body">
+                <input class="goods-modal__form-wrapper-item-content" type="text" name="category" id="goods_order_cat" value="Электрическая зарядная станция" disabled>
+                <input class="goods-modal__form-wrapper-item-content" type="text" name="title" id="goods_order_title" value="TOUCH Home Max Pro 13,2" disabled>
+                <input class="goods-modal__form-wrapper-item-content" type="text" name="price" id="goods_order_price" value="500 000 ₽" disabled>
+              </div>
+            </div>
+            <h3 class="goods-modal__form-bottom-title">Ваши контактные данные</h3>
+            <div class="goods-modal__form-bottom-field">
+              <span class="goods-modal__form-bottom-label">Ф.И.О *</span>
+              <input type="text" class="goods-modal__form-bottom-input" placeholder="Можно указать только имя" name="name" required>
+            </div>
+            <div class="goods-modal__form-bottom-field">
+              <span class="goods-modal__form-bottom-label">Номер телефона *</span>
+              <input type="text" class="goods-modal__form-bottom-input" placeholder="+7 999 000 00-00" name="phone" required>
+            </div>
+            <div class="goods-modal__form-bottom-field">
+              <span class="goods-modal__form-bottom-label">Комментарий к заявке</span>
+              <textarea type="text" class="goods-modal__form-bottom-input" placeholder="Наберите текст" name="text"></textarea>
+            </div>
+          </div>
+
+          <button class="goods-modal__form-bottom-submit main-button main-button--yellow" type="submit">Отправить заявку</button>
+
+          <div class="goods-modal__form-bottom-info">
+            <p>
+              Нажимая на кнопку “Отправить заявку”,
+              вы даете согласие на обработку персональных
+              данных и соглашаетесь с условиями политики
+              конфиденциальности.
+            </p>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-success">
+        <h2 class="modal-success__title">Спасибо, Ваша заявка успешно отправлена</h2>
+        <span class="modal-success__subtitle">
+          Наш менеджер свяжется с вами
+          для уточнения данных
+        </span>
+        <button class="goods-modal__close main-button">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="success-modal">
+    <div class="success-modal__wrapper">
+      <button class="success-modal__close success-modal__close--top" type="button">
+        <svg class="cars-modal__close-icon" width="24" height="24" aria-hidden="true">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal-success">
+        <h2 class="modal-success__title">Спасибо, Ваша заявка успешно отправлена</h2>
+        <span class="modal-success__subtitle">
+          Наш менеджер свяжется с вами
+          для уточнения данных
+        </span>
+        <button class="success-modal__close main-button">Закрыть</button>
       </div>
     </div>
   </div>
@@ -256,21 +380,26 @@
             <span class="single-cars__options-select-label">Комплектация</span>
             <div class="single-cars__options-select-wrapper">
               <select class="single-cars__options-select">
-                <option data-options_select="1" data-img="https://files.catbox.moe/9jgd88.png">HiPhi X Deluxe Edition 6 местный</option>
-                <option data-options_select="2" data-img="https://files.catbox.moe/up2wzu.png">HiPhi X Flagship 6 местный</option>
-                <option data-options_select="3" data-img="https://files.catbox.moe/k4083e.png">HiPhi X Flagship 4 местный</option>
+                <option data-options_select="1" data-options_initial_price="7500000" data-img="https://files.catbox.moe/9jgd88.png">
+                  HiPhi X Deluxe Edition 6 местный
+                </option>
+                <option data-options_select="2" data-options_initial_price="8500000" data-img="https://files.catbox.moe/up2wzu.png">
+                  HiPhi X Flagship 6 местный
+                </option>
+                <option data-options_select="3" data-options_initial_price="9500000" data-img="https://files.catbox.moe/k4083e.png">
+                  HiPhi X Flagship 4 местный
+                </option>
               </select>
             </div>
 
             <h2 class="single-cars__options-title">Характеристики</h2>
             <div class="single-cars__options-wrapper">
-
               <div class="single-cars__options-item" data-options_set="1">
                 <span class="single-cars__options-item-label">Цвет кузова</span>
                 <div class="single-cars__options-item-buttons">
                   <button class="single-cars__options-item-button" data-options_price="0" data-options_name="Чёрный" style="background: #0B101A;">
                   </button>
-                  <button class="single-cars__options-item-button" data-options_price="10000" data-options_name="Жолтий" style="background: #ffe76a;">
+                  <button class="single-cars__options-item-button" data-options_price="10000" data-options_name="Жёлтый" style="background: #ffe76a;">
                   </button>
                   <button class="single-cars__options-item-button" data-options_price="20000" data-options_name="Белый" style="background: #FFFFFF;">
                   </button>
@@ -305,7 +434,6 @@
                   <span class="single-cars__options-item-price-num">+ <span class="single-cars__options-item-price-num--yellow">0</span> ₽</span>
                 </div>
               </div>
-
             </div>
 
             <div class="single-cars__options-result">
@@ -313,7 +441,7 @@
                 <span class="single-cars__options-result-label">Итого</span>
                 <span class="single-cars__options-result-num"><span id="result_price">7 500 000 </span>₽</span>
               </div>
-              <button class="single-cars__options-result-button main-button main-button--yellow modal-with-form__button" type="button">Заказать</button>
+              <button class="single-cars__options-result-button main-button main-button--yellow cars-modal__button" type="button">Заказать</button>
             </div>
 
           </div>
@@ -321,12 +449,12 @@
       </div>
     </div>
 
-    <figure class="single-cars__banner-image" style="overflow-x: hidden;">
+    <figure class="single-cars__banner-image">
       <img class="single-cars__banner-img" src="img/image/single-banner.png" alt="#">
     </figure>
 
     <div class="single-cars__container base-container">
-      <div class="single-cars__features" style="overflow-x: hidden;">
+      <div class="single-cars__features">
         <h2 class="single-cars__features-title section-title">Идеальное сочетание суперкара и внедорожника</h2>
         <p class="single-cars__features-text">
           E-пропорция — в которой используется конструкция с перемещением точки капота вперед и лобового стекла с большим углом наклона 65 градусов, образующим форму суперкара. 22-дюймовые колеса в сочетании с полным приводом и регулируемой пневматической
@@ -354,7 +482,7 @@
           </div>
         </div>
       </div>
-      <div class="single-cars__gallery" style="overflow-x: hidden;">
+      <div class="single-cars__gallery">
         <h2 class="single-cars__gallery-title section-title">Фотографиии кузова и салона HiPhi X</h2>
         <div class="single-cars__gallery-slider swiper">
           <div class="single-cars__gallery-wrapper swiper-wrapper">
@@ -379,7 +507,7 @@
           </div>
         </div>
       </div>
-      <div class="single-cars__tabs" style="overflow-x: hidden;">
+      <div class="single-cars__tabs">
         <h2 class="single-cars__tabs-title section-title">Технические характеристики комплектаций HiPhi X</h2>
         <div class="single-cars__tabs-wrapper">
           <div class="single-cars__tabs-buttons">
@@ -628,7 +756,7 @@
           <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
         </a>
         <span class="footer-top__column-phone-subline">Время работы: с 9 до 21 часов</span>
-        <button class="brands__feedback-submit modal-with-form__button main-button" type="button">Свяжитесь со мной</button>
+        <button class="brands__feedback-submit cars-modal__button main-button" type="button">Свяжитесь со мной</button>
       </div>
     </div>
   </section>
