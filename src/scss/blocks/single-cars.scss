@@ -103,7 +103,6 @@
   }
 
   &__options {
-
     &-select {
       &-label {
         display: inline-block;
@@ -203,16 +202,17 @@
     }
 
     &-item {
-      display: none;
+      // display: none;
+      display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
 
       width: 100%;
 
-      &--active {
-        display: flex;
-      }
+      // &--active {
+      //   display: flex;
+      // }
 
       &-label {
         display: inline-block;

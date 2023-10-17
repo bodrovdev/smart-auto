@@ -27,7 +27,7 @@
         min-width: 250px;
         min-height: 1069px;
 
-        @include mixins.respond-to(notDesktopFr) {
+        @include mixins.respond-to(notDesktopBigOne) {
           position: fixed;
           top: 0;
           left: 0;
@@ -275,7 +275,7 @@
       & .catalogue-cars__filters-content-close {
         display: none;
 
-        @include mixins.respond-to(notDesktopFr) {
+        @include mixins.respond-to(notDesktopBigOne) {
           position: fixed;
           bottom: 0;
           left: 50%;
@@ -758,7 +758,7 @@
     gap: 20px;
 
     @include mixins.respond-to(notDesktopFr) {
-      gap: 15px;
+      gap: 20px;
     }
   }
 
@@ -806,15 +806,15 @@
   .next {
     background: url('../img/image/pagination-arrow.svg') transparent no-repeat;
     background-size: 8px 13px;
-    background-position: 21px center;
+    background-position: center center;
 
     border: 1px solid #373c4a;
 
     transition: background 0.3s;
 
     @include mixins.respond-to(notDesktopFr) {
-      width: 49px;
-      height: 49px;
+      width: 29px;
+      height: 29px;
     }
 
     &:hover {
@@ -862,20 +862,25 @@
 
     width: 100%;
 
-    @include mixins.respond-to(notDesktopFr) {
+    @include mixins.respond-to(notDesktopBigOne) {
       justify-content: space-between;
     }
   }
 
   &-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
 
-    font-family: var(--font-family-default);
-    font-size: 16px;
-    font-weight: 500;
-    color: #E0E4E7;
+    display: none;
+
+    @include mixins.respond-to(notDesktopBigOne) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      font-family: var(--font-family-default);
+      font-size: 16px;
+      font-weight: 500;
+      color: #E0E4E7;
+    }
   }
 }

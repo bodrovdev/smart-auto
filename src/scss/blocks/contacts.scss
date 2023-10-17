@@ -79,10 +79,10 @@
       top: auto;
       left: auto;
 
-      width: 100%;
-      max-width: 300px;
+      width: 92%;
+      max-width: none;
       min-height: auto;
-      // max-height: 350px;
+      max-height: 350px;
       border-radius: 8px;
       border: 1px solid #30363D;
 
@@ -113,6 +113,7 @@
       width: 100%;
 
       @include mixins.respond-to(mobileOnly) {
+        align-items: center;
         gap: 20px;
       }
     }

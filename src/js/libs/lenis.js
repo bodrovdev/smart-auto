@@ -1,22 +1,19 @@
-// ? --- Плавный скроллинг
-import Lenis from '@studio-freight/lenis'
-function scrollFunc() {
-  window.addEventListener('load', () => {
-    if (window.innerWidth >= 1280) {
-      const lenis = new Lenis()
+// import Lenis from '@studio-freight/lenis';
 
-      lenis.on('scroll', (e) => {
-        console.log(e)
-      })
+// ? --- Плавный скроллинг (не работает вместе с модалками)
+// window.addEventListener('load', () => {
+//   if (window.innerWidth >= 1280) {
+//     const lenis = new Lenis()
 
-      function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-      }
+//     lenis.on('scroll', (e) => {
+//       console.log(e)
+//     })
 
-      requestAnimationFrame(raf)
-    }
-  })
-}
+//     function raf(time) {
+//       lenis.raf(time)
+//       requestAnimationFrame(raf)
+//     }
 
-export { scrollFunc };
+//     requestAnimationFrame(raf)
+//   }
+// })

@@ -1,8 +1,8 @@
-// import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { lock, unlock } from 'tua-body-scroll-lock';
-import { scrollFunc } from './libs/lenis';
 
-scrollFunc();
+import { accordionFunc } from './accordionFunc';
+import { tabsFunc } from './tabsFunc';
+import { modalFunc } from './modalFunc';
 
 // ? --- Отключение подсветки ошибок в инпутах
 window.addEventListener('load', () => {
@@ -45,64 +45,6 @@ window.addEventListener('load', () => {
   }
 });
 
-// ? --- Аккордеон в блоке вопросов
-function accordionFunc(rootClassName) {
-  window.addEventListener('load', () => {
-    let accordionList = document.querySelectorAll(`.${rootClassName}__accordion-item`);
-
-    if (accordionList === null) {
-      return;
-    }
-    else {
-      accordionList.forEach(item => {
-        let accordionItemContent = item.querySelector(`.${rootClassName}__accordion-item-content`);
-        let accordionItemTop = item.querySelector(`.${rootClassName}__accordion-item-top`);
-
-        item.addEventListener('click', () => {
-          if (item.classList.contains(`${rootClassName}__accordion-item--active`)) {
-            item.classList.remove(`${rootClassName}__accordion-item--active`);
-            item.setAttribute('style', '');
-          }
-          else {
-            item.classList.add(`${rootClassName}__accordion-item--active`);
-            item.setAttribute(`style`, `height:${accordionItemContent.offsetHeight + accordionItemTop.offsetHeight}px; transition:all 0.3s;`);
-          }
-        })
-      })
-    }
-  })
-}
-accordionFunc('questions');
-
-// ? --- Табы в блоке характеристик
-function tabsFunc(rootClassName) {
-  window.addEventListener('load', () => {
-    let tabs_buttons = document.querySelectorAll(`.${rootClassName}__tabs-button`);
-    if (tabs_buttons === null) {
-      return;
-    }
-    else {
-      let tabs_items = document.querySelectorAll(`.${rootClassName}__tabs-body-item`);
-
-      tabs_buttons.forEach(button => {
-        button.addEventListener('click', (e) => {
-
-          tabs_buttons.forEach(button_value => { button_value.classList.remove(`${rootClassName}__tabs-button--active`) });
-          button.classList.add(`${rootClassName}__tabs-button--active`);
-
-          tabs_items.forEach(item => {
-            if (button.dataset.tab === item.dataset.tab) {
-              tabs_items.forEach(item_value => { item_value.classList.remove(`${rootClassName}__tabs-body-item--active`); });
-              item.classList.add(`${rootClassName}__tabs-body-item--active`);
-            }
-          });
-        });
-      })
-    }
-  });
-}
-tabsFunc(`single-cars`);
-
 // ? --- Фильтр на странице каталога
 window.addEventListener('load', () => {
   let filter_menu = document.querySelector('.catalogue-cars__wrapper-column--left');
@@ -131,3 +73,34 @@ window.addEventListener('load', () => {
     })
   }
 })
+
+// ? --- Аккордеон в блоке вопросов
+accordionFunc('questions');
+
+// ? --- Табы в блоке характеристик
+tabsFunc(`single-cars`);
+
+// ? --- Модалки
+modalFunc('cars-modal');
+modalFunc('success-modal');
+modalFunc('goods-modal');
+
+window.addEventListener('load', () => {
+  let single_goods_cat = document.querySelector('.single-goods__cat');
+  let single_goods_title = document.querySelector('.single-goods__title');
+  let single_goods_price = document.querySelector('.single-goods__price');
+
+  let modal_goods_cat = document.getElementById('goods_order_cat');
+  let modal_goods_title = document.getElementById('goods_order_title');
+  let modal_goods_price = document.getElementById('goods_order_price');
+
+  let single_goods_button = document.querySelector('.goods-modal__button');
+
+  if (!(single_goods_title === null)) {
+    single_goods_button.addEventListener('click', () => {
+      modal_goods_cat.value = single_goods_cat.textContent;
+      modal_goods_title.value = single_goods_title.textContent;
+      modal_goods_price.value = single_goods_price.textContent;
+    });
+  }
+});
