@@ -19,12 +19,18 @@ function modalFunc(rootClassName) {
           modal.classList.remove(`${rootClassName}--active`);
           modal_inner.classList.remove(`${rootClassName}__inner--hidden`);
           modal_success.classList.remove('modal-success--active');
-          // lock(modal);
+          unlock(modal);
         }
         else {
           // * Если модалка с подтверждением отправки
           modal.classList.remove(`${rootClassName}--active`);
-          // lock(modal);
+          unlock(modal);
+        }
+      }
+
+      function modalClickOutside(e) {
+        if (!(Array.from(modal_buttons).includes(e.target)) && !(modal_wrapper.contains(e.target))) {
+          modalClose();
         }
       }
 
@@ -32,7 +38,9 @@ function modalFunc(rootClassName) {
       modal_buttons.forEach(button => {
         button.addEventListener('click', () => {
           modal.classList.add(`${rootClassName}--active`);
-          // unlock(modal);
+          lock(modal);
+
+          window.addEventListener('click', (e) => { modalClickOutside(e) });
         })
       })
 
@@ -40,40 +48,36 @@ function modalFunc(rootClassName) {
       modal_close.forEach(close_button => {
         close_button.addEventListener('click', () => {
           modalClose();
-        })
-      })
 
-      // ? - Закрытие по клику снаружи модалки
-      window.addEventListener('click', (e) => {
-        if (Array.from(modal_buttons).includes(e.target)) {
-          return;
-        }
-        else if (!(modal_wrapper.contains(e.target))) {
-          modalClose();
-        }
+          window.removeEventListener('click', (e) => { modalClickOutside(e) });
+        })
       })
 
       // ? - Закрытие по нажатию на esc
       window.addEventListener('keydown', (e) => {
         if (e.key === "Escape") {
           modalClose();
+
+          window.removeEventListener('click', (e) => { modalClickOutside(e) });
         }
       });
 
       // ? - Отправка
       modal_form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
         if (modal.contains(modal_inner)) {
           // * Если обычная модалка
-          e.preventDefault();
           modal_inner.classList.add(`${rootClassName}__inner--hidden`);
           modal_success.classList.add('modal-success--active');
         }
         else {
           // * Если модалка с подтверждением отправки
-          e.preventDefault();
           modal.classList.add(`${rootClassName}--active`);
           modal_success.classList.add('modal-success--active');
-          // unlock(modal);
+          lock(modal);
+
+          window.addEventListener('click', (e) => { modalClickOutside(e) });
         }
       })
     }
