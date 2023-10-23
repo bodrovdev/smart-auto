@@ -36,12 +36,6 @@
 
     width: 100%;
 
-    @include mixins.respond-to(notDesktopFr) {
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      justify-content: center;
-      gap: 24px 20px;
-    }
-
     &-item {
       display: flex;
       flex-direction: column;
@@ -91,6 +85,24 @@
       &-item {
         width: 100%;
       }
+    }
+  }
+
+  @media (min-width: 360px) and (max-width: 799px) {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      justify-content: center;
+      gap: 24px 20px;
+    }
+  }
+
+  @media (min-width: 800px) and (max-width: 1279px) {
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: center;
+      gap: 20px;
     }
   }
 }
