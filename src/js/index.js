@@ -82,8 +82,10 @@ tabsFunc(`single-cars`);
 
 // ? --- Модалки
 modalFunc('cars-modal');
-modalFunc('success-modal');
 modalFunc('goods-modal');
+modalFunc('callback-modal');
+modalFunc('success-modal');
+
 
 window.addEventListener('load', () => {
   let single_goods_cat = document.querySelector('.single-goods__cat');

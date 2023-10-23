@@ -115,14 +115,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
   }
 
-  @media (min-width:1280px) and (max-width:1599px) {
-    &__container {
-      justify-content: space-between;
-      gap: 20px;
-    }
-  }
+  // @media (min-width:1280px) and (max-width:1599px) {
+  //   &__container {
+  //     justify-content: space-between;
+  //   }
+  // }
 
   &__logo-link {
     display: flex;
@@ -131,7 +131,7 @@
 
     transition: transform 0.2s;
 
-    margin: 0 150px 0 0;
+    // margin: 0 150px 0 0;
 
     @include mixins.respond-to(notDesktop) {
       margin: 0;
