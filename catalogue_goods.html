@@ -155,6 +155,55 @@
     </div>
   </div>
 
+  <div class="callback-modal">
+    <div class="callback-modal__wrapper">
+      <button class="callback-modal__close callback-modal__close--top" type="button">
+        <svg class="callback-modal__close-icon" width="24" height="24" aria-hidden="true">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <div class="callback-modal__inner">
+        <form class="callback-modal__form" id="catalogue_goods_form">
+          <div class="callback-modal__form-bottom">
+            <h3 class="callback-modal__form-bottom-title">Ваши контактные данные</h3>
+            <div class="callback-modal__form-bottom-field">
+              <span class="callback-modal__form-bottom-label">Ф.И.О *</span>
+              <input type="text" class="callback-modal__form-bottom-input" placeholder="Можно указать только имя" name="name" required>
+            </div>
+            <div class="callback-modal__form-bottom-field">
+              <span class="callback-modal__form-bottom-label">Номер телефона *</span>
+              <input type="text" class="callback-modal__form-bottom-input" placeholder="+7 999 000 00-00" name="phone" required>
+            </div>
+            <div class="callback-modal__form-bottom-field">
+              <span class="callback-modal__form-bottom-label">Комментарий к заявке</span>
+              <textarea type="text" class="callback-modal__form-bottom-input" placeholder="Наберите текст" name="text"></textarea>
+            </div>
+          </div>
+
+          <button class="callback-modal__form-bottom-submit main-button main-button--yellow" type="submit">Отправить заявку</button>
+
+          <div class="callback-modal__form-bottom-info">
+            <p>
+              Нажимая на кнопку “Отправить заявку”,
+              вы даете согласие на обработку персональных
+              данных и соглашаетесь с условиями политики
+              конфиденциальности.
+            </p>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-success">
+        <h2 class="modal-success__title">Спасибо, Ваша заявка успешно отправлена</h2>
+        <span class="modal-success__subtitle">
+          Наш менеджер свяжется с вами
+          для уточнения данных
+        </span>
+        <button class="callback-modal__close main-button">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
   <div class="success-modal">
     <div class="success-modal__wrapper">
       <button class="success-modal__close success-modal__close--top" type="button">
@@ -206,6 +255,9 @@
             </li>
             <li class="main-nav__mobile-menu-item">
               <a class="main-nav__mobile-menu-link" href="page-about.html">О нас</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="page-about.html">Инвестиции</a>
             </li>
           </ul>
 
@@ -538,7 +590,7 @@
           <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
         </a>
         <span class="footer-top__column-phone-subline">Время работы: с 9 до 21 часов</span>
-        <button class="brands__feedback-submit cars-modal__button main-button" type="button">Свяжитесь со мной</button>
+        <button class="brands__feedback-submit callback-modal__button main-button" type="button">Свяжитесь со мной</button>
       </div>
     </div>
   </section>

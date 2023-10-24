@@ -155,6 +155,55 @@
     </div>
   </div>
 
+  <div class="callback-modal">
+    <div class="callback-modal__wrapper">
+      <button class="callback-modal__close callback-modal__close--top" type="button">
+        <svg class="callback-modal__close-icon" width="24" height="24" aria-hidden="true">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <div class="callback-modal__inner">
+        <form class="callback-modal__form" id="catalogue_goods_form">
+          <div class="callback-modal__form-bottom">
+            <h3 class="callback-modal__form-bottom-title">Ваши контактные данные</h3>
+            <div class="callback-modal__form-bottom-field">
+              <span class="callback-modal__form-bottom-label">Ф.И.О *</span>
+              <input type="text" class="callback-modal__form-bottom-input" placeholder="Можно указать только имя" name="name" required>
+            </div>
+            <div class="callback-modal__form-bottom-field">
+              <span class="callback-modal__form-bottom-label">Номер телефона *</span>
+              <input type="text" class="callback-modal__form-bottom-input" placeholder="+7 999 000 00-00" name="phone" required>
+            </div>
+            <div class="callback-modal__form-bottom-field">
+              <span class="callback-modal__form-bottom-label">Комментарий к заявке</span>
+              <textarea type="text" class="callback-modal__form-bottom-input" placeholder="Наберите текст" name="text"></textarea>
+            </div>
+          </div>
+
+          <button class="callback-modal__form-bottom-submit main-button main-button--yellow" type="submit">Отправить заявку</button>
+
+          <div class="callback-modal__form-bottom-info">
+            <p>
+              Нажимая на кнопку “Отправить заявку”,
+              вы даете согласие на обработку персональных
+              данных и соглашаетесь с условиями политики
+              конфиденциальности.
+            </p>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-success">
+        <h2 class="modal-success__title">Спасибо, Ваша заявка успешно отправлена</h2>
+        <span class="modal-success__subtitle">
+          Наш менеджер свяжется с вами
+          для уточнения данных
+        </span>
+        <button class="callback-modal__close main-button">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
   <div class="success-modal">
     <div class="success-modal__wrapper">
       <button class="success-modal__close success-modal__close--top" type="button">
@@ -206,6 +255,9 @@
             </li>
             <li class="main-nav__mobile-menu-item">
               <a class="main-nav__mobile-menu-link" href="page-about.html">О нас</a>
+            </li>
+            <li class="main-nav__mobile-menu-item">
+              <a class="main-nav__mobile-menu-link" href="page-about.html">Инвестиции</a>
             </li>
           </ul>
 
@@ -348,12 +400,31 @@
     })
   </script>
 
-<a class="heading__whatsapp">
-  <span class="heading__whatsapp-text">WhatsApp</span>
-  <svg class="heading__whatsapp-logo" width="61" height="61" aria-hidden="true">
-    <use href="img/icon/sprite.svg#whatsapp-icon"></use>
+<div class="moving-socials">
+  <div class="moving-socials__container">
+    <a class="moving-socials__item" href="#">
+      <svg class="moving-socials__item-icon" width="29" height="29" aria-hidden="true">
+        <use href="img/icon/sprite.svg#tg-icon"></use>
+      </svg>
+      <span class="moving-socials__item-text">Telegram</span>
+    </a>
+    <a class="moving-socials__item" href="#">
+      <svg class="moving-socials__item-icon" width="29" height="29" aria-hidden="true">
+        <use href="img/icon/sprite.svg#tel-icon"></use>
+      </svg>
+      <span class="moving-socials__item-text">Позвонить +79253050560</span>
+    </a>
+    <a class="moving-socials__item" href="#">
+      <svg class="moving-socials__item-icon" width="29" height="29" aria-hidden="true">
+        <use href="img/icon/sprite.svg#whatsapp-icon"></use>
+      </svg>
+      <span class="moving-socials__item-text">WhatsApp</span>
+    </a>
+  </div>
+  <svg class="moving-socials__logo" width="61" height="61" aria-hidden="true">
+    <use href="img/icon/sprite.svg#moving-socials-icon"></use>
   </svg>
-</a>
+</div>
 
 <main class="page-content">
 
@@ -433,24 +504,44 @@
         </div>
       </div>
 
-      <div class="brands__catalogue">
-        <a class="brands__catalogue-link" href="catalogue_cars.html">
-          <figure class="brands__catalogue-image">
-            <img class="brands__catalogue-img" src="img/image/brands-catalogue-1.png" alt="#">
-            <figcaption class="brands__catalogue-label">Электромобили</figcaption>
-          </figure>
-        </a>
-        <a class="brands__catalogue-link" href="catalogue_cars.html">
-          <figure class="brands__catalogue-image">
-            <img class="brands__catalogue-img" src="img/image/brands-catalogue-2.png" alt="#">
-            <figcaption class="brands__catalogue-label">Гибриды</figcaption>
-          </figure>
-        </a>
+      <div class="brands__catalogue-slider swiper">
+        <div class="brands__catalogue swiper-wrapper">
+          <a class="brands__catalogue-link swiper-slide" href="catalogue_cars.html">
+            <figure class="brands__catalogue-image">
+              <img class="brands__catalogue-img" src="img/image/brands-catalogue-1.png" alt="#">
+              <figcaption class="brands__catalogue-label">Электромобили</figcaption>
+            </figure>
+          </a>
+          <a class="brands__catalogue-link swiper-slide" href="catalogue_cars.html">
+            <figure class="brands__catalogue-image">
+              <img class="brands__catalogue-img" src="img/image/brands-catalogue-2.png" alt="#">
+              <figcaption class="brands__catalogue-label">Гибриды</figcaption>
+            </figure>
+          </a>
+          <a class="brands__catalogue-link swiper-slide" href="catalogue_cars.html">
+            <figure class="brands__catalogue-image">
+              <img class="brands__catalogue-img" src="img/image/brands-catalogue-3.png" alt="#">
+              <figcaption class="brands__catalogue-label">ДВС</figcaption>
+            </figure>
+          </a>
+        </div>
+        <div class="brands__slider-arrows">
+          <button class="brands__slider-arrow brands__slider-arrow--prev brands__catalogue-slider-arrow--prev" aria-label="Назад">
+            <svg class="brands__slider-arrow-icon" width="9" height="14">
+              <use href="img/icon/sprite.svg#brands-arrow-icon"></use>
+            </svg>
+          </button>
+          <button class="brands__slider-arrow brands__slider-arrow--next brands__catalogue-slider-arrow--next" style="transform:scaleX(-1)" aria-label="Вперёд">
+            <svg class="brands__slider-arrow-icon" width="9" height="14">
+              <use href="img/icon/sprite.svg#brands-arrow-icon"></use>
+            </svg>
+          </button>
+        </div>
       </div>
 
     </div>
 
-    <div class="brands__feedback">
+    <!-- <div class="brands__feedback">
       <div class="brands__feedback-container base-container ">
         <h2 class="brands__feedback-title">Закажите консультацию</h2>
         <span class="brands__feedback-subtitle">Оставьте данные, и мы свяжемся с вами в течении дня</span>
@@ -497,7 +588,7 @@
           </radialGradient>
         </defs>
       </svg>
-    </div>
+    </div> -->
 
   </section>
 
@@ -659,9 +750,120 @@
       </div>
     </section>
 
-    <section class="news" style="overflow-x: hidden;">
+    <section class="reviews">
+      <div class="reviews__container base-container">
+        <h2 class="reviews__title section-title">Клиенты о нас</h2>
+        <div class="reviews__slider swiper">
+          <div class="reviews__slider-wrapper swiper-wrapper">
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+          </div>
+          <div class="banners__slider-pagination reviews__slider-pagination swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="news">
       <div class="news__container base-container">
-        <h2 class="news__title section-title">Новости</h2>
+        <h2 class="news__title section-title">Клиенты о нас</h2>
         <div class="news__wrapper">
           <a class="news__wrapper-item news__wrapper-item--active" href="single-news.html">
             <img class="news__wrapper-item-img" src="img/image/news.png" alt="#">
@@ -689,7 +891,7 @@
           </a>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 
   <section class="contacts">
@@ -830,7 +1032,7 @@
           <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
         </a>
         <span class="footer-top__column-phone-subline">Время работы: с 9 до 21 часов</span>
-        <button class="brands__feedback-submit cars-modal__button main-button" type="button">Свяжитесь со мной</button>
+        <button class="brands__feedback-submit callback-modal__button main-button" type="button">Свяжитесь со мной</button>
       </div>
     </div>
   </section>
