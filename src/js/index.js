@@ -86,7 +86,7 @@ modalFunc('goods-modal');
 modalFunc('callback-modal');
 modalFunc('success-modal');
 
-
+// ? --- Передача имени и цены выбранного товара в модалку
 window.addEventListener('load', () => {
   let single_goods_cat = document.querySelector('.single-goods__cat');
   let single_goods_title = document.querySelector('.single-goods__title');
@@ -106,3 +106,20 @@ window.addEventListener('load', () => {
     });
   }
 });
+
+// ? --- Следящие ссылки на главном экране
+window.addEventListener('load', () => {
+  let following_socials = document.querySelector('.moving-socials');
+
+  if (following_socials !== null && window.innerWidth <= 1023) {
+    following_socials.addEventListener('click', () => {
+      following_socials.classList.add('moving-socials--active');
+    })
+
+    window.addEventListener('click', (e) => {
+      if (e.target !== following_socials && !(following_socials.contains(e.target))) {
+        following_socials.classList.remove('moving-socials--active');
+      }
+    });
+  }
+})

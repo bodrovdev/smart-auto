@@ -5,6 +5,7 @@
   font-size: 32px;
   font-weight: 300;
   line-height: 40px;
+  color: #E5EEF6;
 
   @include mixins.respond-to(notDesktop) {
     font-size: 24px;

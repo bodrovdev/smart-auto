@@ -74,3 +74,41 @@ function gallery_slider() {
 }
 gallery_slider();
 window.addEventListener("resize", gallery_slider);
+
+var brands_catalogue_slider_init = false;
+
+function brands_catalogue_slider() {
+  if (window.innerWidth <= 1199) {
+    if (!brands_catalogue_slider_init) {
+      brands_catalogue_slider_init = true;
+
+      var brands_catalogue_slider = new Swiper(".brands__catalogue-slider", {
+        direction: "horizontal",
+        spaceBetween: 50,
+        slidesPerView: 1,
+
+        navigation: {
+          nextEl: '.brands__catalogue-slider-arrow--next',
+          prevEl: '.brands__catalogue-slider-arrow--prev',
+        },
+      });
+    }
+  } else if (brands_catalogue_slider_init) {
+    brands_catalogue_slider.destroy();
+    brands_catalogue_slider_init = false;
+  }
+}
+brands_catalogue_slider();
+window.addEventListener("resize", brands_catalogue_slider);
+
+let reviews_slider = new Swiper(".reviews__slider", {
+  direction: "horizontal",
+  spaceBetween: 100,
+  slidesPerView: "auto",
+  speed: 1000,
+
+  pagination: {
+    el: ".reviews__slider-pagination",
+    clickable: true,
+  },
+});

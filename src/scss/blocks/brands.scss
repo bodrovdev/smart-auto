@@ -3,10 +3,10 @@
 .brands {
   position: relative;
 
-  background: url('../img/image/brands.png') no-repeat;
-  background-position: center bottom;
-  background-size: 100% 490px;
-  padding: 85px 0 116px 0;
+  // background: url('../img/image/brands.png') no-repeat;
+  // background-position: center bottom;
+  // background-size: 100% 490px;
+  padding: 85px 0 60px 0;
 
   @include mixins.respond-to(notDesktopFr) {
     background: none;
@@ -30,7 +30,7 @@
     margin: 0 0 92px 0;
 
     @include mixins.respond-to(notDesktopFr) {
-      margin: 0 0 132px 0;
+      margin: 0 0 59px 0;
     }
   }
 
@@ -106,25 +106,34 @@
     }
   }
 
-  &__catalogue {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 150px;
+  &__catalogue-slider {
+    position: relative;
 
     width: 100%;
 
-    margin: 0 0 177px 0;
+    & .brands__slider-arrows {
+      top: 82% !important;
+
+      width: 80% !important;
+    }
+  }
+
+  &__catalogue {
+    width: 100%;
+
+    // margin: 0 0 177px 0;
 
     @include mixins.respond-to(notDesktopFr) {
-      flex-direction: column;
-      gap: 60px;
+      // flex-direction: column;
+      // gap: 60px;
 
       margin: 0 0 42px 0;
     }
 
     &-link {
       display: flex;
+      align-items: center;
+      justify-content: center;
 
       opacity: 0.3;
 
@@ -136,15 +145,10 @@
       }
 
       @include mixins.respond-to(notDesktopFr) {
+
         opacity: 1;
 
         transition: transform 0.3s;
-
-        &:nth-child(1) {
-          & .brands__catalogue-img {
-            margin: 0 0 40px 0;
-          }
-        }
 
         &:active {
           transform: scale(0.9);
@@ -167,7 +171,13 @@
 
     &-img {
       width: 100%;
+      max-width: 367px;
+      height: 220px;
       object-fit: contain !important;
+
+      @include mixins.respond-to(notDesktopFr) {
+        margin: 0 0 24px 0;
+      }
     }
 
     &-label {
@@ -179,8 +189,28 @@
     }
   }
 
-  &__feedback {
+  @media (min-width: 1200px) {
+    &__catalogue-slider {
+      & .brands__slider-arrows {
+        display: none !important;
+      }
+    }
 
+    &__catalogue {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 54px;
+
+      &-link {
+        flex: 1;
+
+        width: fit-content !important;
+      }
+    }
+  }
+
+  &__feedback {
     overflow: hidden;
 
     @include mixins.respond-to(notDesktopFr) {
@@ -297,29 +327,29 @@
     }
   }
 
-  &__lights {
-    position: absolute;
-    bottom: 170px;
+  // &__lights {
+  //   position: absolute;
+  //   bottom: 170px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 400px;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   gap: 400px;
 
-    width: 100%;
-    max-width: 100%;
-    height: fit-content;
-    user-select: none;
-    pointer-events: none;
+  //   width: 100%;
+  //   max-width: 100%;
+  //   height: fit-content;
+  //   user-select: none;
+  //   pointer-events: none;
 
-    @include mixins.respond-to(notDesktopFr) {
-      display: none;
-    }
+  //   @include mixins.respond-to(notDesktopFr) {
+  //     display: none;
+  //   }
 
-    & svg {
-      & path {
-        animation: lights 8s ease-in-out infinite;
-      }
-    }
-  }
+  //   & svg {
+  //     & path {
+  //       animation: lights 8s ease-in-out infinite;
+  //     }
+  //   }
+  // }
 }

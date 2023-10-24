@@ -104,24 +104,44 @@
         </div>
       </div>
 
-      <div class="brands__catalogue">
-        <a class="brands__catalogue-link" href="catalogue_cars.html">
-          <figure class="brands__catalogue-image">
-            <img class="brands__catalogue-img" src="img/image/brands-catalogue-1.png" alt="#">
-            <figcaption class="brands__catalogue-label">Электромобили</figcaption>
-          </figure>
-        </a>
-        <a class="brands__catalogue-link" href="catalogue_cars.html">
-          <figure class="brands__catalogue-image">
-            <img class="brands__catalogue-img" src="img/image/brands-catalogue-2.png" alt="#">
-            <figcaption class="brands__catalogue-label">Гибриды</figcaption>
-          </figure>
-        </a>
+      <div class="brands__catalogue-slider swiper">
+        <div class="brands__catalogue swiper-wrapper">
+          <a class="brands__catalogue-link swiper-slide" href="catalogue_cars.html">
+            <figure class="brands__catalogue-image">
+              <img class="brands__catalogue-img" src="img/image/brands-catalogue-1.png" alt="#">
+              <figcaption class="brands__catalogue-label">Электромобили</figcaption>
+            </figure>
+          </a>
+          <a class="brands__catalogue-link swiper-slide" href="catalogue_cars.html">
+            <figure class="brands__catalogue-image">
+              <img class="brands__catalogue-img" src="img/image/brands-catalogue-2.png" alt="#">
+              <figcaption class="brands__catalogue-label">Гибриды</figcaption>
+            </figure>
+          </a>
+          <a class="brands__catalogue-link swiper-slide" href="catalogue_cars.html">
+            <figure class="brands__catalogue-image">
+              <img class="brands__catalogue-img" src="img/image/brands-catalogue-3.png" alt="#">
+              <figcaption class="brands__catalogue-label">ДВС</figcaption>
+            </figure>
+          </a>
+        </div>
+        <div class="brands__slider-arrows">
+          <button class="brands__slider-arrow brands__slider-arrow--prev brands__catalogue-slider-arrow--prev" aria-label="Назад">
+            <svg class="brands__slider-arrow-icon" width="9" height="14">
+              <use href="img/icon/sprite.svg#brands-arrow-icon"></use>
+            </svg>
+          </button>
+          <button class="brands__slider-arrow brands__slider-arrow--next brands__catalogue-slider-arrow--next" style="transform:scaleX(-1)" aria-label="Вперёд">
+            <svg class="brands__slider-arrow-icon" width="9" height="14">
+              <use href="img/icon/sprite.svg#brands-arrow-icon"></use>
+            </svg>
+          </button>
+        </div>
       </div>
 
     </div>
 
-    <div class="brands__feedback">
+    <!-- <div class="brands__feedback">
       <div class="brands__feedback-container base-container ">
         <h2 class="brands__feedback-title">Закажите консультацию</h2>
         <span class="brands__feedback-subtitle">Оставьте данные, и мы свяжемся с вами в течении дня</span>
@@ -168,7 +188,7 @@
           </radialGradient>
         </defs>
       </svg>
-    </div>
+    </div> -->
 
   </section>
 
@@ -330,9 +350,120 @@
       </div>
     </section>
 
-    <section class="news" style="overflow-x: hidden;">
+    <section class="reviews">
+      <div class="reviews__container base-container">
+        <h2 class="reviews__title section-title">Клиенты о нас</h2>
+        <div class="reviews__slider swiper">
+          <div class="reviews__slider-wrapper swiper-wrapper">
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+            <div class="reviews__slider-slide swiper-slide">
+              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <div class="reviews__slider-slide-bottom">
+                <div>
+                  <span class="reviews__slider-slide-name">Алена</span>
+                  <span class="span reviews__slider-slide-address">г. Москва</span>
+                </div>
+                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
+              </div>
+            </div>
+          </div>
+          <div class="banners__slider-pagination reviews__slider-pagination swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="news">
       <div class="news__container base-container">
-        <h2 class="news__title section-title">Новости</h2>
+        <h2 class="news__title section-title">Клиенты о нас</h2>
         <div class="news__wrapper">
           <a class="news__wrapper-item news__wrapper-item--active" href="single-news.html">
             <img class="news__wrapper-item-img" src="img/image/news.png" alt="#">
@@ -360,7 +491,7 @@
           </a>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 
   @@include('components/_bem/_contacts.html')
