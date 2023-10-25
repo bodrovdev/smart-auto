@@ -103,7 +103,7 @@ window.addEventListener("resize", brands_catalogue_slider);
 
 let reviews_slider = new Swiper(".reviews__slider", {
   direction: "horizontal",
-  spaceBetween: 100,
+  spaceBetween: 20,
   slidesPerView: "auto",
   speed: 1000,
 

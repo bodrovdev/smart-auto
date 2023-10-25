@@ -84,7 +84,7 @@ tabsFunc(`single-cars`);
 modalFunc('cars-modal');
 modalFunc('goods-modal');
 modalFunc('callback-modal');
-modalFunc('success-modal');
+// modalFunc('success-modal');
 
 // ? --- Передача имени и цены выбранного товара в модалку
 window.addEventListener('load', () => {

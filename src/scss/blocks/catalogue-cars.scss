@@ -114,6 +114,7 @@
           font-weight: 400;
           line-height: 24px;
           letter-spacing: 0.5px;
+          color: #BEC3D0;
         }
       }
 
@@ -131,7 +132,7 @@
         & li {
           &:hover {
             & label {
-              color: #ffe76a;
+              color: #FFF;
 
               transition: color 0.3s;
             }
@@ -171,6 +172,7 @@
           font-weight: 400;
           line-height: 24px;
           letter-spacing: 0.5px;
+          color: #BEC3D0;
 
           transition: color 0.3s;
 
@@ -184,7 +186,7 @@
 
             width: 21px;
             height: 21px;
-            border: 1px solid #FFF;
+            border: 1px solid #BEC3D0;
             border-radius: 2px;
 
             transform: translateY(-50%);
@@ -255,7 +257,7 @@
         font-weight: 400;
         line-height: 24px;
         letter-spacing: 0.5px;
-        color: #FFF;
+        color: #BEC3D0;
         text-decoration-line: underline;
         text-transform: uppercase;
 
@@ -356,7 +358,7 @@
         font-family: var(--font-family-default) !important;
         font-size: 16px;
         font-weight: 500;
-        color: #E0E4E7;
+        color: #BEC3D0;
 
         padding: 10px 30px 10px 20px;
 
@@ -369,7 +371,7 @@
         & option {
           font-size: 16px;
           font-weight: 500;
-          color: #E0E4E7;
+          color: #BEC3D0;
         }
       }
     }
@@ -409,7 +411,7 @@
       width: 100%;
       min-height: 452px;
       background: #272D3B;
-      border-radius: 16px;
+      border-radius: 8px;
 
       padding: 24px;
 
@@ -769,7 +771,7 @@
 
     width: 49px;
     height: 49px;
-    background: #8e9094;
+    background: #2c3241;
     border-radius: 50%;
 
     font-size: 16px;
@@ -787,7 +789,7 @@
     }
 
     &:hover {
-      background: #ffe76a;
+      background: #FFF;
 
       transition: background 0.3s;
     }

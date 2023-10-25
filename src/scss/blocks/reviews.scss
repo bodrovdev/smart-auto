@@ -1,6 +1,12 @@
 @use "../mixins";
 
 .reviews {
+  padding: 80px 0 0 0;
+
+  @include mixins.respond-to(notDesktop) {
+    padding: 40px 0 0 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -12,33 +18,124 @@
   &__slider {
     width: 100%;
 
+    padding: 0 0 40px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      padding: 0;
+    }
+
+    &-wrapper {
+      @include mixins.respond-to(notDesktop) {
+        margin: 0 0 14px 0;
+      }
+    }
+
     &-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
       width: 385px;
-      height: 457px;
+      height: auto !important;
+      min-height: 457px;
       background: #272D3B;
       border: 1px solid #30363D;
       border-radius: 8px;
 
       padding: 19px 19px 23px 19px;
 
+      @include mixins.respond-to(mobileOnly) {
+        width: 100%;
+        max-width: 280px;
+        min-height: 476px;
+
+        padding: 19px;
+      }
+
+      & a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 8px;
+        overflow: hidden;
+
+        &:hover {
+          & img {
+            transform: scale(1.1);
+            transition: transform 0.6s;
+          }
+        }
+      }
+
       &-img {
+        flex: 1;
+
         border-radius: 8px;
         object-fit: contain !important;
+
+        transition: transform 0.6s;
+
+        @include mixins.respond-to(mobileOnly) {
+          width: 100%;
+          object-fit: cover !important;
+        }
       }
 
       &-bottom {
+        flex: 1;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         gap: 14px;
+
+        width: 100%;
+
+        & div {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+
+          width: 100%;
+
+          margin: 14px 0 0 0;
+        }
       }
 
-      &-name {}
+      &-name {
+        font-family: var(--font-family-second);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+      }
 
-      &-address {}
+      &-address {
+        text-align: right;
+      }
 
-      &-car {}
+      &-address,
+      .reviews__slider-slide-car {
+        color: hsla(210, 100%, 96%, 0.5);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+      &-car {
+        display: inline-block;
+
+        margin: auto 0 0 0;
+      }
+    }
+
+    & .banners__slider-pagination {
+      bottom: 0 !important;
+
+      @include mixins.respond-to(notDesktop) {
+        position: relative !important;
+      }
     }
   }
 }
