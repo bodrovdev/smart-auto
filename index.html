@@ -10,7 +10,7 @@
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
 
-  <link href="css/style.min.css?v=4.0" rel="stylesheet">
+  <link href="css/style.min.css?v=5.0" rel="stylesheet">
   <title></title>
 </head>
 
@@ -204,7 +204,7 @@
     </div>
   </div>
 
-  <div class="success-modal">
+  <!-- <div class="success-modal">
     <div class="success-modal__wrapper">
       <button class="success-modal__close success-modal__close--top" type="button">
         <svg class="cars-modal__close-icon" width="24" height="24" aria-hidden="true">
@@ -220,7 +220,7 @@
         <button class="success-modal__close main-button">Закрыть</button>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <header class="page-header">
     <nav class="main-nav">
@@ -257,7 +257,7 @@
               <a class="main-nav__mobile-menu-link" href="page-about.html">О нас</a>
             </li>
             <li class="main-nav__mobile-menu-item">
-              <a class="main-nav__mobile-menu-link" href="page-about.html">Инвестиции</a>
+              <a class="main-nav__mobile-menu-link" href="#">Инвестиции</a>
             </li>
           </ul>
 
@@ -336,9 +336,9 @@
   </header>
 
   <div class="preloader preloader--active">
-    <div class="preloader__circle">
-
-    </div>
+    <svg class="main-nav__logo-icon" width="300" alt="Логотип">
+      <use href="img/icon/sprite.svg#logo-icon"></use>
+    </svg>
   </div>
 
   <style>
@@ -363,6 +363,14 @@
       z-index: 100;
     }
 
+    @media (min-width: 320px) and (max-width: 767px) {
+      .preloader .main-nav__logo-icon {
+        width: 100% !important;
+        max-width: 280px !important;
+        height: auto !important;
+      }
+    }
+
     .preloader--active {
       opacity: 100%;
 
@@ -372,7 +380,7 @@
       transition: opacity 0.3s;
     }
 
-    @keyframes spin {
+    /* @keyframes spin {
       0% {
         transform: rotate(0deg);
       }
@@ -380,9 +388,9 @@
       100% {
         transform: rotate(360deg);
       }
-    }
+    } */
 
-    .preloader__circle {
+    /* .preloader__circle {
       width: 120px;
       height: 120px;
       border: 16px solid #FFF;
@@ -390,7 +398,7 @@
       border-radius: 50%;
 
       animation: spin 2s linear infinite;
-    }
+    } */
   </style>
 
   <script>
@@ -756,7 +764,9 @@
         <div class="reviews__slider swiper">
           <div class="reviews__slider-wrapper swiper-wrapper">
             <div class="reviews__slider-slide swiper-slide">
-              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <a href="img/image/reviews.png" data-fancybox>
+                <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              </a>
               <div class="reviews__slider-slide-bottom">
                 <div>
                   <span class="reviews__slider-slide-name">Алена</span>
@@ -766,7 +776,9 @@
               </div>
             </div>
             <div class="reviews__slider-slide swiper-slide">
-              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <a href="img/image/reviews.png" data-fancybox>
+                <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              </a>
               <div class="reviews__slider-slide-bottom">
                 <div>
                   <span class="reviews__slider-slide-name">Алена</span>
@@ -776,7 +788,9 @@
               </div>
             </div>
             <div class="reviews__slider-slide swiper-slide">
-              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <a href="img/image/reviews.png" data-fancybox>
+                <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              </a>
               <div class="reviews__slider-slide-bottom">
                 <div>
                   <span class="reviews__slider-slide-name">Алена</span>
@@ -786,7 +800,9 @@
               </div>
             </div>
             <div class="reviews__slider-slide swiper-slide">
-              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <a href="img/image/reviews.png" data-fancybox>
+                <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              </a>
               <div class="reviews__slider-slide-bottom">
                 <div>
                   <span class="reviews__slider-slide-name">Алена</span>
@@ -796,57 +812,9 @@
               </div>
             </div>
             <div class="reviews__slider-slide swiper-slide">
-              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
-              <div class="reviews__slider-slide-bottom">
-                <div>
-                  <span class="reviews__slider-slide-name">Алена</span>
-                  <span class="span reviews__slider-slide-address">г. Москва</span>
-                </div>
-                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
-              </div>
-            </div>
-            <div class="reviews__slider-slide swiper-slide">
-              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
-              <div class="reviews__slider-slide-bottom">
-                <div>
-                  <span class="reviews__slider-slide-name">Алена</span>
-                  <span class="span reviews__slider-slide-address">г. Москва</span>
-                </div>
-                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
-              </div>
-            </div>
-            <div class="reviews__slider-slide swiper-slide">
-              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
-              <div class="reviews__slider-slide-bottom">
-                <div>
-                  <span class="reviews__slider-slide-name">Алена</span>
-                  <span class="span reviews__slider-slide-address">г. Москва</span>
-                </div>
-                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
-              </div>
-            </div>
-            <div class="reviews__slider-slide swiper-slide">
-              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
-              <div class="reviews__slider-slide-bottom">
-                <div>
-                  <span class="reviews__slider-slide-name">Алена</span>
-                  <span class="span reviews__slider-slide-address">г. Москва</span>
-                </div>
-                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
-              </div>
-            </div>
-            <div class="reviews__slider-slide swiper-slide">
-              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
-              <div class="reviews__slider-slide-bottom">
-                <div>
-                  <span class="reviews__slider-slide-name">Алена</span>
-                  <span class="span reviews__slider-slide-address">г. Москва</span>
-                </div>
-                <span class="span reviews__slider-slide-car">HiPhi X Deluxe Edition 6 местный</span>
-              </div>
-            </div>
-            <div class="reviews__slider-slide swiper-slide">
-              <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              <a href="img/image/reviews.png" data-fancybox>
+                <img class="reviews__slider-slide-img" src="img/image/reviews.png" width="347" height="331" alt="#">
+              </a>
               <div class="reviews__slider-slide-bottom">
                 <div>
                   <span class="reviews__slider-slide-name">Алена</span>
@@ -981,13 +949,25 @@
           </span>
         </div>
       </div>
+      <div class="footer-top__column footer-top__column--right">
+        <div>
+          <span class="footer-top__column-phone-subline">Время работы: с 9 до 21 часов</span>
+          <a class="main-nav__contacts-phone" href="tel:+7 495-001-18-88">
+            <svg class="main-nav__contacts-phone-icon" width="24" height="24" aria-hidden="true">
+              <use href="img/icon/sprite.svg#phone-icon"></use>
+            </svg>
+            <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
+          </a>
+        </div>
+        <button class="brands__feedback-submit callback-modal__button main-button" type="button">Свяжитесь со мной</button>
+      </div>
       <div class="footer-top__column footer-top__column--center">
         <ul class="main-nav__mobile-menu-list">
           <li class="main-nav__mobile-menu-item">
             <a class="main-nav__mobile-menu-link" href="catalogue_cars.html">Автомобили</a>
           </li>
           <li class="main-nav__mobile-menu-item">
-            <a class="main-nav__mobile-menu-link" href="catalogue_goods.html">Аксессуары и тюнинг</a>
+            <a class="main-nav__mobile-menu-link" href="catalogue_goods.html">Аксессуары</a>
           </li>
           <li class="main-nav__mobile-menu-item">
             <a class="main-nav__mobile-menu-link" href="page-services.html">Сервис</a>
@@ -1003,6 +983,9 @@
           </li>
           <li class="main-nav__mobile-menu-item">
             <a class="main-nav__mobile-menu-link" href="page-about.html">О нас</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link" href="#">Инвестиции</a>
           </li>
         </ul>
 
@@ -1023,16 +1006,6 @@
     </a>
   </li>
 </ul>
-      </div>
-      <div class="footer-top__column footer-top__column--right">
-        <a class="main-nav__contacts-phone" href="tel:+7 495-001-18-88">
-          <svg class="main-nav__contacts-phone-icon" width="24" height="24" aria-hidden="true">
-            <use href="img/icon/sprite.svg#phone-icon"></use>
-          </svg>
-          <span class="main-nav__contacts-phone-text">+7 495-001-18-88</span>
-        </a>
-        <span class="footer-top__column-phone-subline">Время работы: с 9 до 21 часов</span>
-        <button class="brands__feedback-submit callback-modal__button main-button" type="button">Свяжитесь со мной</button>
       </div>
     </div>
   </section>
