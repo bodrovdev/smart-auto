@@ -207,6 +207,11 @@
 
         margin: 0 0 86px 0;
       }
+
+      & .current_page_item a,
+      .current-menu-item a {
+        opacity: 100%;
+      }
     }
 
     &-item {
