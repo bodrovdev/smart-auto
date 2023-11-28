@@ -136,6 +136,16 @@
     @include mixins.respond-to(notDesktop) {
       margin: 0;
     }
+
+    & svg {
+      width: 220px;
+      height: auto;
+
+      @include mixins.respond-to(notDesktop) {
+        width: 180px;
+        height: auto;
+      }
+    }
   }
 
   @media (min-width:1280px) and (max-width:1599px) {

@@ -40,13 +40,32 @@
         gap: 15px;
       }
 
+      & .main-nav__contacts-address {
+        align-items: center;
+      }
+
       & .main-nav__contacts-address-text {
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
 
         font-size: 12px;
         color: #9d9fa3;
 
         max-width: 360px;
+
+        & span {
+          font-size: 14px;
+          color: #FFF;
+          white-space: nowrap;
+        }
+
+        @media (min-width: 320px) and (max-width: 1365px) {
+          & span {
+            white-space: initial;
+          }
+        }
       }
     }
 
@@ -83,6 +102,12 @@
 
       & .main-nav__contacts-phone-text {
         font-size: 24px;
+      }
+
+      @media (min-width: 1200px) and (max-width: 1365px) {
+        & .main-nav__contacts-phone-text {
+          font-size: 18px;
+        }
       }
 
       & .brands__feedback-submit {
@@ -154,6 +179,11 @@
       @include mixins.respond-to(notDesktopFr) {
         margin: 0 0 8px 0;
       }
+    }
+
+    &-logo-icon {
+      width: 220px;
+      height: auto;
     }
   }
 }

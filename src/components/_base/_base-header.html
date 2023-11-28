@@ -10,7 +10,7 @@
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
 
-  <link href="css/style.min.css?v=5.0" rel="stylesheet">
+  <link href="css/style.min.css?v=10.0" rel="stylesheet">
   <title></title>
 </head>
 
@@ -248,16 +248,7 @@
               <a class="main-nav__mobile-menu-link" href="page.html">Доставка</a>
             </li>
             <li class="main-nav__mobile-menu-item">
-              <a class="main-nav__mobile-menu-link" href="#">Лизинг/кредит</a>
-            </li>
-            <li class="main-nav__mobile-menu-item">
-              <a class="main-nav__mobile-menu-link" href="#">Франшиза</a>
-            </li>
-            <li class="main-nav__mobile-menu-item">
               <a class="main-nav__mobile-menu-link" href="page-about.html">О нас</a>
-            </li>
-            <li class="main-nav__mobile-menu-item">
-              <a class="main-nav__mobile-menu-link" href="#">Инвестиции</a>
             </li>
           </ul>
 
@@ -320,7 +311,7 @@
   </header>
 
   <div class="preloader preloader--active">
-    <svg class="main-nav__logo-icon" width="300" alt="Логотип">
+    <svg class="main-nav__logo-icon" alt="Логотип">
       <use href="img/icon/sprite.svg#logo-icon"></use>
     </svg>
   </div>
@@ -347,11 +338,15 @@
       z-index: 100;
     }
 
+    .preloader .main-nav__logo-icon {
+      width: 70%;
+      height: 100%;
+    }
+
     @media (min-width: 320px) and (max-width: 767px) {
       .preloader .main-nav__logo-icon {
         width: 100% !important;
         max-width: 280px !important;
-        height: auto !important;
       }
     }
 
@@ -387,7 +382,9 @@
 
   <script>
     window.addEventListener('load', () => {
-      document.querySelector('.preloader').classList.remove('preloader--active');
-      document.body.setAttribute('style', '');
+      setTimeout(() => {
+        document.querySelector('.preloader').classList.remove('preloader--active');
+        document.body.setAttribute('style', '');
+      }, 800);
     })
   </script>
