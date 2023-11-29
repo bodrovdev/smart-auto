@@ -63,6 +63,10 @@
         }
       }
 
+      &:only-child {
+        width: 514px;
+      }
+
       &-category {
         display: inline-block;
 
@@ -132,6 +136,18 @@
       &-button {
         margin: 0 auto;
       }
+    }
+  }
+
+  @media (min-width: 1360px) and (max-width: 1439px) {
+    .catalogue-goods__content {
+      grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    }
+  }
+
+  @media (min-width: 1440px) and (max-width: 1599px) {
+    .catalogue-goods__content {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
   }
 }
